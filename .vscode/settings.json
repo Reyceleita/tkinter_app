@@ -1,0 +1,10 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:tkinter_app}/model/database/db.sqlite",
+            "name": "name"
+        }
+    ]
+}
