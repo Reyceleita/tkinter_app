@@ -8,12 +8,6 @@ from view.abiertos.abiertos import *
 from view.styles.dark_mode import *
 
 #
-#Cambiar optionmenus por combobox xD
-#
-#
-#
-#
-#
 #
 #
 
@@ -25,9 +19,12 @@ class App(tk.Tk):
         
         style = ttk.Style()
         dark_theme(style)
+        self.option_add("*background", "#121212")
+        self.option_add("*foreground", "#B0B0B0")
         
         # Oculta la barra de título por defecto
         #self.overrideredirect(True)  
+        
         
         #Se cambia titulo y tamaño
         self.title('App')
@@ -38,7 +35,6 @@ class App(tk.Tk):
         self.hwnd = ctypes.windll.user32.GetParent(self.winfo_id())
         
         
-        self.set_title_bar_color(self.hwnd, "FF0000")
         #Se crea notebook para manejo de pestañas
         self.notebook = ttk.Notebook(self)
         self.notebook.grid(row=0, column=0, sticky='nswe')
@@ -68,15 +64,6 @@ class App(tk.Tk):
             pass
         else:
             pass
-    
-    def set_title_bar_color(self, hwnd, color):
-        # Define el atributo DWMWA_CAPTION_COLOR (valor 35)
-        DWMWA_CAPTION_COLOR = 35
-        # Convierte el color a un valor RGB en hexadecimal (0x00BBGGRR)
-        color = int(color, 16)  # Convierte de string hexadecimal a entero
-        # Llama a la API de Windows para cambiar el color
-        ctypes.windll.dwmapi.DwmSetWindowAttribute(hwnd, DWMWA_CAPTION_COLOR, ctypes.byref(ctypes.c_int(color)), 4)
-
     
 
 first_execute()
