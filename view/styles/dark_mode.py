@@ -1,13 +1,13 @@
 from tkinter import *
 
 
-#Fondo principal: #121212 (Negro casi puro, ideal para el fondo)
-#Fondo secundario: #414141 (Gris oscuro, para secciones elevadas o tarjetas)
-#Texto principal: #E0E0E0 (Gris muy claro, para buena legibilidad)
-#Texto secundario: #B0B0B0 (Gris más tenue para información menos destacada)
-#Acento 1: #BB86FC (Morado vibrante, estilo Material Design)
-#Acento 2: #03DAC6 (Cian brillante, ideal para destacar elementos)
-#Error/Advertencia: #CF6679 (Rojo tenue pero llamativo)
+#Fondo principal: #121212 (Negro casi puro)
+#Fondo secundario: #1E1E1E (Gris oscuro)
+#Texto primario: #E0E0E0 (Gris claro)
+#Texto secundario: #A0A0A0 (Gris medio)
+#Botones primarios: #00C896 (Turquesa)
+#Botones secundarios: #FF4081 (Rosa neón)
+#Resaltados: #FFC400 (Amarillo neón)
 
 
 def dark_theme(style):
@@ -30,15 +30,16 @@ def dark_theme(style):
                     ]})
                 ],
                 "configure": {
-                    "background": "#414141",  
-                    "foreground": "#B0B0B0",
-                    "relief": "solid",
-                    "bordercolor": "black",
+                    "background": "#00C896",  
+                    "foreground": "black",
+                    "relief": "raised",
+                    "bordercolor": "#005F46",
                     "padding": (5,0,5,0),
+                    "borderwidth": 5
                     #"font": ["Arial", 24]
                 },
                 "map": {
-                    "background": [("active", "blue")]
+                    "background": [("active", "#119876")]
                 }
             },
             "TEntry": {
@@ -58,6 +59,10 @@ def dark_theme(style):
                     "relief": "raised",
                     "bordercolor": "black",
                     "padding": (5,3,3,3),
+                    "insertbackground": "blue",
+                },
+                map: {
+                    "insertbackgroud": [("focus", "white")]
                 }
             },
             "TCombobox": {
@@ -75,12 +80,13 @@ def dark_theme(style):
                     "background": "#1E1E1E",
                     "arrowcolor": "red",
                     "borderclor": "white",
-                    "padding": (5,5,5,5)
+                    "padding": (5,5,5,5),
                 },
                 "map": {
                     "bordercolor": [("focus", "green")],
                     "background": [("active", "white")],
-                    "arrowcolor": [("active", "blue")]
+                    "arrowcolor": [("active", "blue")],
+                    "fieldbackground": [("readonly", "#1E1E1E")]
                 }
             }
             
