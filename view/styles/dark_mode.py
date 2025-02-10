@@ -52,9 +52,9 @@ def dark_theme(style):
                     ]})
                 ],
                 "configure": {
-                    "background": "#091032",
-                    "foreground": "#03DAC6",
-                    "fieldbackground": "#1E1E1E",
+                    "background": "#c7c7c7",
+                    "foreground": "black",
+                    "fieldbackground": "#c7c7c7",
                     "insertborderwidth": 10,
                     "relief": "raised",
                     "bordercolor": "black",

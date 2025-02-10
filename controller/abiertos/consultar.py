@@ -5,9 +5,7 @@ connection = connection_to_db()
 cursor = connection.cursor()
 
 def query_datos_activos():
-    
-    def order(l):
-        return l[11]
+    datos=list()
     
     command = """
         SELECT id_ticket, titulo, fecha_apertura, fecha_limite, categoria, nombre, solucion, script, fecha_solucion, observaciones, estado_t, revisado 
@@ -17,8 +15,8 @@ def query_datos_activos():
         INNER JOIN scripts ON tickets_diarios.script_id = scripts.id_script;
     """
     cursor.execute(command)
+    datos.clear()
     datos = list(cursor.fetchall())
-    datos.sort(key=order)
     
     return datos
 

@@ -25,7 +25,7 @@ class EditarAbiertos(tk.Toplevel):
         self.columnconfigure(2, weight=1)
         self.rowconfigure(9, weight=1)
         
-        info_ticket = obtener_desplegables_abierto(id_ticket.get())
+        info_ticket = obtener_desplegables(id_ticket.get())
         
         self.tecnico_db.set(info_ticket[0])
         self.solucion_db.set(info_ticket[1])

@@ -108,6 +108,5 @@ def subir_abiertos(tabla):
             if ticket not in tickets_csv and estado == 'Nuevo':
                 actualizar_estado_abiertos('Escalado', ticket)
     
-    messagebox.showinfo('Completado', 'Se cargaron correctamente los registros')
-    
     mostrar_datos(query_datos_activos(), tabla)
+    messagebox.showinfo('Completado', 'Se cargaron correctamente los registros')

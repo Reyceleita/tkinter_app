@@ -5,7 +5,7 @@ cursor = connection.cursor()
 
 #Funcón para obtener id del tecnico según nombre, en caso de no existir se coloca sin asignar
 def obtener_id_tecnico(nombre):
-    cursor.execute('SELECT id_tecnico FROM tecnicos WHERE nombre = ?', (nombre,))
+    cursor.execute('SELECT id_tecnico FROM tecnicos WHERE nombre = %s', (nombre, ))
     tecnico = cursor.fetchone()
     return str(tecnico[0]) if tecnico else '1'
 
@@ -14,7 +14,7 @@ def obtener_ticket_abierto(ticket):
     command = """
         SELECT tecnico_id, estado, fecha_actualiza, revisado 
         FROM tickets_diarios 
-        WHERE id_ticket = ?
+        WHERE id_ticket = %s
     """
     cursor.execute(command, (ticket, ))
     ticket = cursor.fetchone()
@@ -22,24 +22,12 @@ def obtener_ticket_abierto(ticket):
 
 #Función para obtener el estado de un ticket abierto
 def obtener_estado(ticket):
-    cursor.execute('SELECT estado_t FROM tickets_diarios WHERE id_ticket = ?', (ticket, ))
+    cursor.execute('SELECT estado_t FROM tickets_diarios WHERE id_ticket = %s', (ticket, ))
     estado = cursor.fetchone()
     estado = estado[0]
     return estado
 
-#Función para obtener campos especificos de un ticket específico
-def obtener_desplegables_abierto(id):
-    command = """
-        SELECT nombre, solucion, script, fecha_solucion
-        FROM tickets_diarios
-        INNER JOIN tecnicos ON tickets_diarios.tecnico_id = tecnicos.id_tecnico
-        INNER JOIN forma_solucion ON tickets_diarios.forma_solucion_id = forma_solucion.id_solucion
-        INNER JOIN scripts ON tickets_diarios.script_id = scripts.id_script
-        WHERE id_ticket = ?
-    """
-    cursor.execute(command, (id, ))
-    info = list(cursor.fetchall()[0])
-    return info
+
 
 #Función para obtener las soluciones de base de datos
 def cargar_solucion(solucion, solucion_list):
