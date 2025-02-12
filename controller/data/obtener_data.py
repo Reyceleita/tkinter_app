@@ -72,3 +72,22 @@ def obtener_campo_lista(lista, menu):
     if id in lista:
         id_obtenido = lista[id]
         return id_obtenido
+
+#Función para obtener el id de un combobox
+def obtener_cargo(cargo_id, combobox):
+    cargo = combobox
+    if cargo in cargo_id:
+        id_cargo = cargo_id[cargo]
+        return id_cargo
+
+#Obtener listado de cargos
+def cargar_cargo(cargo_id, combobox):
+    combobox['values'] = []
+    cargo_id.clear()
+
+    command = "SELECT id_cargo, cargo FROM cargos"
+    cursor.execute(command)
+    cargos = cursor.fetchall()
+    for id_cargo, cargo in cargos:
+        cargo_id[cargo] = id_cargo
+        combobox['values'] = list(cargo_id.keys())

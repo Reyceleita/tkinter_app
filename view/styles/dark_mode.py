@@ -9,7 +9,7 @@ from tkinter import *
 #Botones secundarios: #FF4081 (Rosa neón)
 #Resaltados: #FFC400 (Amarillo neón)
 
-
+#Estilizar interfaz
 def dark_theme(style):
     style.theme_create(
         "Dark_theme",
