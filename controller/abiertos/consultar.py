@@ -4,7 +4,8 @@ from controller.data.mostrar import *
 connection = connection_to_db()
 cursor = connection.cursor()
 
-def query_datos_activos():
+#Listar datos de tickets abiertos
+def query_datos_activos():    
     datos=list()
     
     command = """
@@ -20,6 +21,7 @@ def query_datos_activos():
     
     return datos
 
+#Filtrar según campos con los tickets abiertos
 def filtar_id_abiertos(id_filtro, columna_filtro, tabla, conteo):
     id_filtro = id_filtro.lower()
     datos = query_datos_activos()

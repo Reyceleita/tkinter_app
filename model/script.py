@@ -137,7 +137,6 @@ try:
     ('Deicy Yadira Robayo Rincon', '3'),
     ('Faiver Leguizamo Rojas', '4'),
     ('Edgar Yesid Cortes Insuasty', '3'),
-    ('Diego Andres Villa Cardona', '3'),
     ('Jairo Miller Urrego Garay', '2'),
     ('Mauricio Enrique Hernandez Cabrera', 2);
         """

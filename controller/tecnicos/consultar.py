@@ -8,8 +8,14 @@ cursor = connection.cursor()
 
 def cargar_tecnicos(tabla_tecnicos):
     """
-    cargar los datos, de la base de datos
+    Consultar y rrellenar la tabla con la información
+    de los técnicos.
     
+    Parámetros:
+        tabla_tecnicos (ttk.TreeView): Tabla en donde 
+        cargar la información
+    Resultado:
+        Tabla con los datós consultados.
     """
     for row in tabla_tecnicos.get_children():
         tabla_tecnicos.delete(row)
@@ -64,7 +70,13 @@ def cargar_tecnicos(tabla_tecnicos):
             tabla_tecnicos.insert('', 'end', values=fila)
 
 def tecnico_nobre(nombre):
-    
+    """
+    Consultar datos de un técnico por su nombre.
+    Parámetros:
+        nombre (String): nombre del técnico a consultar
+    Resultado:
+        (List) tecnico: Lista con datos del técnico consultado
+    """
     command = """
             SELECT id_tecnico, cargo, fecha_ingreso, fecha_salida
             FROM tecnicos 

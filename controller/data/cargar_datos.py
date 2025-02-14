@@ -2,6 +2,12 @@ import pandas as pd
 from tkinter import filedialog, messagebox
 
 def cargar_datos():
+    """
+    Leer archivo csv y trnasforma los datos para su manejo
+    
+    Resultados:
+        (Dataframe) reporte: Datos extraidos del archivo csv
+    """
     archivo = filedialog.askopenfilename(
         filetypes=[('Archivos CSV', '*.csv'), ('Todos los archivos', '*.*')]
     )

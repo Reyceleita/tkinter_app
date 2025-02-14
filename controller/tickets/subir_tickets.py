@@ -1,9 +1,8 @@
-import unicodedata
 from tkinter import messagebox
 
 from model.connection import *
 from controller.data.obtener_data import *
-from controller.data.normalizar import *
+from controller.data.validaciones import *
 from controller.data.cargar_datos import *
 from controller.data.mostrar import *
 from controller.tickets.consultar import *

@@ -4,6 +4,7 @@ import datetime
 connection = connection_to_db()
 cursor = connection.cursor()
 
+#Subir a base de datos nuevos tickets abiertos
 def insertar_abierto(id_ticket, titulo, estado, fecha_apertura, fecha_limite, categoria, 
         prioridad, solicitante, localizacion, tecnico_i, observacion, estado_t, revisado):
     command = """

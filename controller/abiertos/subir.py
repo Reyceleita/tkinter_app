@@ -3,7 +3,6 @@ import datetime
 
 from model.connection import *
 from controller.data.obtener_data import *
-from controller.data.normalizar import *
 from controller.abiertos.actualizar import *
 from controller.abiertos.consultar import *
 from controller.abiertos.insertar import *

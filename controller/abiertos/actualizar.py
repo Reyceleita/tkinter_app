@@ -13,6 +13,7 @@ def actualizar_estado_abiertos(estado, ticket):
     cursor.execute('UPDATE tickets_abiertos SET estado_t = %s WHERE id_ticket = %s', (estado, ticket))
     connection.commit()
 
+#Actualizar estado del ticket abiento en base de datos
 def actualizar_abiertos(tecnico_i, estado, fecha_actu, estado_t, id_ticket):
     command = """
         UPDATE tickets_diarios
@@ -22,6 +23,7 @@ def actualizar_abiertos(tecnico_i, estado, fecha_actu, estado_t, id_ticket):
     cursor.execute(command, (tecnico_i, estado, fecha_actu, estado_t, id_ticket))
     connection.commit()
 
+#Actualizar datos del ticket abierto en base de datos
 def actualizar_abierto(id_ticket, solucion, tecnico, script, fecha, observacion, frame, tecnico_list, script_list, solucion_list, tabla):
     solucion_id = obtener_campo_lista(solucion_list, solucion)
     tecnico_id = obtener_campo_lista(tecnico_list, tecnico)

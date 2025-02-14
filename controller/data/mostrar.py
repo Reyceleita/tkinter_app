@@ -1,7 +1,4 @@
-from model.connection import *
-
-
-
+#Cargar datos seleccionados en la tabla seleccionada
 def mostrar_datos(datos, tabla):
     
     for row in tabla.get_children():
@@ -17,6 +14,7 @@ def mostrar_datos(datos, tabla):
     conteo
     return conteo
 
+#Organizar valores de la columna 
 def ordenar_tabla(tabla, col, descendiente, columnas):
     data = [(tabla.set(item, col), item) for item in tabla.get_children('')]
     data.sort(reverse=descendiente)
