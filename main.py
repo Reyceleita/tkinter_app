@@ -9,6 +9,13 @@ from view.tickets.tickets import *
 from view.tecnicos.tecnicos import *
 from view.styles.dark_mode import *
 
+#HACERRR
+#
+#Regresar a sqlite
+#Areglar filtro
+#Arreglar mostrar
+#Completar esilos
+#
 
 #Se crea app principal
 class App(tk.Tk):

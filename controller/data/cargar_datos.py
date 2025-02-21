@@ -29,9 +29,10 @@ def cargar_datos():
                 reporte['ID'] = reporte['ID'].str.replace(' ', '', regex=False)
                 reporte.rename(columns=columnas_renombradas, inplace=True)
                 reporte = reporte.set_index("ID")
+                reporte = reporte.where(pd.notna(reporte), None)
                 return reporte
             except Exception as e:
-                print(f"Error: {e}")
+                print(f"Error: {e} i")
         except Exception as e:
             messagebox.showwarning('Advertencia', f'No se pudo cargar el archivo \nArchivo no válido, solo se admiten arcivos .csv')
-            print(e)
+            print(e, 'e')

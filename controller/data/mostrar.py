@@ -11,7 +11,6 @@ def mostrar_datos(datos, tabla):
         incompleto = [(campo if campo is not None else 'Sin definir') for campo in row]
         tabla.insert('', 'end', values=list(incompleto))
     
-    conteo
     return conteo
 
 #Organizar valores de la columna 

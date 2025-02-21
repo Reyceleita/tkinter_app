@@ -83,8 +83,8 @@ def subir_tickets(tabla):
 
             cambios = False #Indica si hubo cambios
             
-            #Si el técnico cambió y no es 'nan' ni 'Sin asignar', se actualiza
-            if tecnico_i != 'nan' and tecnico_normalizado != tecnico_actual_nombre and tecnico_i != 'Sin asignar' :
+            #Si el técnico cambió y no es None ni 'Sin asignar', se actualiza
+            if tecnico_i != None and tecnico_normalizado != tecnico_actual_nombre and tecnico_i != 'Sin asignar' :
                 for t in tecnicos:
                     if tecnico_i == t[1]: #Buscar técnico en base de datos
                         tecnico_i = obtener_id_tecnico(tecnico_i)
@@ -106,10 +106,10 @@ def subir_tickets(tabla):
                     connection.commit()
                     break
                 except Exception as e:
-                    print(e)
+                    print(e, 'c')
         else:
             #Se asigna técnico default si no hay tecnico en la fila
-            if tecnico_i == "nan":
+            if tecnico_i == None:
                 tecnico_i = '1'
             else:
                 #Buscar técnico en vase de datos
@@ -133,7 +133,7 @@ def subir_tickets(tabla):
                 
                 nuevos +=1 #Incrementa contador de tickets insertados
             except Exception as e:
-                print(e)
+                print(e, 'a')
 
     #Mostrar mensaje de exito con la cantidad de registros procesados
     if actualizados > 0 and nuevos > 0 or actualizados == 0:

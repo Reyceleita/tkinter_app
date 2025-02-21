@@ -1,52 +1,38 @@
-import sqlite3
-from connection import connection_to_db
 
-connection = connection_to_db()
-cursor = connection.cursor()
-
-#Script para base de datos
-try:
-    cursor.execute(
-        """
+    CREATE DATABASE tkinter_app;
+    
+    USE tkinter_app;
+    
     CREATE TABLE IF NOT EXISTS cargos (
-        id_cargo INTEGER PRIMARY KEY AUTOINCREMENT,
+        id_cargo INTEGER PRIMARY KEY AUTO_INCREMENT,
         cargo TEXT
     );
-        """
-    )
 
-    cursor.execute(
-        """
+
     CREATE TABLE IF NOT EXISTS tecnicos (
-        id_tecnico INTEGER PRIMARY KEY AUTOINCREMENT,
+        id_tecnico INTEGER PRIMARY KEY AUTO_INCREMENT,
         nombre TEXT,
         cargo_id INTEGER,
         fecha_ingreso TEXT,
         fecha_salida TEXT
     );
-        """
-    )
 
-    cursor.execute(
-        """
+
+
     CREATE TABLE IF NOT EXISTS forma_solucion (
-        id_solucion INTEGER PRIMARY KEY AUTOINCREMENT,
+        id_solucion INTEGER PRIMARY KEY AUTO_INCREMENT,
         solucion TEXT
     );
-        """
-    )
 
-    cursor.execute(
-        """
+
+
     CREATE TABLE IF NOT EXISTS scripts (
-        id_script INTEGER PRIMARY KEY AUTOINCREMENT,
+        id_script INTEGER PRIMARY KEY AUTO_INCREMENT,
         script TEXT
     );
-        """
-    )
 
-    cursor.execute(
-        """
+
+
     CREATE TABLE IF NOT EXISTS tickets (
         id_ticket INTEGER PRIMARY KEY ,
         titulo TEXT,
@@ -67,11 +53,8 @@ try:
         FOREIGN KEY (forma_solucion_id) REFERENCES forma_solucion(id_solucion),
         FOREIGN KEY (script_id) REFERENCES scripts(id_script)
     );
-        """
-    )
-    
-    cursor.execute(
-        """
+
+
     CREATE TABLE IF NOT EXISTS tickets_diarios (
         id_ticket INTEGER PRIMARY KEY ,
         titulo TEXT,
@@ -94,11 +77,9 @@ try:
         FOREIGN KEY (forma_solucion_id) REFERENCES forma_solucion(id_solucion),
         FOREIGN KEY (script_id) REFERENCES scripts(id_script)
     );
-        """
-    )
+
     
-    cursor.execute(
-        """
+
     INSERT INTO cargos(cargo)
     Values
     ('N/A'),
@@ -106,11 +87,8 @@ try:
     ('LT'),
     ('AD'),
     ('QA');
-        """
-    )
+
     
-    cursor.execute(
-        """
     INSERT INTO forma_solucion(solucion)
     Values
     ('Consulta BD'),
@@ -118,12 +96,10 @@ try:
     ('Informe'),
     ('No aplica'),
     ('Sin asignar');
-        """
-    )
     
-    cursor.execute(
-        """
-    INSERT INTO tecnicos('nombre', 'cargo_id')
+    
+
+    INSERT INTO tecnicos(nombre, cargo_id)
     VALUES
     ('Sin asignar', '1'),
     ('Santiago Ñustes', '2'),
@@ -139,12 +115,7 @@ try:
     ('Edgar Yesid Cortes Insuasty', '3'),
     ('Jairo Miller Urrego Garay', '2'),
     ('Mauricio Enrique Hernandez Cabrera', 2);
-        """
-    )
-    
-    
-    cursor.execute(
-        """
+
     INSERT INTO scripts(script)
     Values
     ('Actualiza Centro Servicio'),
@@ -201,12 +172,3 @@ try:
     ('Actualiza limite de texto'),
     ('No aplica'),
     ('Sin asignar');
-        """
-    )
-    connection.commit()
-except sqlite3.IntegrityError as e:
-    print(f"Error al insertar en la base de datos: {e}")
-except KeyError as e:
-    print(f"Clave faltante en el elemento: {e}")
-except Exception as e:
-    print(f"Error inesperado: {e}")

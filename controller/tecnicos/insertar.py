@@ -4,9 +4,10 @@ import tkinter as tk
 from controller.data.validaciones import *
 from controller.data.obtener_data import *
 from controller.tecnicos.consultar import *
+from view.alertas.error import *
 
 
-def crear_tecnico(cargo_id, cargo, fecha_ingreso, nombre, fecha_salida, tabla_tecnicos, nombre_c, fecha_i_c, fecha_s_c, cargo_c):
+def crear_tecnico(cargo_id, cargo, fecha_ingreso, nombre, fecha_salida, tabla_tecnicos, nombre_c, fecha_i_c, fecha_s_c, cargo_c, frame):
     """
     Agrega un nuevo técnico a la base de datos
     
@@ -49,7 +50,8 @@ def crear_tecnico(cargo_id, cargo, fecha_ingreso, nombre, fecha_salida, tabla_te
                     existe = True
             
             if existe:
-                messagebox.showerror('Ya existe', 'El nombre del técnico ya existe')
+                texto = 'El técnico ya existe'
+                ErrorAlert(frame, texto)
             else:
                 try:
                     command = """

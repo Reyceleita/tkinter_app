@@ -63,7 +63,7 @@ def subir_abiertos(tabla):
                 (normalizar_nombre(t[1]) for t in tecnicos_db if str(t[0]) == str(tecnico_db))
             )
             
-            if tecnico_csv != 'nan' and nombre_normalizado != nombre_db and tecnico_csv != 'sin asignar':
+            if tecnico_csv != None and nombre_normalizado != nombre_db and tecnico_csv != 'sin asignar':
                 tecnico_csv = obtener_id_tecnico(tecnico_csv)
                 cambio = True
             
@@ -89,7 +89,7 @@ def subir_abiertos(tabla):
         else:
             estado_t = 'Nuevo'
             
-            if tecnico_csv == 'nan':
+            if tecnico_csv == None:
                 tecnico_csv = '1'
             else:
                 tecnico_csv = obtener_id_tecnico(tecnico_csv)
@@ -106,6 +106,6 @@ def subir_abiertos(tabla):
             estado = obtener_estado(ticket)
             if ticket not in tickets_csv and estado == 'Nuevo':
                 actualizar_estado_abiertos('Escalado', ticket)
+        mostrar_datos(query_datos_activos(), tabla)
     
-    mostrar_datos(query_datos_activos(), tabla)
     messagebox.showinfo('Completado', 'Se cargaron correctamente los registros')

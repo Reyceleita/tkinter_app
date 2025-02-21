@@ -69,7 +69,7 @@ class TabTecnicos(ttk.Frame):
         #Botón de acción
         ttk.Button(self, text='Crear', command=lambda: crear_tecnico(self.cargo_id, self.cargo_campo.get(), 
                                                                     self.ingreso_campo.get(), self.nombre_campo.get(), self.salida_campo.get(), 
-                                                                    self.tabla_tecnicos, self.nombre_campo, self.ingreso_campo, self.salida_campo, self.cargo_campo )).grid(row=5, column=2, columnspan=1, pady=5, sticky='E')
+                                                                    self.tabla_tecnicos, self.nombre_campo, self.ingreso_campo, self.salida_campo, self.cargo_campo, self )).grid(row=5, column=2, columnspan=1, pady=5, sticky='E')
         
         #Cargar datos en la taba y en combobox
         cargar_tecnicos(self.tabla_tecnicos)

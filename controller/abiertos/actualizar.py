@@ -4,6 +4,7 @@ from controller.data.validaciones import *
 from controller.data.obtener_data import *
 from controller.data.mostrar import *
 from controller.abiertos.consultar import *
+from view.alertas.warning import *
 
 connection = connection_to_db()
 cursor =  connection.cursor()
@@ -45,14 +46,16 @@ def actualizar_abierto(id_ticket, solucion, tecnico, script, fecha, observacion,
                 connection.commit()
                 frame.destroy()
             except Exception as e:
-                print(e)
+                print(e, 'uu')
             
             mostrar_datos(query_datos_activos(), tabla)
         else:
-            messagebox.showerror('Error', 'Complete todos los campos')
+            texto = ('Complete todos los campos')
+            AdverteciaAlerta(frame, texto)
             frame.lift()
     else:
-        messagebox.showerror('Error', 'Fecha inválida \nFormato correcto: YYYY-MM-DD')
+        texto = ('Fecha inválida \nFormato correcto: YYYY-MM-DD')
+        AdverteciaAlerta(frame, texto)
         frame.lift()
     
 #Función para obtener campos especificos de un ticket específico

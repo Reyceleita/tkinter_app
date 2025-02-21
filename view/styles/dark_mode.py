@@ -13,12 +13,39 @@ from tkinter import *
 def dark_theme(style):
     style.theme_create(
         "Dark_theme",
-        parent="clam",  
+        parent="default",  
         settings={
             ".": {
                 "configure": {
                     "background": "#121212", 
                     "foreground": "#B0B0B0"
+                }
+            },
+            "Treeview":{
+                "layout": [
+                    ("Treeview.treearea", {"sticky": "nswe"})
+                ],
+                "configure": {
+                    "background": "#121212",
+                    "fieldbackground": "red",
+                }
+            },
+            "TScrollbar": {
+                "Layout": [
+                    ("Scrollbar.trough", {"children": [
+                        ("Scrollbar.uparrow", {"side": "top", "sticky": "n"}),
+                        ("Scrollbar.downarrow", {"side": "bottom", "sticky": "s"}),
+                        ("Scrollbar.thumb", {"unit": "1", "sticky": "nswe"})
+                    ]})
+                ],
+                "configure": {
+                    "background": "#121212",
+                    "troughcolor": "#121212",
+                    "bordercolor": "#E0E0E0",
+                    "arrowcolor": "#A0A0A0",
+                    "troughrelief": "flat",
+                    "darkcolor": "#A0A0A0",
+                    "relief": "ridge"
                 }
             },
             "TButton": {
@@ -87,6 +114,32 @@ def dark_theme(style):
                     "background": [("active", "white")],
                     "arrowcolor": [("active", "blue")],
                     "fieldbackground": [("readonly", "#1E1E1E")]
+                }
+            },
+            "Advertencia.TLabel":{
+                "layout": [
+                    ("Label.border", {"sticky": "nswe", "children":[
+                        ("Label.padding", {"sticky": "nswe", "children": [
+                            ("Label.label", {"sticky": "nswe"})
+                        ]})
+                    ]})
+                ],
+                "configure": {
+                    "font": ("Arial", 16, "bold"),
+                    "foreground": "yellow",
+                }
+            },
+            "Error.TLabel":{
+                "layout": [
+                    ("Label.border", {"sticky": "nswe", "children":[
+                        ("Label.padding", {"sticky": "nswe", "children": [
+                            ("Label.label", {"sticky": "nswe"})
+                        ]})
+                    ]})
+                ],
+                "configure": {
+                    "font": ("Arial", 16, "bold"),
+                    "foreground": "Red",
                 }
             }
             
