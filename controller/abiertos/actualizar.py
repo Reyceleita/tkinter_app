@@ -11,7 +11,7 @@ cursor =  connection.cursor()
 
 #Fucnión para actualizar el estado de un ticket abierto
 def actualizar_estado_abiertos(estado, ticket):
-    cursor.execute('UPDATE tickets_abiertos SET estado_t = %s WHERE id_ticket = %s', (estado, ticket))
+    cursor.execute('UPDATE tickets_diarios SET estado_t = %s WHERE id_ticket = %s', (estado, ticket))
     connection.commit()
 
 #Actualizar estado del ticket abiento en base de datos

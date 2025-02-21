@@ -12,7 +12,7 @@ from view.styles.dark_mode import *
 #HACERRR
 #
 #Regresar a sqlite
-#Areglar filtro
+#Arglar conssultas :(
 #Arreglar mostrar
 #Completar esilos
 #

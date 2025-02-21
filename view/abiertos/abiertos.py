@@ -85,5 +85,5 @@ class TabAbiertos(ttk.Frame):
         EditarAbiertos(self, id_ticket, titulo_ticket, self.tabla)
     
     def filtrar(self, event):
-        filter_values = {col: self.filters[col].get() for col in self.columna}
-        nose(filter=filter_values)
+        filter_values = {col: self.filters[col].get() for col in self.columnas}
+        nose(tabla=self.tabla, filter=filter_values)

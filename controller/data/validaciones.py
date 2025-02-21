@@ -12,7 +12,7 @@ def validar_fecha(fecha_entrada):
 
 #Eliminar espacios y colocar en minúsculas 
 def normalizar_nombre(nombre):
-    if nombre in None:
+    if nombre is None:
         return ""
     return ''.join(
         c for c in unicodedata.category('NFD', nombre.lower())
