@@ -1,13 +1,13 @@
 from tkinter import *
 from tkinter import ttk
 import tkinter as tk
-import ctypes
 
 from model.execution import *
 from view.abiertos.abiertos import *
 from view.tickets.tickets import *
 from view.tecnicos.tecnicos import *
 from view.styles.dark_mode import *
+
 
 #HACERRR
 #
@@ -67,5 +67,7 @@ class App(tk.Tk):
 
 #Ejecución de aplicación
 if __name__ == '__main__':
+    first_execute()
     app = App()
     app.mainloop()
+    

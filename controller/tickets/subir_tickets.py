@@ -70,7 +70,7 @@ def subir_tickets(tabla):
         
         if existe:
             #Obtener el técnico actual y estado del ticket en la base de datos
-            command_F = "SELECT tecnico_id, estado FROM tickets WHERE id_ticket = %s"
+            command_F = "SELECT tecnico_id, estado FROM tickets WHERE id_ticket = ?"
             cursor.execute(command_F, (id_ticket,))
             result = cursor.fetchone()
             tecnico_actual, estado_actual = result[0], result[1]
@@ -99,8 +99,8 @@ def subir_tickets(tabla):
                 try:
                     command = """
                         UPDATE tickets
-                        SET tecnico_id = %s, estado = %s
-                        WHERE id_ticket = %s
+                        SET tecnico_id = ?, estado = ?
+                        WHERE id_ticket = ?
                     """
                     cursor.execute(command, (tecnico_i, estado, id_ticket))
                     connection.commit()
@@ -126,7 +126,7 @@ def subir_tickets(tabla):
                 command = """
                 INSERT INTO tickets(id_ticket, titulo, estado, fecha_apertura, fecha_limite, categoria, 
                 prioridad, solicitante, localizacion, tecnico_id, forma_solucion_id, script_id, observaciones, revisado)
-                VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) 
+                VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?) 
                 """
                 cursor.execute(command, (id_ticket,titulo,estado,fecha_apertura,fecha_limite,categoria,prioridad,solicitante,localizacion, tecnico_i, '5', '54', observacion, revisado))
                 connection.commit()

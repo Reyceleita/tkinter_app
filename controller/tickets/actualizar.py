@@ -39,8 +39,8 @@ def actualizar_ticket(id_ticket, solucion, tecnico, script, fecha, observacion, 
     #Sentencia SQL
     command = """
     UPDATE tickets
-    SET forma_solucion_id = %s, tecnico_id = %s, script_id = %s, fecha_solucion = %s, observaciones =  %s, revisado = 'Revisado'
-    WHERE id_ticket = %s
+    SET forma_solucion_id = ?, tecnico_id = ?, script_id = ?, fecha_solucion = ?, observaciones =  ?, revisado = 'Revisado'
+    WHERE id_ticket = ?
     """
     
     #Validaciones previas a actualizar el ticket

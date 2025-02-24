@@ -13,15 +13,6 @@ class TabAbiertos(ttk.Frame):
     def __init__(self, parent):
         super().__init__(parent)
         
-        #Configuración de pestaña
-        self.grid(row=0, column=0, sticky='nswe')
-        self.columnconfigure(3, weight=1)
-        self.rowconfigure(6, weight=1)
-        
-        #Variable para guardar conteo de registros
-        self.conteo = tk.IntVar(value=0)
-        self.filters = {}
-        
         #Columnas de la tabla
         self.columnas = (
             'Código', 'Título', 'Fecha de apertura', 'Fecha límite', 
@@ -29,17 +20,23 @@ class TabAbiertos(ttk.Frame):
             'Script', 'Fecha de solución', 'Observaciones', 'Estado','Revisado'
         )
         
-        #Etiquetas informativas
-        ttk.Label(self, text='Tickets abiertos', font=('Arial', 14)).grid(row=0, column=1, sticky='wn')
-        ttk.Label(self, text='Fitro: ', font=('Arial', 10)).grid(row=2, column=0, padx=10, sticky='w')
-        ttk.Button(self, text='Cerrar', command='').grid(row=3, column=1, padx=5, pady=5)
-        ttk.Label(self, text='Se muestran: ', font=('Arial', 10)).grid(row=2, column=3, padx=20, sticky='e')
-        ttk.Label(self, textvariable=self.conteo, font=('Arial', 10)).grid(row=2, column=3, sticky='e', padx=5)
+        #Configuración de pestaña
+        self.grid(row=0, column=0, sticky='nswe')
+        self.columnconfigure(0, weight=1)
+        self.rowconfigure(6, weight=1)
+        for i in range(len(self.columnas) + 1): 
+            self.grid_columnconfigure(i, weight=1)
+            
+        #Variable para alamcenar datos a usar
+        self.conteo = tk.IntVar(value=0)
+        self.filters = {}
         
-        #Campos de entrada
-        self.valor = ttk.Entry(self, width=33)
-        self.columna = ttk.Combobox(self, state='readonly', values=self.columnas)
-        self.button = ttk.Button(self, text='Filtrar', command= lambda: filtar_id_abiertos(self.valor.get(), self.columna.get(), self.tabla, self.conteo))
+        
+        #Etiquetas informativas
+        ttk.Label(self, text='Tickets abiertos', font=('Arial', 14)).grid(row=0, column=5, sticky='wn')
+        ttk.Button(self, text='Cerrar revisados', command='').grid(row=3, column=0, padx=5, pady=5, sticky='w')
+        ttk.Label(self, text='Se muestran: ', font=('Arial', 10)).grid(row=2, column=11, padx=20, sticky='e')
+        ttk.Label(self, textvariable=self.conteo, font=('Arial', 10)).grid(row=2, column=11, sticky='e', padx=5)
         
         
         #Configuración de tabla y scroll
@@ -50,22 +47,20 @@ class TabAbiertos(ttk.Frame):
         )
         
         #Posicionamiento de widgets
-        self.valor.grid(row=4, column=0, padx=10, sticky='w')
-        self.columna.grid(row=3, column=0, padx=10, sticky='w')
-        self.button.grid(row=4, column=1, pady=5, padx=3)
-        self.tabla.grid(row=5, column=0, columnspan=4, padx=10, pady=10, sticky='we')
-        scrolly.grid(row=5, column=3, rowspan=1, sticky='ens')
+        self.tabla.grid(row=5, column=0, columnspan=len(self.columnas), padx=10, pady=10, sticky='we')
+        scrolly.grid(row=5, column=len(self.columnas), rowspan=1, sticky='ens')
         scrolly.config(command=self.tabla.yview) #Vincular scrollbar a la tabla
         
         #Configuración de encabezados de la tabla
         for columna in self.columnas:
             self.tabla.heading(columna, text=columna.capitalize(), command=lambda c=columna, cols=self.columnas: ordenar_tabla(self.tabla, c, False, cols))
             self.tabla.column(column=columna, width=100)
-            
-            self.palabra = ttk.Entry(self)
-            self.palabra.grid()
-            self.palabra.bind("<KeyRelease>", self.filtrar)
-            self.filters[columna] = self.palabra
+        
+        for i, columna in enumerate(self.columnas):
+            entry = ttk.Entry(self, width=10)
+            entry.grid(row=4, column=i, pady=5, padx=5, sticky='ew')
+            entry.bind("<KeyRelease>", self.filtrar)  
+            self.filters[columna] = entry 
         
         #Vincular selección de la tabla a una función
         self.tabla.bind("<<TreeviewSelect>>", self.obtener_ticket)
@@ -86,4 +81,5 @@ class TabAbiertos(ttk.Frame):
     
     def filtrar(self, event):
         filter_values = {col: self.filters[col].get() for col in self.columnas}
-        nose(tabla=self.tabla, filter=filter_values)
+        filtro(tabla=self.tabla, filter=filter_values)
+        self.conteo.set(mostrar_datos(filtro(self.tabla, filter_values), self.tabla))

@@ -11,15 +11,15 @@ cursor =  connection.cursor()
 
 #Fucnión para actualizar el estado de un ticket abierto
 def actualizar_estado_abiertos(estado, ticket):
-    cursor.execute('UPDATE tickets_diarios SET estado_t = %s WHERE id_ticket = %s', (estado, ticket))
+    cursor.execute('UPDATE tickets_diarios SET estado_t = ? WHERE id_ticket = ?', (estado, ticket))
     connection.commit()
 
 #Actualizar estado del ticket abiento en base de datos
 def actualizar_abiertos(tecnico_i, estado, fecha_actu, estado_t, id_ticket):
     command = """
         UPDATE tickets_diarios
-        SET tecnico_id = %s, estado = %s, fecha_actualiza = %s, estado_t = %s
-        WHERE id_ticket = %s
+        SET tecnico_id = ?, estado = ?, fecha_actualiza = ?, estado_t = ?
+        WHERE id_ticket = ?
     """
     cursor.execute(command, (tecnico_i, estado, fecha_actu, estado_t, id_ticket))
     connection.commit()
@@ -32,8 +32,8 @@ def actualizar_abierto(id_ticket, solucion, tecnico, script, fecha, observacion,
     observacion = str(observacion)
     command = """
         UPDATE tickets_diarios
-        SET forma_solucion_id = %s, tecnico_id = %s, script_id = %s, fecha_solucion = %s, observaciones =  %s, revisado = 'Revisado'
-        WHERE id_ticket = %s
+        SET forma_solucion_id = ?, tecnico_id = ?, script_id = ?, fecha_solucion = ?, observaciones =  ?, revisado = 'Revisado'
+        WHERE id_ticket = ?
     """
     
     if validar_fecha(fecha.strip()):
@@ -66,7 +66,7 @@ def obtener_desplegables(id):
         INNER JOIN tecnicos ON tickets_diarios.tecnico_id = tecnicos.id_tecnico
         INNER JOIN forma_solucion ON tickets_diarios.forma_solucion_id = forma_solucion.id_solucion
         INNER JOIN scripts ON tickets_diarios.script_id = scripts.id_script
-        WHERE id_ticket = %s
+        WHERE id_ticket = ?
     """
     cursor.execute(command, (id, ))
     info = list(cursor.fetchall()[0])

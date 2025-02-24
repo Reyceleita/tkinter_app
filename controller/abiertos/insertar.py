@@ -12,7 +12,7 @@ def insertar_abierto(id_ticket, titulo, estado, fecha_apertura, fecha_limite, ca
         id_ticket, titulo, estado, fecha_apertura, fecha_limite, categoria, 
         prioridad, solicitante, localizacion, tecnico_id, forma_solucion_id, 
         script_id, observaciones, fecha_actualiza, estado_t, revisado
-    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     """
     fecha_actual = datetime.datetime.now().strftime("%Y-%m-%d %X")
     cursor.execute(command, (

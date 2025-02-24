@@ -30,8 +30,8 @@ def actualizar_tecnico(id_tecnico, cargo_edit, fecha_i_editar, fecha_s_editar, n
             fecha_fin = str(fecha_s_editar)
             command = """
                 UPDATE tecnicos
-                SET nombre = %s, cargo_id = %s, fecha_ingreso = %s, fecha_salida = %s
-                WHERE id_tecnico = %s
+                SET nombre = ?, cargo_id = ?, fecha_ingreso = ?, fecha_salida = ?
+                WHERE id_tecnico = ?
             """
             cursor.execute(command, (nombre, cargo, fecha_inicio, fecha_fin, id_tecnico))
             connection.commit()

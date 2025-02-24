@@ -1,10 +1,10 @@
 import sqlite3
-from connection import connection_to_db
+from model.connection import connection_to_db
 
 connection = connection_to_db()
 cursor = connection.cursor()
 
-#Script para base de datos
+#Script para base de datos en sqlite
 try:
     cursor.execute(
         """

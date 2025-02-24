@@ -35,13 +35,13 @@ def cargar_tecnicos(tabla_tecnicos):
         command_1 ="""
             SELECT id_ticket 
             FROM tickets 
-            WHERE tecnico_id = %s
+            WHERE tecnico_id = ?
         """
         
         command_2 ="""
             SELECT id_ticket 
             FROM tickets_diarios
-            WHERE tecnico_id = %s
+            WHERE tecnico_id = ?
         """
         cursor.execute(command_1, (id_tecnico, ))
         tickets = cursor.fetchall()
@@ -81,7 +81,7 @@ def tecnico_nobre(nombre):
             SELECT id_tecnico, cargo, fecha_ingreso, fecha_salida
             FROM tecnicos 
             INNER JOIN cargos ON cargos.id_cargo = tecnicos.cargo_id
-            WHERE nombre = %s
+            WHERE nombre = ?
             """
     cursor.execute(command, (nombre, ))
     tecnico = list(cursor.fetchall()[0])

@@ -1,3 +1,5 @@
+/*Script para base de datos en mysql*/
+
 
     CREATE DATABASE tkinter_app;
     
