@@ -92,6 +92,18 @@ def dark_theme(style):
                     "insertbackgroud": [("focus", "white")]
                 }
             },
+            "Titulo.TLabel": {
+                "layout": [
+                    ("Label.border", {"sticky": "nswe", "children":[
+                        ("Label.padding", {"sticky": "nswe", "children": [
+                            ("Label.label", {"sticky": "nswe"})
+                        ]})
+                    ]})
+                ],
+                "configure":{
+                    "font": {"Arial", 16, "bold"}
+                }
+            },
             "TCombobox": {
                 "layout": [
                     ("Combobox.border", {"sticky": "nswe", "children":[
@@ -105,7 +117,6 @@ def dark_theme(style):
                 "configure": {
                     "fieldbackground": "#1E1E1E",
                     "background": "#1E1E1E",
-                    "arrowcolor": "red",
                     "borderclor": "white",
                     "padding": (5,5,5,5),
                 },
@@ -127,6 +138,21 @@ def dark_theme(style):
                 "configure": {
                     "font": ("Arial", 16, "bold"),
                     "foreground": "yellow",
+                    "background": "#A0A0A0"
+                }
+            },
+            "TextAdvertencia.TLabel":{
+                "layout": [
+                    ("Label.border", {"sticky": "nswe", "children":[
+                        ("Label.padding", {"sticky": "nswe", "children": [
+                            ("Label.label", {"sticky": "nswe"})
+                        ]})
+                    ]})
+                ],
+                "configure":{
+                    "font": {"Arial", 10},
+                    "foreground": '#121212',
+                    "background": "#A0A0A0"
                 }
             },
             "Error.TLabel":{

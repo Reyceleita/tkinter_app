@@ -30,6 +30,8 @@ class TabAbiertos(ttk.Frame):
         #Variable para alamcenar datos a usar
         self.conteo = tk.IntVar(value=0)
         self.filters = {}
+        self.contador = StringVar()
+        self.contador.set(f'Se muestran: {self.conteo.get()}')
         
         
         #Etiquetas informativas
@@ -66,11 +68,12 @@ class TabAbiertos(ttk.Frame):
         self.tabla.bind("<<TreeviewSelect>>", self.obtener_ticket)
         
         #Botón de acción
-        ttk.Button(self, text='Subir archivo', command=lambda: subir_abiertos(self.tabla)).grid(row=1, column=0, padx=5, sticky='w')
+        ttk.Button(self, text='Subir archivo', command=self.subir_archivo).grid(row=1, column=0, padx=5, sticky='w')
         
         #Cargar datos en la tabla y actualizar conteo 
         mostrar_datos(query_datos_activos(), self.tabla)
         self.conteo.set(mostrar_datos(query_datos_activos(), self.tabla))
+        self.contador.set(f'Se muestran: {self.conteo.get()}')
         
     #Llamar ventana para edición de datos
     def obtener_ticket(self, event):
@@ -78,8 +81,16 @@ class TabAbiertos(ttk.Frame):
         id_ticket = self.tabla.item(ticket, 'values')[0]
         titulo_ticket = self.tabla.item(ticket, 'values')[1]
         EditarAbiertos(self, id_ticket, titulo_ticket, self.tabla)
+        self.contador.set(f'Se muestran: {self.conteo.get()}')
     
+    #Filtrar segúnlo escito en los campos Entry
     def filtrar(self, event):
         filter_values = {col: self.filters[col].get() for col in self.columnas}
         filtro(tabla=self.tabla, filter=filter_values)
         self.conteo.set(mostrar_datos(filtro(self.tabla, filter_values), self.tabla))
+        self.contador.set(f'Se muestran: {self.conteo.get()}')
+    
+    def subir_archivo(self):
+        subir_abiertos(self.tabla)
+        self.conteo.set(mostrar_datos(query_datos_activos(), self.tabla))
+        self.contador.set(f'Se muestran: {self.conteo.get()}')

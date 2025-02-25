@@ -11,11 +11,16 @@ from view.styles.dark_mode import *
 
 #HACERRR
 #
-#Regresar a sqlite
-#Arglar conssultas :(
-#Arreglar mostrar
+#Traer obs para edits
+#Mejorar UI 
 #Completar esilos
+#Crear Readme
 #
+#Revisar para comentar
+#
+#Buscar cómo convertirlo en app .¿
+#.¿
+
 
 #Se crea app principal
 class App(tk.Tk):

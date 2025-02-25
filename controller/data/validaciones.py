@@ -15,6 +15,6 @@ def normalizar_nombre(nombre):
     if nombre is None:
         return ""
     return ''.join(
-        c for c in unicodedata.category('NFD', nombre.lower())
-        if unicodedata.category(c) != 'Mn'
-        ).replace(' x', '')
+        c for c in unicodedata.normalize('NFD', nombre.lower())  
+        if unicodedata.category(c) != 'Mn' 
+    ).replace(' x', '')

@@ -74,7 +74,7 @@ def subir_abiertos(tabla):
                 cambio = False
             
             ultima_actu_csv = datetime.datetime.strptime(ultima_actu_csv, '%Y-%m-%d %H:%M')
-            fecha_db = datetime.datetime.strptime(fecha_db, '%Y-%m-%d %H:%M:?')
+            fecha_db = datetime.datetime.strptime(fecha_db, '%Y-%m-%d %H:%M:%S')
             if fecha_db < ultima_actu_csv:
                 estado_t = 'Actualizado'
             elif ultima_actu_csv < fecha_db:
@@ -109,3 +109,4 @@ def subir_abiertos(tabla):
         mostrar_datos(query_datos_activos(), tabla)
     
     messagebox.showinfo('Completado', 'Se cargaron correctamente los registros')
+    

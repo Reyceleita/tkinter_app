@@ -39,7 +39,7 @@ class EditarAbiertos(tk.Toplevel):
         
         #Estiquetaws de información
         ttk.Label(self, text='Editar', font=('Arial', 20)).grid(row=0, column=0, columnspan=3)
-        ttk.Label(self, text='Tecnoco asignado', font=('Arial', 12)).grid(row=2, column=0, pady=5)
+        ttk.Label(self, text='Tecnico asignado', font=('Arial', 12)).grid(row=2, column=0, pady=5)
         ttk.Label(self, text='Forma de solución', font=('Arial', 12)).grid(row=2, column=2, pady=5, padx=40)
         ttk.Label(self, text='Observación', font=('Arial', 12)).grid(row=6, column=0, pady=5, padx=40)
         ttk.Label(self, text='Script usado', font=('Arial', 12)).grid(row=4, column=0, pady=5, padx=40, sticky='e')

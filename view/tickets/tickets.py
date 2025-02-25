@@ -25,6 +25,8 @@ class TabTickets(ttk.Frame):
         self.columnconfigure(0, weight=1)
         self.rowconfigure(7, weight=1)
         self.conteo = IntVar(value=0) #Definición de variable
+        self.contador = StringVar()
+        
         for i in range(len(self.columnas)+ 1):
             self.grid_columnconfigure(i, weight=1)
         
@@ -33,9 +35,8 @@ class TabTickets(ttk.Frame):
         self.filters = {}
         
         #Etiquetas informativas
-        ttk.Label(self, text='Registro de tickets').grid(row=0, column=0, sticky='wn')
-        ttk.Label(self, textvariable=self.conteo, font=('Arial', 10)).grid(row=2, column=2, sticky='e')
-        ttk.Label(self, text='Se muestran: ', font=('Arial', 10)).grid(row=2, column=2, padx=30, sticky='e')
+        ttk.Label(self, text='Registro de tickets', style="Titulo.TLabel").grid(row=0, column=5, columnspan=2, pady=20)
+        ttk.Label(self, textvariable=self.contador, font=('Arial', 10)).grid(row=2, column=12, sticky='e')
         
         #Configuración de tabla y scrollbar
         scrolly = ttk.Scrollbar(self, orient='vertical')
@@ -50,7 +51,7 @@ class TabTickets(ttk.Frame):
         scrolly.config(command=self.tabla.yview) #Vincular scrollbar a la tabla
         
         #Boton de acción
-        ttk.Button(self, text='Subir archivo', command= lambda: subir_tickets(self.tabla)).grid(row=1, column=0, padx=5, pady=5, sticky='w')
+        ttk.Button(self, text='Subir archivo', command=self.subir_archivo).grid(row=1, column=0, padx=5, pady=5, sticky='w')
         
         #Configuración de encabezados de la tabla
         for columna in self.columnas:
@@ -69,6 +70,7 @@ class TabTickets(ttk.Frame):
         #Cargar datos en la tabla y actualizar conteo 
         mostrar_datos(query_datos(), self.tabla)
         self.conteo.set(mostrar_datos(query_datos(), self.tabla))
+        self.contador.set(f"Se muestran: {self.conteo.get()}")
         
     #Llamar ventana para edición de datos
     def obtener_ticket(self, event):
@@ -77,7 +79,14 @@ class TabTickets(ttk.Frame):
         titulo_ticket = self.tabla.item(ticket, "values")[1]
         EditarTicket(self, id_ticket, titulo_ticket, self.tabla)
     
+    #Llamar función  de filtro
     def filtrar(self, event):
         filter_values = {col: self.filters[col].get() for col in self.columnas}
         filtro(self.tabla, filter_values)
         self.conteo.set(mostrar_datos(filtro(self.tabla, filter_values), self.tabla))
+        self.contador.set(f"Se muestran: {self.conteo.get()}")
+    
+    def subir_archivo(self):
+        subir_tickets(self.tabla)
+        self.conteo.set(mostrar_datos(query_datos(), self.tabla))
+        self.contador.set(f'Se muestran: {self.conteo.get()}')
