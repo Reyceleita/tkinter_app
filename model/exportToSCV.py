@@ -6,7 +6,7 @@ import os
 output_folder = r"..\csv"
 
 # Conectar con SQLite
-conn = sqlite3.connect(r"C:\Users\ivanfceleitar\Documents\GitHub\tkinter_app\model\database\db.sqlite")
+conn = sqlite3.connect(r".\database\db.sqlite")
 
 # Obtener nombres de todas las tablas
 tables = pd.read_sql_query("SELECT name FROM sqlite_master WHERE type='table';", conn)
