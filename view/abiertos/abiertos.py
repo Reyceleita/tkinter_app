@@ -91,6 +91,6 @@ class TabAbiertos(ttk.Frame):
         self.contador.set(f'Se muestran: {self.conteo.get()}')
     
     def subir_archivo(self):
-        subir_abiertos(self.tabla)
+        subir_abiertos(self.tabla, self)
         self.conteo.set(mostrar_datos(query_datos_activos(), self.tabla))
         self.contador.set(f'Se muestran: {self.conteo.get()}')

@@ -33,6 +33,7 @@ class EditarTicket(tk.Toplevel):
         self.solucion_db.set(info_ticket[1])
         self.script_db.set(info_ticket[2])
         self.fecha_db.set(info_ticket[3])
+        self.observacion_db.set(cargar_observacion('tickets', id_ticket.get()))
         if self.fecha_db.get() == "None":
             self.fecha_db.set("Sin definir")
         

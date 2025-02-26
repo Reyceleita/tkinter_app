@@ -11,11 +11,10 @@ from view.styles.dark_mode import *
 
 #HACERRR
 #
-#Traer obs para edits
 #Mejorar UI 
-#Completar esilos
+#Completar y verificar estilos
 #Crear Readme
-#
+#Pasar cerrar abiertos :/
 #Revisar para comentar
 #
 #Buscar cómo convertirlo en app .¿

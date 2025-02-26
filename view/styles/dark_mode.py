@@ -57,7 +57,7 @@ def dark_theme(style):
                     ]})
                 ],
                 "configure": {
-                    "background": "#00C896",  
+                    "background": "#00C896",
                     "foreground": "black",
                     "relief": "raised",
                     "bordercolor": "#005F46",
@@ -101,7 +101,7 @@ def dark_theme(style):
                     ]})
                 ],
                 "configure":{
-                    "font": {"Arial", 16, "bold"}
+                    "font": ("Arial", 16, "bold")
                 }
             },
             "TCombobox": {
@@ -150,7 +150,7 @@ def dark_theme(style):
                     ]})
                 ],
                 "configure":{
-                    "font": {"Arial", 10},
+                    "font": ("Arial", 10),
                     "foreground": '#121212',
                     "background": "#A0A0A0"
                 }
@@ -167,8 +167,35 @@ def dark_theme(style):
                     "font": ("Arial", 16, "bold"),
                     "foreground": "Red",
                 }
+            },
+            "Completado.TLabel":{
+                "layout": [
+                    ("Label.border", {"sticky": "nswe", "children":[
+                        ("Label.padding", {"sticky": "nswe", "children": [
+                            ("Label.label", {"sticky": "nswe"})
+                        ]})
+                    ]})
+                ],
+                "configure": {
+                    "font": ("Arial", 16, "bold"),
+                    "foreground": "green",
+                    "background": "#A0A0A0"
+                }
+            },
+            "TextCompletado.TLabel":{
+                "layout": [
+                    ("Label.border", {"sticky": "nswe", "children":[
+                        ("Label.padding", {"sticky": "nswe", "children": [
+                            ("Label.label", {"sticky": "nswe"})
+                        ]})
+                    ]})
+                ],
+                "configure": {
+                    "font": ("Arial", 10),
+                    "foreground": '#121212',
+                    "background": "#A0A0A0"
+                }
             }
-            
         }
     )
     style.theme_use("Dark_theme")

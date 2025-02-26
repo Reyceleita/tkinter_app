@@ -66,6 +66,13 @@ def cargar_tecnico(tecnico, tecnico_list):
         tecnico_list[tecnico_] = id_tecnico
         tecnico['values'] = list(tecnico_list.keys())
 
+#
+def cargar_observacion(tabla, id):
+    command = f"SELECT observaciones FROM {tabla} WHERE id_ticket = ?"
+    cursor.execute(command, (id, ))
+    obsesrvacion = cursor.fetchone()
+    return obsesrvacion[0]
+
 #Función para obtener el id de un combobox
 def obtener_campo_lista(lista, menu):
     id = menu

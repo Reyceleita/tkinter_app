@@ -20,4 +20,4 @@ class AdverteciaAlerta(tk.Toplevel):
     
         ttk.Label(self, text='Advertencia', style='Advertencia.TLabel').grid(column=0, row=0, columnspan=2)
         ttk.Label(self, textvariable=self.texto, style='TextAdvertencia.TLabel').grid(column=0, row=1)
-        ttk.Button(self, text='Cerrar', command=self.destroy).grid(column=1, row=2, sticky='e')
+        ttk.Button(self, text='Cerrar', command=self.destroy).grid(column=0, row=2, pady=5, sticky='e')

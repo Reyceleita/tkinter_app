@@ -34,10 +34,11 @@ class EditarAbiertos(tk.Toplevel):
         self.solucion_db.set(info_ticket[1])
         self.script_db.set(info_ticket[2])
         self.fecha_db.set(info_ticket[3])
+        self.observacion_db.set(cargar_observacion('tickets_diarios', id_ticket.get())) #Cargar observación guardada en BD
         if self.fecha_db.get() == 'None':
             self.fecha_db.set('Sin definir')
         
-        #Estiquetaws de información
+        #Estiquetas de información
         ttk.Label(self, text='Editar', font=('Arial', 20)).grid(row=0, column=0, columnspan=3)
         ttk.Label(self, text='Tecnico asignado', font=('Arial', 12)).grid(row=2, column=0, pady=5)
         ttk.Label(self, text='Forma de solución', font=('Arial', 12)).grid(row=2, column=2, pady=5, padx=40)

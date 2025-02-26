@@ -8,11 +8,12 @@ from controller.abiertos.consultar import *
 from controller.abiertos.insertar import *
 from controller.data.cargar_datos import *
 from controller.data.mostrar import *
+from view.alertas.correcto import *
 
 connection = connection_to_db()
 cursor = connection.cursor()
 
-def subir_abiertos(tabla):
+def subir_abiertos(tabla, frame):
     reporte = cargar_datos()
     
     tickets_csv = list()
@@ -108,5 +109,5 @@ def subir_abiertos(tabla):
                 actualizar_estado_abiertos('Escalado', ticket)
         mostrar_datos(query_datos_activos(), tabla)
     
-    messagebox.showinfo('Completado', 'Se cargaron correctamente los registros')
-    
+    # messagebox.showinfo('Completado', 'Se cargaron correctamente los registros')
+    Completado(frame, 'Se cargaron correctamente los registros')

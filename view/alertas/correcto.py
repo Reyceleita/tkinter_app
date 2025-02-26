@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import *
 from tkinter import ttk
 
-class ErrorAlert(tk.Toplevel):
+class Completado(tk.Toplevel):
     def __init__(self, parent, texto):
         super().__init__(parent)
         
@@ -18,6 +18,6 @@ class ErrorAlert(tk.Toplevel):
         self.geometry(f"{315}x{120}+{x}+{y}")
         self.grab_set()
     
-        ttk.Label(self, text='Advertencia', style='Error.TLabel').grid(column=0, row=0, columnspan=2)
-        ttk.Label(self, textvariable=self.texto).grid(column=0, row=1)
-        ttk.Button(self, text='Cerrar', command=self.destroy).grid(column=0, row=2, pady=5, sticky='e')
+        ttk.Label(self, text='Completado', style='Completado.TLabel').grid(column=0, row=0, columnspan=2)
+        ttk.Label(self, textvariable=self.texto, style="TextCompletado.TLabel").grid(column=0, row=1)
+        ttk.Button(self, text='Aceptar', command=self.destroy).grid(column=0, row=2, pady=5, sticky='e')
