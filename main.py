@@ -14,9 +14,9 @@ from view.styles.dark_mode import *
 #Mejorar UI 
 #Completar y verificar estilos
 #Crear Readme
-#Pasar cerrar abiertos :/
+#Arreglar conteo de tickets para alertas .¿
 #Revisar para comentar
-#
+#Manejo de errores
 #Buscar cómo convertirlo en app .¿
 #.¿
 

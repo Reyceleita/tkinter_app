@@ -20,3 +20,19 @@ def query_datos_activos():
     datos = list(cursor.fetchall())
     
     return datos
+
+#Listar datos de tivkets revisados
+def query_revisados_abiertos():
+    datos = list()
+    
+    command = """
+        SELECT id_ticket, titulo, estado, fecha_apertura, fecha_limite, categoria, prioridad, solicitante, 
+        localizacion, tecnico_id, forma_solucion_id, script_id, fecha_solucion, observaciones, revisado
+        FROM tickets_diarios
+        WHERE revisado = 'Revisado'
+    """
+    
+    cursor.execute(command)
+    datos.clear()
+    datos = list(cursor.fetchall())
+    return datos

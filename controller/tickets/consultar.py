@@ -46,3 +46,14 @@ def obtener_desplegables_tickets(id):
     cursor.execute(command, (id, ))
     info = list(cursor.fetchall()[0])
     return info
+
+def query_tickets():
+    command = """
+        SELECT id_ticket, titulo, estado, fecha_apertura, fecha_limite, categoria, prioridad, solicitante, 
+        localizacion, tecnico_id, forma_solucion_id, script_id, fecha_solucion, observaciones, revisado
+        FROM tickets
+    """
+    
+    cursor.execute(command)
+    datos = list(cursor.fetchall())
+    return datos

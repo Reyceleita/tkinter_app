@@ -3,6 +3,7 @@ from tkinter import  messagebox
 from controller.data.obtener_data import *
 from controller.tecnicos.consultar import *
 from controller.data.validaciones import *
+from view.alertas.error import * 
 
 
 def actualizar_tecnico(id_tecnico, cargo_edit, fecha_i_editar, fecha_s_editar, nombre_edit, editar, cargo_id, tabla):
@@ -38,9 +39,9 @@ def actualizar_tecnico(id_tecnico, cargo_edit, fecha_i_editar, fecha_s_editar, n
             editar.destroy()
             cargar_tecnicos(tabla)
         else:
-            messagebox.showerror('Error', 'Complete todos los campos')
+            ErrorAlert(editar, 'Complete todos los campos')
             editar.lift()
     else:
-        messagebox.showerror('Error', 'Fecha inválida \nFormato correcto: YYYY-MM-DD')
+        ErrorAlert(editar, 'Fecha inválida \nFormato correcto: YYYY-MM-DD')
         editar.lift()
 

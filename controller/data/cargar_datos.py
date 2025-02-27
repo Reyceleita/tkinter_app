@@ -1,7 +1,8 @@
 import pandas as pd
 from tkinter import filedialog, messagebox
+from view.alertas.error import *
 
-def cargar_datos():
+def cargar_datos(frame):
     """
     Leer archivo csv y trnasforma los datos para su manejo
     
@@ -32,7 +33,7 @@ def cargar_datos():
                 reporte = reporte.where(pd.notna(reporte), None)
                 return reporte
             except Exception as e:
-                print(f"Error: {e} i")
+                ErrorAlert(frame, e)
+                
         except Exception as e:
-            messagebox.showwarning('Advertencia', f'No se pudo cargar el archivo \nArchivo no válido, solo se admiten arcivos .csv')
-            print(e, 'e')
+            ErrorAlert(frame, e)

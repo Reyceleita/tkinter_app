@@ -51,7 +51,7 @@ class TabTickets(ttk.Frame):
         scrolly.config(command=self.tabla.yview) #Vincular scrollbar a la tabla
         
         #Boton de acción
-        ttk.Button(self, text='Subir archivo', command=self.subir_archivo).grid(row=1, column=0, padx=5, pady=5, sticky='w')
+        ttk.Button(self, text='Subir archivo', command= lambda: self.subir_archivo(self)).grid(row=1, column=0, padx=5, pady=5, sticky='w')
         
         #Configuración de encabezados de la tabla
         for columna in self.columnas:
@@ -86,7 +86,7 @@ class TabTickets(ttk.Frame):
         self.conteo.set(mostrar_datos(filtro(self.tabla, filter_values), self.tabla))
         self.contador.set(f"Se muestran: {self.conteo.get()}")
     
-    def subir_archivo(self):
-        subir_tickets(self.tabla)
+    def subir_archivo(self, frame):
+        subir_tickets(self.tabla, frame)
         self.conteo.set(mostrar_datos(query_datos(), self.tabla))
         self.contador.set(f'Se muestran: {self.conteo.get()}')

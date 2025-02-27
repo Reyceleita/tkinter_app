@@ -12,7 +12,7 @@ connection = connection_to_db()
 cursor = connection.cursor()
 
 #Cargar tickets abiertos en la tabla especificada
-def subir_tickets(tabla):
+def subir_tickets(tabla, frame):
     """
     Carga datos desde un archivo y los inserta o actualiza en la base de datos de tickets.
 
@@ -21,7 +21,7 @@ def subir_tickets(tabla):
     """
     
     #Cargar datos desde un CSV
-    reporte = cargar_datos()
+    reporte = cargar_datos(frame)
     
     ##Agregar alerta de error
     if reporte is None:

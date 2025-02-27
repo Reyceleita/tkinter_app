@@ -7,6 +7,7 @@ from controller.data.mostrar import *
 from controller.abiertos.consultar import *
 from view.abiertos.edit_abiertos import *
 from controller.abiertos.filtro import *
+from controller.abiertos.cerrar_tickets import *
 
 #Pestaña de tickets abiertos
 class TabAbiertos(ttk.Frame):
@@ -36,7 +37,6 @@ class TabAbiertos(ttk.Frame):
         
         #Etiquetas informativas
         ttk.Label(self, text='Tickets abiertos', font=('Arial', 14)).grid(row=0, column=5, sticky='wn')
-        ttk.Button(self, text='Cerrar revisados', command='').grid(row=3, column=0, padx=5, pady=5, sticky='w')
         ttk.Label(self, text='Se muestran: ', font=('Arial', 10)).grid(row=2, column=11, padx=20, sticky='e')
         ttk.Label(self, textvariable=self.conteo, font=('Arial', 10)).grid(row=2, column=11, sticky='e', padx=5)
         
@@ -67,8 +67,9 @@ class TabAbiertos(ttk.Frame):
         #Vincular selección de la tabla a una función
         self.tabla.bind("<<TreeviewSelect>>", self.obtener_ticket)
         
-        #Botón de acción
+        #Botones de acción
         ttk.Button(self, text='Subir archivo', command=self.subir_archivo).grid(row=1, column=0, padx=5, sticky='w')
+        ttk.Button(self, text='Cerrar revisados', command=lambda: cerrar_abierto(self.tabla, self)).grid(row=3, column=0, padx=5, pady=5, sticky='w')
         
         #Cargar datos en la tabla y actualizar conteo 
         mostrar_datos(query_datos_activos(), self.tabla)

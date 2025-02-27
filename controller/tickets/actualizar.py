@@ -4,6 +4,7 @@ from model.connection import *
 from controller.data.obtener_data import *
 from controller.data.validaciones import *
 from controller.tickets.consultar import *
+from view.alertas.error import *
 
 #Crear conexión y cursor de Base de datos
 connection = connection_to_db()
@@ -54,9 +55,9 @@ def actualizar_ticket(id_ticket, solucion, tecnico, script, fecha, observacion, 
             frame.destroy()
             mostrar_datos(query_datos(), tabla)
         else: 
-            messagebox.showerror('Error', 'Complete todos los campos')
+            ErrorAlert(frame, 'Complete todos los campos')
             frame.lift()
             
     else:
-        messagebox.showerror('Error', 'Fecha inválida \nFormato correcto: YYYY-MM-DD')
+        ErrorAlert(frame, 'Fecha inválida \nFormato correcto: YYYY-MM-DD')
         frame.lift()

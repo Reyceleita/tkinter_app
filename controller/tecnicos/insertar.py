@@ -68,6 +68,6 @@ def crear_tecnico(cargo_id, cargo, fecha_ingreso, nombre, fecha_salida, tabla_te
                 except Exception as e:
                     print(e)
         else:
-            messagebox.showerror('Error', 'Complete todos los campos')
+            ErrorAlert(frame, 'Complete todos los campos')
     else:
-        messagebox.showerror('Error', 'Fecha inválida \nFormato correcto: YYYY-MM-DD')
+        ErrorAlert(frame, 'Fecha inválida \nFormato correcto: YYYY-MM-DD')

@@ -14,7 +14,7 @@ connection = connection_to_db()
 cursor = connection.cursor()
 
 def subir_abiertos(tabla, frame):
-    reporte = cargar_datos()
+    reporte = cargar_datos(frame)
     
     tickets_csv = list()
     
@@ -109,5 +109,4 @@ def subir_abiertos(tabla, frame):
                 actualizar_estado_abiertos('Escalado', ticket)
         mostrar_datos(query_datos_activos(), tabla)
     
-    # messagebox.showinfo('Completado', 'Se cargaron correctamente los registros')
     Completado(frame, 'Se cargaron correctamente los registros')
