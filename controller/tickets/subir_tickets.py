@@ -6,6 +6,7 @@ from controller.data.validaciones import *
 from controller.data.cargar_datos import *
 from controller.data.mostrar import *
 from controller.tickets.consultar import *
+from view.alertas.error import *
 
 #Crear conexión y cursor de Base de datos
 connection = connection_to_db()
@@ -23,11 +24,10 @@ def subir_tickets(tabla, frame):
     #Cargar datos desde un CSV
     reporte = cargar_datos(frame)
     
-    ##Agregar alerta de error
     if reporte is None:
         #Regresa error si el CSV esta vacio
-        exce = 'Documento vacio'
-        return exce
+        ErrorAlert(frame, 'Tipo de archivo vacio o \n Tipo de archivo incorrecto')
+        return
     
     #Obtner tickets de la base de datos
     command_R = "SELECT id_ticket FROM tickets;"

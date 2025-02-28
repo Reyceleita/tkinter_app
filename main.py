@@ -18,6 +18,9 @@ from view.styles.dark_mode import *
 #Revisar para comentar
 #Manejo de errores
 #Buscar cómo convertirlo en app .¿
+#
+#Revisar que al subir reporte mensual no sobreescriba los revisados (creo q si valida ._.) >:/ (Revisar lógica actualizar abierto, [no actualiza si el cambio es sin cambios X.X])
+#
 #.¿
 
 

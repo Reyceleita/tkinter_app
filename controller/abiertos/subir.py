@@ -105,8 +105,11 @@ def subir_abiertos(tabla, frame):
         for ticket in tickets_db:
             ticket = ticket[0]
             estado = obtener_estado(ticket)
-            if ticket not in tickets_csv and estado == 'Nuevo':
-                actualizar_estado_abiertos('Escalado', ticket)
+            if ticket not in tickets_csv: 
+                if estado == 'Nuevo' or estado == 'Sn cambios':
+                    actualizar_estado_abiertos('Escalado', ticket)
+                else:
+                    pass
         mostrar_datos(query_datos_activos(), tabla)
     
     Completado(frame, 'Se cargaron correctamente los registros')
