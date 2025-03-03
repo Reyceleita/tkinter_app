@@ -111,5 +111,6 @@ def subir_abiertos(tabla, frame):
                 else:
                     pass
         mostrar_datos(query_datos_activos(), tabla)
+        
     
     Completado(frame, 'Se cargaron correctamente los registros')

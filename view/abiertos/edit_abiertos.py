@@ -43,12 +43,12 @@ class EditarAbiertos(tk.Toplevel):
         ttk.Label(self, text='Tecnico asignado', font=('Arial', 12)).grid(row=2, column=0, pady=5)
         ttk.Label(self, text='Forma de solución', font=('Arial', 12)).grid(row=2, column=2, pady=5, padx=40)
         ttk.Label(self, text='Observación', font=('Arial', 12)).grid(row=6, column=0, pady=5, padx=40)
-        ttk.Label(self, text='Script usado', font=('Arial', 12)).grid(row=4, column=0, pady=5, padx=40, sticky='e')
-        ttk.Label(self, text='Fecha de solución', font=('Arial', 12)).grid(row=4, column=2, pady=5, padx=40, sticky='e')
+        ttk.Label(self, text='Script usado', font=('Arial', 12)).grid(row=4, column=0, pady=5, padx=40)
+        ttk.Label(self, text='Fecha de solución', font=('Arial', 12)).grid(row=4, column=2, pady=5, padx=40)
         
         #Campos de entrada
-        ttk.Entry(self, textvariable=self.titulo, state='readonly').grid(row=1, column=0, columnspan=3, padx=65, sticky='we')
-        ttk.Entry(self, textvariable=id_ticket, width=8, state='readonly').grid(row=1, column=0, padx=5, pady=5, sticky='w')
+        ttk.Entry(self, textvariable=self.titulo, state='readonly', style="Label.TEntry").grid(row=1, column=0, columnspan=3, padx=65, sticky='we')
+        ttk.Entry(self, textvariable=id_ticket, width=8, state='readonly', style="Label.TEntry").grid(row=1, column=0, padx=10, pady=5, sticky='w')
         obsevacion_campo = ttk.Entry(self, width=30, textvariable=self.observacion_db)
         fecha_campo = ttk.Entry(self, textvariable=self.fecha_db, width=33)
         tecnico_campo = ttk.Combobox(self, textvariable=self.tecnico_db, state='readonly', width=30)
@@ -58,7 +58,7 @@ class EditarAbiertos(tk.Toplevel):
         #Posicionamiento de widgets
         tecnico_campo.grid(row=3, column=0, pady=5, padx=40)
         solucion_campo.grid(row=3, column=2, pady=5, padx=40, sticky='e')
-        obsevacion_campo.grid(row=7, column=0, pady=5, padx=40, sticky='e')
+        obsevacion_campo.grid(row=7, column=0, columnspan=3, pady=5, padx=40, sticky='we')
         script_campo.grid(row=5, column=0, pady=5, padx=40)
         fecha_campo.grid(row=5, column=2, pady=5, padx=40, sticky='e')
         
@@ -70,5 +70,14 @@ class EditarAbiertos(tk.Toplevel):
         #Botón de acción
         guardar = ttk.Button(self, text='Guardar', width=25, command= lambda: actualizar_abierto(id_ticket.get(), solucion_campo.get(), tecnico_campo.get(), script_campo.get(), fecha_campo.get(), 
                                                                                             obsevacion_campo.get(), self, tecnico_list, script_list, solucion_list, tabla))
-        guardar.grid(row=7, column=2, rowspan=2, pady=5, padx=40, sticky='e') #Posicionamiento de botón
-
+        guardar.grid(row=8, column=2, rowspan=2, pady=15, padx=40, sticky='e') #Posicionamiento de botón
+        
+        #Definir dimensiones de la alerta
+        self.update_idletasks()
+        self.geometry("")
+        ancho = self.winfo_reqwidth()
+        alto = self.winfo_reqheight()
+        x = (self.winfo_screenwidth() // 2) - (ancho // 2)
+        y = (self.winfo_screenheight() // 2) - (alto // 2)
+        self.geometry(f"{ancho}x{alto}+{x}+{y}")
+        self.grab_set()

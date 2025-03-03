@@ -26,8 +26,15 @@ def dark_theme(style):
                     ("Treeview.treearea", {"sticky": "nswe"})
                 ],
                 "configure": {
-                    "background": "#121212",
+                    "background": "#1E1E1E",
                     "fieldbackground": "red",
+                }
+            },
+            "Treeview.Heading":{
+                "configure": {
+                    "background": "#1E1E1E",
+                    "relief": "solid",
+                    "borderwidth": 2
                 }
             },
             "TScrollbar": {
@@ -92,6 +99,29 @@ def dark_theme(style):
                     "insertbackgroud": [("focus", "white")]
                 }
             },
+            "Label.TEntry": {
+                "layout": [
+                    ("Entry.field", {"sticky": "nswe", "border": 0,  "children": [
+                        ("Entry.padding", {"sticky": "nswe",  "children": [
+                            ("Entry.label", {"sticky": "nswe"}),
+                            ("Entry.textarea", {"sticky": "nswe"})
+                        ]})
+                    ]})
+                ],
+                "configure": {
+                    "background": "#1E1E1E",
+                    "foreground": "#00C896",
+                    "fieldbackground": "#1E1E1E",
+                    "insertborderwidth": 10,
+                    "relief": "flat",
+                    "bordercolor": "#1E1E1E",
+                    "padding": (5,3,3,3),
+                    "insertbackground": "#1E1E1E",
+                },
+                map: {
+                    "insertbackgroud": [("focus", "#1E1E1E")]
+                }
+            },
             "Titulo.TLabel": {
                 "layout": [
                     ("Label.border", {"sticky": "nswe", "children":[
@@ -152,7 +182,9 @@ def dark_theme(style):
                 "configure":{
                     "font": ("Arial", 10),
                     "foreground": '#121212',
-                    "background": "#A0A0A0"
+                    "background": "#A0A0A0",
+                    "padding": (5,5,15,5)
+                    
                 }
             },
             "Error.TLabel":{
@@ -166,6 +198,7 @@ def dark_theme(style):
                 "configure": {
                     "font": ("Arial", 16, "bold"),
                     "foreground": "Red",
+                    "padding": (5,5,15,5)
                 }
             },
             "Completado.TLabel":{
@@ -179,7 +212,9 @@ def dark_theme(style):
                 "configure": {
                     "font": ("Arial", 16, "bold"),
                     "foreground": "green",
-                    "background": "#A0A0A0"
+                    "background": "#A0A0A0",
+                    "padding": (5,5,15,5)
+                    
                 }
             },
             "TextCompletado.TLabel":{

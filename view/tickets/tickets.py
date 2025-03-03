@@ -90,3 +90,7 @@ class TabTickets(ttk.Frame):
         subir_tickets(self.tabla, frame)
         self.conteo.set(mostrar_datos(query_datos(), self.tabla))
         self.contador.set(f'Se muestran: {self.conteo.get()}')
+    
+    def traer_tabla(self):
+        tabla = self.tabla
+        return tabla

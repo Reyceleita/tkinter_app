@@ -8,6 +8,7 @@ from controller.abiertos.consultar import *
 from view.abiertos.edit_abiertos import *
 from controller.abiertos.filtro import *
 from controller.abiertos.cerrar_tickets import *
+from model.exportToSCV import *
 
 #Pestaña de tickets abiertos
 class TabAbiertos(ttk.Frame):
@@ -70,6 +71,7 @@ class TabAbiertos(ttk.Frame):
         #Botones de acción
         ttk.Button(self, text='Subir archivo', command=self.subir_archivo).grid(row=1, column=0, padx=5, sticky='w')
         ttk.Button(self, text='Cerrar revisados', command=lambda: cerrar_abierto(self.tabla, self)).grid(row=3, column=0, padx=5, pady=5, sticky='w')
+        ttk.Button(self, text='Exportar datos', command=exportar_datos).grid(row=3, column=11, sticky='e')
         
         #Cargar datos en la tabla y actualizar conteo 
         mostrar_datos(query_datos_activos(), self.tabla)
@@ -84,14 +86,21 @@ class TabAbiertos(ttk.Frame):
         EditarAbiertos(self, id_ticket, titulo_ticket, self.tabla)
         self.contador.set(f'Se muestran: {self.conteo.get()}')
     
-    #Filtrar segúnlo escito en los campos Entry
+    #Filtrar según lo escito en los campos Entry
     def filtrar(self, event):
         filter_values = {col: self.filters[col].get() for col in self.columnas}
         filtro(tabla=self.tabla, filter=filter_values)
+        #Actualizar contador
         self.conteo.set(mostrar_datos(filtro(self.tabla, filter_values), self.tabla))
         self.contador.set(f'Se muestran: {self.conteo.get()}')
     
+    #Llamar función para subir archivo
     def subir_archivo(self):
         subir_abiertos(self.tabla, self)
+        #Actualizar contador
         self.conteo.set(mostrar_datos(query_datos_activos(), self.tabla))
         self.contador.set(f'Se muestran: {self.conteo.get()}')
+    
+    def traer_tabla(self):
+        tabla = self.tabla
+        return tabla

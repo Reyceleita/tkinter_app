@@ -80,3 +80,8 @@ class TabTecnicos(ttk.Frame):
         tecnico = self.tabla_tecnicos.selection()[0]
         nombre = str(self.tabla_tecnicos.item(tecnico, 'values')[0])
         EditarTecnico(self, nombre, self.tabla_tecnicos, self.cargo_id)
+        
+    def traer_tabla(self):
+        tabla = self.tabla_tecnicos
+        return tabla
+        

@@ -8,19 +8,21 @@ from view.tickets.tickets import *
 from view.tecnicos.tecnicos import *
 from view.styles.dark_mode import *
 
-
 #HACERRR
 #
 #Mejorar UI 
 #Completar y verificar estilos
 #Crear Readme
-#Arreglar conteo de tickets para alertas .¿
+#Arreglar conteo de tickets para {alertas} .¿
 #Revisar para comentar
 #Manejo de errores
 #Buscar cómo convertirlo en app .¿
-#
+#Agregar spinn(coso de carga)
 #Revisar que al subir reporte mensual no sobreescriba los revisados (creo q si valida ._.) >:/ (Revisar lógica actualizar abierto, [no actualiza si el cambio es sin cambios X.X])
 #
+#Agregar pestaña para manejo de datos
+#Organizar fechas 
+# 
 #.¿
 
 
@@ -29,6 +31,7 @@ class App(tk.Tk):
     def __init__(self):
         super().__init__()
         
+        #Asignar estilos
         style = ttk.Style()
         dark_theme(style)
         self.option_add("*background", "#121212")
@@ -50,7 +53,6 @@ class App(tk.Tk):
         self.abiertos = TabAbiertos(self.notebook)
         self.tickets = TabTickets(self.notebook)
         self.tecnicos = TabTecnicos(self.notebook)
-        
         self.notebook.add(self.abiertos, text='Abiertos')
         self.notebook.add(self.tecnicos, text='Tecnicos')
         self.notebook.add(self.tickets, text='Tickets')
@@ -64,13 +66,11 @@ class App(tk.Tk):
         pestaña = self.notebook.index(self.notebook.select())
         
         if pestaña == 0:
-            pass
+            mostrar_datos(query_datos_activos(), self.abiertos.traer_tabla())
         elif pestaña == 1:
-            pass
-        else:
-            pass
-    
-
+            cargar_tecnicos(self.tecnicos.traer_tabla())
+        elif pestaña == 2:
+            mostrar_datos(query_datos(), self.tickets.traer_tabla())
 
 #Ejecución de aplicación
 if __name__ == '__main__':
