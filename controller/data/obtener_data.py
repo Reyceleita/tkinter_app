@@ -1,5 +1,6 @@
 from model.connection import *
 
+
 connection = connection_to_db()
 cursor = connection.cursor()
 
@@ -26,8 +27,6 @@ def obtener_estado(ticket):
     estado = cursor.fetchone()
     estado = estado[0]
     return estado
-
-
 
 #Función para obtener las soluciones de base de datos
 def cargar_solucion(solucion, solucion_list):
@@ -66,7 +65,7 @@ def cargar_tecnico(tecnico, tecnico_list):
         tecnico_list[tecnico_] = id_tecnico
         tecnico['values'] = list(tecnico_list.keys())
 
-#
+#Obtener las observaciones de base de datos
 def cargar_observacion(tabla, id):
     command = f"SELECT observaciones FROM {tabla} WHERE id_ticket = ?"
     cursor.execute(command, (id, ))

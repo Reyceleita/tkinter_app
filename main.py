@@ -13,12 +13,12 @@ from view.styles.dark_mode import *
 #Mejorar UI 
 #Completar y verificar estilos
 #Crear Readme
-#Arreglar conteo de tickets para {alertas} .¿
+#Arreglar conteo de tickets para {alertas} .¿ /*ARREGLADO*/
 #Revisar para comentar
+#Agregar hover para tablas
 #Manejo de errores
 #Buscar cómo convertirlo en app .¿
-#Agregar spinn(coso de carga)
-#Revisar que al subir reporte mensual no sobreescriba los revisados (creo q si valida ._.) >:/ (Revisar lógica actualizar abierto, [no actualiza si el cambio es sin cambios X.X])
+#Revisar que al subir reporte mensual no sobreescriba los revisados (creo q si valida ._.) >:/ (Revisar lógica actualizar abierto, [no actualiza si el cambio es sin cambios X.X]) /*ARREGLADOOOOOO*/
 #
 #Agregar pestaña para manejo de datos
 #Organizar fechas 

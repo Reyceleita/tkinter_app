@@ -6,6 +6,7 @@ from controller.data.validaciones import *
 from controller.data.cargar_datos import *
 from controller.data.mostrar import *
 from controller.tickets.consultar import *
+from view.alertas.correcto import *
 from view.alertas.error import *
 
 #Crear conexión y cursor de Base de datos
@@ -69,6 +70,7 @@ def subir_tickets(tabla, frame):
         
         
         if existe:
+            actualizados =+1
             #Obtener el técnico actual y estado del ticket en la base de datos
             command_F = "SELECT tecnico_id, estado FROM tickets WHERE id_ticket = ?"
             cursor.execute(command_F, (id_ticket,))
@@ -84,7 +86,7 @@ def subir_tickets(tabla, frame):
             cambios = False #Indica si hubo cambios
             
             #Si el técnico cambió y no es None ni 'Sin asignar', se actualiza
-            if tecnico_i != None and tecnico_normalizado != tecnico_actual_nombre and tecnico_i != 'Sin asignar' :
+            if tecnico_i != None or tecnico_normalizado != tecnico_actual_nombre or tecnico_i != 'Sin asignar' :
                 for t in tecnicos:
                     if tecnico_i == t[1]: #Buscar técnico en base de datos
                         tecnico_i = obtener_id_tecnico(tecnico_i)
@@ -108,6 +110,7 @@ def subir_tickets(tabla, frame):
                 except Exception as e:
                     print(e, 'c')
         else:
+            nuevos +=1
             #Se asigna técnico default si no hay tecnico en la fila
             if tecnico_i == None:
                 tecnico_i = '1'
@@ -137,9 +140,11 @@ def subir_tickets(tabla, frame):
 
     #Mostrar mensaje de exito con la cantidad de registros procesados
     if actualizados > 0 and nuevos > 0 or actualizados == 0:
-        messagebox.showinfo('Subida completada', f"Se cargaron correctamente {nuevos} registros nuevos")
+        Completado(frame, f"Se cargaron correctamente {nuevos} registros nuevos")
+    elif nuevos > 0 and actualizados == 0:
+        Completado(frame, f'Se subieron {actualizados} tickets nuevos')
     elif actualizados > 0 and nuevos == 0:
-        messagebox.showinfo('Subida completada', f"No se cargó ningún registro nuevo")
+        Completado(frame, f"No se cargó ningún registro nuevo")
     
     #Actualizar interfaz con los datos de la base de datos
     mostrar_datos(query_datos(), tabla)

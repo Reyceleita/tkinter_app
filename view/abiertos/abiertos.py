@@ -1,3 +1,4 @@
+import threading
 import tkinter as tk
 from tkinter import *
 from tkinter import ttk
@@ -9,6 +10,7 @@ from view.abiertos.edit_abiertos import *
 from controller.abiertos.filtro import *
 from controller.abiertos.cerrar_tickets import *
 from model.exportToSCV import *
+from view.alertas.progressbar import *
 
 #Pestaña de tickets abiertos
 class TabAbiertos(ttk.Frame):
@@ -41,6 +43,8 @@ class TabAbiertos(ttk.Frame):
         ttk.Label(self, text='Se muestran: ', font=('Arial', 10)).grid(row=2, column=11, padx=20, sticky='e')
         ttk.Label(self, textvariable=self.conteo, font=('Arial', 10)).grid(row=2, column=11, sticky='e', padx=5)
         
+        
+        self.progreso = ttk.Progressbar(self, orient='horizontal', length=250, mode='indeterminate')
         
         #Configuración de tabla y scroll
         scrolly = ttk.Scrollbar(self, orient='vertical')
@@ -95,8 +99,10 @@ class TabAbiertos(ttk.Frame):
         self.contador.set(f'Se muestran: {self.conteo.get()}')
     
     #Llamar función para subir archivo
-    def subir_archivo(self):
-        subir_abiertos(self.tabla, self)
+    def subir_archivo(self,):
+        reporte = cargar_datos(self)
+        progressbar = Progressbar(self)
+        self.after(100, lambda: subir_abiertos(self.tabla, self, reporte, progressbar))
         #Actualizar contador
         self.conteo.set(mostrar_datos(query_datos_activos(), self.tabla))
         self.contador.set(f'Se muestran: {self.conteo.get()}')

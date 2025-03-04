@@ -12,8 +12,9 @@ cursor = connection.cursor()
 def cerrar_abierto(tabla, frame):
     revisados = query_revisados_abiertos()
     cerrados = query_tickets()
-    
+    conteo = 0
     for row in revisados:
+        conteo += 1
         existe = False
         
         id_ticket = row[0]
@@ -60,4 +61,4 @@ def cerrar_abierto(tabla, frame):
         connection.commit()
         
     mostrar_datos(query_datos_activos(), tabla)
-    Completado(frame, 'Se cerraron correctamente')
+    Completado(frame, f'Se cerraron correctamente {conteo} tickets')
