@@ -1,6 +1,8 @@
 import pandas as pd
 from tkinter import filedialog, messagebox
+
 from view.alertas.error import *
+from logs.logger_config import logger
 
 def cargar_datos(frame):
     """
@@ -33,7 +35,9 @@ def cargar_datos(frame):
                 reporte = reporte.where(pd.notna(reporte), None)
                 return reporte
             except Exception as e:
-                ErrorAlert(frame, e)
+                logger.error('Parametros del archivo incorrectos: %s', e)
+                ErrorAlert(frame, 'Error al leer el archivo')
                 
         except Exception as e:
-            ErrorAlert(frame, e)
+            logger.error('No se identificó el archivo: %s', e)
+            ErrorAlert(frame, 'Archivo incorrecto')

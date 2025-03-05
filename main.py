@@ -7,6 +7,7 @@ from view.abiertos.abiertos import *
 from view.tickets.tickets import *
 from view.tecnicos.tecnicos import *
 from view.styles.dark_mode import *
+from settings.settings import *
 
 #HACERRR
 #
@@ -14,28 +15,35 @@ from view.styles.dark_mode import *
 #Completar y verificar estilos
 #Crear Readme
 #Arreglar conteo de tickets para {alertas} .¿ /*ARREGLADO*/
-#Revisar para comentar
-#Agregar hover para tablas
-#Manejo de errores
+#Revisar para comentar/*pro gre so*/
+#Agregar hover para tablas /*LISTOOO*/
+#Manejo de errores y agregar logs? /*LISTOOO*/
+#Agregar confirmación en según que partes
 #Buscar cómo convertirlo en app .¿
-#Revisar que al subir reporte mensual no sobreescriba los revisados (creo q si valida ._.) >:/ (Revisar lógica actualizar abierto, [no actualiza si el cambio es sin cambios X.X]) /*ARREGLADOOOOOO*/
+#Revisar que al subir reporte mensual no sobreescriba los revisados (creo q si valida ._.) >:/ (Revisar lógica actualizar abierto, [no actualiza si el cambio es sin cambios X_X]) /*ARREGLADOOOOOO*/
 #
-#Agregar pestaña para manejo de datos
+#Mejorar colores y agregar imágenes en alertas :P
+#Crear más temas >:O
+#
+#Agregar pestaña para manejo de datos/*pro gre so*/
+#Agregar lógica para vaciar tablas de DB 
 #Organizar fechas 
-# 
-#.¿
+#
+#
+#Cambiar nombre de app
+#
+# .¿
 
 
 #Se crea app principal
 class App(tk.Tk):
     def __init__(self):
         super().__init__()
-        
         #Asignar estilos
         style = ttk.Style()
         dark_theme(style)
-        self.option_add("*background", "#121212")
-        self.option_add("*foreground", "#B0B0B0")
+        
+        aplicar_tema(style, self)
         
         #Configura ventana principal
         self.title('App')
@@ -60,6 +68,8 @@ class App(tk.Tk):
         #Vincular evento de pestañas 
         
         self.notebook.bind('<<NotebookTabChanged>>', self.on_tab_selected)
+        
+        #ttk.Button(self.notebook, text='*').place(x=1280, y=25)
         
     #Cargar datos al cambiar de pestaña
     def on_tab_selected(self, event):

@@ -21,6 +21,7 @@ class TabTecnicos(ttk.Frame):
         self.nombre = StringVar()
         self.fecha_ingreso = StringVar()
         self.fecha_salida = StringVar()
+        self.last_hover = None
         
         #Columnas para la tabla
         columnas = (
@@ -65,11 +66,14 @@ class TabTecnicos(ttk.Frame):
         
         #Vincular selección de la tabla a una función
         self.tabla_tecnicos.bind("<<TreeviewSelect>>", self.obtener_tecnico)
+        self.tabla_tecnicos.bind("<Motion>", self.on_hover)
+        self.tabla_tecnicos.bind("<Leave>", self.on_leave)
         
         #Botón de acción
         ttk.Button(self, text='Crear', command=lambda: crear_tecnico(self.cargo_id, self.cargo_campo.get(), 
                                                                     self.ingreso_campo.get(), self.nombre_campo.get(), self.salida_campo.get(), 
-                                                                    self.tabla_tecnicos, self.nombre_campo, self.ingreso_campo, self.salida_campo, self.cargo_campo, self )).grid(row=5, column=2, columnspan=1, pady=5, sticky='E')
+                                                                    self.tabla_tecnicos, self.nombre_campo, self.ingreso_campo, self.salida_campo, 
+                                                                    self.cargo_campo, self )).grid(row=5, column=2, columnspan=1, pady=5, sticky='E')
         
         #Cargar datos en la taba y en combobox
         cargar_tecnicos(self.tabla_tecnicos)
@@ -84,4 +88,20 @@ class TabTecnicos(ttk.Frame):
     def traer_tabla(self):
         tabla = self.tabla_tecnicos
         return tabla
-        
+    
+    def on_hover(self, event):
+        item = self.tabla_tecnicos.identify_row(event.y)
+        if item and item != self.last_hover:
+            
+            if self.last_hover:
+                self.tabla_tecnicos.item(self.last_hover, tags=())
+            
+            self.tabla_tecnicos.tag_configure("hover", background="#D3D3D3", foreground="black")
+            self.tabla_tecnicos.item(item, tags=("hover",))
+            
+            self.last_hover = item
+    
+    def on_leave(self, event):
+        if self.last_hover:
+            self.tabla_tecnicos.item(self.last_hover, tags=())
+            self.last_hover = None

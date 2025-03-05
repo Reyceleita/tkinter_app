@@ -9,25 +9,32 @@ from controller.data.cargar_datos import *
 from controller.data.mostrar import *
 from view.alertas.correcto import *
 from view.alertas.progressbar import *
+from logs.logger_config import logger
 
 connection = connection_to_db()
 cursor = connection.cursor()
 
+#♪
+#Agregar tickets en la interfaz de abiertos
 def subir_abiertos(tabla, frame, reporte, progressbar):
     try: 
+        #Definición de variables para conteo
         conteo_actu = 0
         conteo_esc = 0
         coneto_nuevo = 0
         conteo_sin = 0
-        tickets_csv = list()
+        tickets_csv = list() #Variable que guarda todos los datos
 
+        #Validar reporte válido
         if reporte is None:
             ex = 'Documento vacio'
             return ex
 
+        #Guardar códigos de tickets del archivo csv en la varible
         for indice, row in reporte.iterrows():
             tickets_csv = {int(indice) for indice in reporte.index} 
 
+        #Consultas de datos
         command = "SELECT id_ticket FROM tickets_diarios;"
         cursor.execute(command)
         tickets_db = cursor.fetchall()
@@ -35,6 +42,7 @@ def subir_abiertos(tabla, frame, reporte, progressbar):
         cursor.execute(command)
         tecnicos_db = list(cursor.fetchall())
 
+        #Recorrer datos del csv
         for indice, row in reporte.iterrows():
             existe = False
             id_ticket_csv = int(indice)
@@ -51,6 +59,7 @@ def subir_abiertos(tabla, frame, reporte, progressbar):
             revisado = "No revisado"
             observacion = " "
 
+            #indicar si el ticket existe
             for ticket in tickets_db:
                 if ticket[0] == id_ticket_csv:
                     existe = True
@@ -104,22 +113,25 @@ def subir_abiertos(tabla, frame, reporte, progressbar):
                                     fecha_limite_csv, categoria_csv, prioridad_csv, solicitante_csv,
                                     localizacion_csv, tecnico_csv, observacion, estado_t, revisado)
                 except Exception as e:
-                    print('error', e)
+                    logger.error('No se crearon los tickets nuevos: %s', e)
+                    ErrorAlert(frame, 'Error en la importación')
 
+        #Recorrer tickets de la base de datos
         for ticket in tickets_db:
-            ticket = ticket[0]
-            estado = obtener_estado(ticket)
+            ticket = ticket[0] #Se obtiene código del ticket
+            estado = obtener_estado(ticket) #Se obtiene estado del ticket
             if ticket not in tickets_csv: 
                 if estado == 'Nuevo' or estado == 'Sin cambios':
                     actualizar_estado_abiertos('Escalado', ticket)
                     conteo_esc +=1
                 else:
                     conteo_sin +=1
-
         mostrar_datos(query_datos_activos(), tabla)
+
+    #Ventanas de información:
     except sqlite3.Error as e:
-        ErrorAlert(frame, e)
-    
+        logger.error('No se lograron cargar los datos: %s', e)
+        ErrorAlert(frame, 'Error al subir los datos')
     finally:
         progressbar.destroy()
         Completado(frame, f'Se cargaron correctamente los registros \nSe agregaron {coneto_nuevo} tickers \nSe actualizaron {conteo_actu} tickets \nSe escalaron {conteo_esc} tickets \n{conteo_sin} tickets no tuvieron cambios')

@@ -68,7 +68,7 @@ class EditarAbiertos(tk.Toplevel):
         cargar_tecnico(tecnico_campo, tecnico_list)
         
         #Botón de acción
-        guardar = ttk.Button(self, text='Guardar', width=25, command= lambda: actualizar_abierto(id_ticket.get(), solucion_campo.get(), tecnico_campo.get(), script_campo.get(), fecha_campo.get(), 
+        guardar = ttk.Button(self, text='Guardar', width=25, command= lambda: actualizar_abierto(id_ticket.get(), solucion_campo.get(), tecnico_campo.get(), script_campo.get(), fecha_campo.get(),
                                                                                             obsevacion_campo.get(), self, tecnico_list, script_list, solucion_list, tabla))
         guardar.grid(row=8, column=2, rowspan=2, pady=15, padx=40, sticky='e') #Posicionamiento de botón
         

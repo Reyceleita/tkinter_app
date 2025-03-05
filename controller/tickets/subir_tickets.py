@@ -8,6 +8,7 @@ from controller.data.mostrar import *
 from controller.tickets.consultar import *
 from view.alertas.correcto import *
 from view.alertas.error import *
+from logs.logger_config import logger
 
 #Crear conexión y cursor de Base de datos
 connection = connection_to_db()
@@ -136,7 +137,8 @@ def subir_tickets(tabla, frame):
                 
                 nuevos +=1 #Incrementa contador de tickets insertados
             except Exception as e:
-                print(e, 'a')
+                logger.error('No se lograron cargar los tickets %s', e)
+                ErrorAlert(frame, 'Error al cargar los datos')
 
     #Mostrar mensaje de exito con la cantidad de registros procesados
     if actualizados > 0 and nuevos > 0 or actualizados == 0:

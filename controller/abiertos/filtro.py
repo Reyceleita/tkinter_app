@@ -3,7 +3,7 @@ from model.connection import *
 connection = connection_to_db()
 cursor = connection.cursor()
 
-
+#Filtrar columnas según parámetros
 def filtro(tabla, filter=None):
 
     tabla.delete(*tabla.get_children())

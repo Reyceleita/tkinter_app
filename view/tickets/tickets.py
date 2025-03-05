@@ -26,6 +26,7 @@ class TabTickets(ttk.Frame):
         self.rowconfigure(7, weight=1)
         self.conteo = IntVar(value=0) #Definición de variable
         self.contador = StringVar()
+        self.last_hover = None
         
         for i in range(len(self.columnas)+ 1):
             self.grid_columnconfigure(i, weight=1)
@@ -66,6 +67,8 @@ class TabTickets(ttk.Frame):
             
         #Vincular selección de la tabla a una función
         self.tabla.bind('<<TreeviewSelect>>', self.obtener_ticket)
+        self.tabla.bind('<Motion>', self.on_hover)
+        self.tabla.bind('<Leave>', self.on_leave)
         
         #Cargar datos en la tabla y actualizar conteo 
         mostrar_datos(query_datos(), self.tabla)
@@ -94,3 +97,20 @@ class TabTickets(ttk.Frame):
     def traer_tabla(self):
         tabla = self.tabla
         return tabla
+
+    def on_hover(self, event):
+        item = self.tabla.identify_row(event.y)
+        if item and item != self.last_hover:
+            
+            if self.last_hover:
+                self.tabla.item(self.last_hover, tags=())
+            
+            self.tabla.tag_configure("hover", background="#D3D3D3", foreground="black")
+            self.tabla.item(item, tags=("hover",))
+            
+            self.last_hover = item
+    
+    def on_leave(self, event):
+        if self.last_hover:
+            self.tabla.item(self.last_hover, tags=())
+            self.last_hover = None

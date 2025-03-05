@@ -1,4 +1,3 @@
-import threading
 import tkinter as tk
 from tkinter import *
 from tkinter import ttk
@@ -9,8 +8,9 @@ from controller.abiertos.consultar import *
 from view.abiertos.edit_abiertos import *
 from controller.abiertos.filtro import *
 from controller.abiertos.cerrar_tickets import *
-from model.exportToSCV import *
+from controller.data.exportToSCV import *
 from view.alertas.progressbar import *
+from view.settings.settings import *
 
 #Pestaña de tickets abiertos
 class TabAbiertos(ttk.Frame):
@@ -28,7 +28,7 @@ class TabAbiertos(ttk.Frame):
         self.grid(row=0, column=0, sticky='nswe')
         self.columnconfigure(0, weight=1)
         self.rowconfigure(6, weight=1)
-        for i in range(len(self.columnas) + 1): 
+        for i in range(len(self.columnas) + 1):
             self.grid_columnconfigure(i, weight=1)
             
         #Variable para alamcenar datos a usar
@@ -36,6 +36,7 @@ class TabAbiertos(ttk.Frame):
         self.filters = {}
         self.contador = StringVar()
         self.contador.set(f'Se muestran: {self.conteo.get()}')
+        self.last_hover = None
         
         
         #Etiquetas informativas
@@ -71,11 +72,13 @@ class TabAbiertos(ttk.Frame):
         
         #Vincular selección de la tabla a una función
         self.tabla.bind("<<TreeviewSelect>>", self.obtener_ticket)
+        self.tabla.bind("<Motion>", self.on_hover)
+        self.tabla.bind("<Leave>", self.on_leave)
         
         #Botones de acción
         ttk.Button(self, text='Subir archivo', command=self.subir_archivo).grid(row=1, column=0, padx=5, sticky='w')
         ttk.Button(self, text='Cerrar revisados', command=lambda: cerrar_abierto(self.tabla, self)).grid(row=3, column=0, padx=5, pady=5, sticky='w')
-        ttk.Button(self, text='Exportar datos', command=exportar_datos).grid(row=3, column=11, sticky='e')
+        ttk.Button(self, text='Opciones', command=lambda: Ajustes(self)).grid(row=3, column=11, sticky='e')
         
         #Cargar datos en la tabla y actualizar conteo 
         mostrar_datos(query_datos_activos(), self.tabla)
@@ -90,7 +93,7 @@ class TabAbiertos(ttk.Frame):
         EditarAbiertos(self, id_ticket, titulo_ticket, self.tabla)
         self.contador.set(f'Se muestran: {self.conteo.get()}')
     
-    #Filtrar según lo escito en los campos Entry
+    #Filtrar según lo escrito en los campos Entry
     def filtrar(self, event):
         filter_values = {col: self.filters[col].get() for col in self.columnas}
         filtro(tabla=self.tabla, filter=filter_values)
@@ -99,7 +102,7 @@ class TabAbiertos(ttk.Frame):
         self.contador.set(f'Se muestran: {self.conteo.get()}')
     
     #Llamar función para subir archivo
-    def subir_archivo(self,):
+    def subir_archivo(self):
         reporte = cargar_datos(self)
         progressbar = Progressbar(self)
         self.after(100, lambda: subir_abiertos(self.tabla, self, reporte, progressbar))
@@ -110,3 +113,20 @@ class TabAbiertos(ttk.Frame):
     def traer_tabla(self):
         tabla = self.tabla
         return tabla
+    
+    def on_hover(self, event):
+        item = self.tabla.identify_row(event.y)
+        if item and item != self.last_hover:
+            
+            if self.last_hover:
+                self.tabla.item(self.last_hover, tags=())
+            
+            self.tabla.tag_configure("hover", background="#D3D3D3", foreground="black")
+            self.tabla.item(item, tags=("hover",))
+            
+            self.last_hover = item
+    
+    def on_leave(self, event):
+        if self.last_hover:
+            self.tabla.item(self.last_hover, tags=())
+            self.last_hover = None

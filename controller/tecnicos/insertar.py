@@ -5,7 +5,8 @@ from controller.data.validaciones import *
 from controller.data.obtener_data import *
 from controller.tecnicos.consultar import *
 from view.alertas.error import *
-
+from view.alertas.warning import *
+from logs.logger_config import logger
 
 def crear_tecnico(cargo_id, cargo, fecha_ingreso, nombre, fecha_salida, tabla_tecnicos, nombre_c, fecha_i_c, fecha_s_c, cargo_c, frame):
     """
@@ -66,8 +67,9 @@ def crear_tecnico(cargo_id, cargo, fecha_ingreso, nombre, fecha_salida, tabla_te
                     fecha_s_c.delete(0, tk.END)
                     cargo_c.delete(0, tk.END)
                 except Exception as e:
-                    print(e)
+                    logger.error('No se pudo crear el tecnico: %s', e)
+                    ErrorAlert(frame, 'Error al crear el técnico')
         else:
-            ErrorAlert(frame, 'Complete todos los campos')
+            AdverteciaAlerta(frame, 'Complete todos los campos')
     else:
-        ErrorAlert(frame, 'Fecha inválida \nFormato correcto: YYYY-MM-DD')
+        AdverteciaAlerta(frame, 'Fecha inválida \nFormato correcto: YYYY-MM-DD')

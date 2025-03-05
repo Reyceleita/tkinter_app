@@ -1,5 +1,9 @@
 from tkinter import *
 
+#
+#Pasar por gpt para obtener más :O
+#
+
 
 #Fondo principal: #121212 (Negro casi puro)
 #Fondo secundario: #1E1E1E (Gris oscuro)
@@ -198,6 +202,7 @@ def dark_theme(style):
                 "configure": {
                     "font": ("Arial", 16, "bold"),
                     "foreground": "Red",
+                    "background": "#A0A0A0",
                     "padding": (5,5,15,5)
                 }
             },
@@ -233,4 +238,3 @@ def dark_theme(style):
             }
         }
     )
-    style.theme_use("Dark_theme")

@@ -4,6 +4,7 @@ from tkinter import ttk
 
 from controller.data.obtener_data import *
 from controller.tickets.actualizar import *
+from controller.data.cargar_datos import *
 
 #Ventana de edición para tickets
 class EditarTicket(tk.Toplevel):
