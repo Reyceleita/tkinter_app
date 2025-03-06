@@ -72,7 +72,10 @@ def cerrar_abierto(tabla, frame):
         mostrar_datos(query_datos_activos(), tabla)
 
     #Mostrar ventanas de información:
-        Completado(frame, f'Se cerraron correctamente {conteo} tickets')
+        if conteo == 0:
+            Completado(frame, 'No se cerró nigún ticket')
+        else:
+            Completado(frame, f'Se cerraron correctamente {conteo} tickets')
     except Exception as e:
         logger.error('No se lograron cerrar los tickets: %s', e)
         ErrorAlert(frame, 'Error al cerrar revisados')

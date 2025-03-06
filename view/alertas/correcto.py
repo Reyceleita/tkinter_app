@@ -19,8 +19,8 @@ class Completado(tk.Toplevel):
 
         #Widgets que se mustran
         ttk.Label(self, text='Completado', style='Completado.TLabel').grid(column=0, row=0, columnspan=2)
-        ttk.Label(self, textvariable=self.texto, style="TextCompletado.TLabel").grid(column=0, row=1)
-        ttk.Button(self, text='Aceptar', command=self.destroy).grid(column=0, row=2, pady=5, sticky='e')
+        ttk.Label(self, textvariable=self.texto, style="TextCompletado.TLabel").grid(column=0, row=1, padx=15)
+        ttk.Button(self, text='Aceptar', command=self.destroy).grid(row=2, column=0, padx=10, pady=5, sticky='e')
         
         #Definir dimensiones de la alerta
         self.update_idletasks()

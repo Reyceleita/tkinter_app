@@ -10,7 +10,7 @@ def validar_fecha(fecha_entrada):
         return False
     
 
-#Eliminar espacios y colocar en minúsculas 
+#Eliminar espacios y colocar en minúsculas para validar
 def normalizar_nombre(nombre):
     if nombre is None:
         return ""

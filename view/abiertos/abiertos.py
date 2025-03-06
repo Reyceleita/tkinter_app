@@ -67,7 +67,7 @@ class TabAbiertos(ttk.Frame):
         for i, columna in enumerate(self.columnas):
             entry = ttk.Entry(self, width=10)
             entry.grid(row=4, column=i, pady=5, padx=5, sticky='ew')
-            entry.bind("<KeyRelease>", self.filtrar)  
+            entry.bind("<KeyRelease>", self.filtrar)
             self.filters[columna] = entry 
         
         #Vincular selección de la tabla a una función
@@ -116,6 +116,10 @@ class TabAbiertos(ttk.Frame):
     
     def on_hover(self, event):
         item = self.tabla.identify_row(event.y)
+        
+        if self.last_hover and self.last_hover not in self.tabla.get_children():
+            self.last_hover = None
+        
         if item and item != self.last_hover:
             
             if self.last_hover:
@@ -127,6 +131,7 @@ class TabAbiertos(ttk.Frame):
             self.last_hover = item
     
     def on_leave(self, event):
-        if self.last_hover:
+        if self.last_hover and self.last_hover in self.tabla.get_children():
             self.tabla.item(self.last_hover, tags=())
-            self.last_hover = None
+        
+        self.last_hover = None

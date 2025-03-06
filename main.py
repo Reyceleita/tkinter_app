@@ -15,21 +15,25 @@ from settings.settings import *
 #Completar y verificar estilos
 #Crear Readme
 #Arreglar conteo de tickets para {alertas} .¿ /*ARREGLADO*/
-#Revisar para comentar/*pro gre so*/
+#Revisar para comentar/*pro gre so x2*/
+#Agregra loading.. para tickets :0 /*LISTOOO*/
+#Normalizar comentariado :/
 #Agregar hover para tablas /*LISTOOO*/
 #Manejo de errores y agregar logs? /*LISTOOO*/
-#Agregar confirmación en según que partes
+#Agregar confirmación en según que partes /*LISTOOO*/
 #Buscar cómo convertirlo en app .¿
 #Revisar que al subir reporte mensual no sobreescriba los revisados (creo q si valida ._.) >:/ (Revisar lógica actualizar abierto, [no actualiza si el cambio es sin cambios X_X]) /*ARREGLADOOOOOO*/
 #
 #Mejorar colores y agregar imágenes en alertas :P
 #Crear más temas >:O
 #
-#Agregar pestaña para manejo de datos/*pro gre so*/
-#Agregar lógica para vaciar tablas de DB 
+#Agregar pestaña para manejo de datos/*pro gre so x2*/
+#Agregar lógica para vaciar tablas de DB /*LISTOOO*/
+#Agregar modificacion a tablas de DB/*pro gre so*/
+#Cerrar conexiones después de usarlas :,[
 #Organizar fechas 
 #
-#
+#Formatear .¿
 #Cambiar nombre de app
 #
 # .¿
@@ -49,7 +53,7 @@ class App(tk.Tk):
         self.title('App')
         screen_width = self.winfo_screenwidth()
         screen_height = self.winfo_screenheight()
-        self.geometry(f"{screen_width}x{screen_height}-1+0")
+        self.geometry(f"{screen_width}x{screen_height}-0+0")
         
         #Cear manejo de pestañas
         self.notebook = ttk.Notebook(self)
@@ -66,7 +70,6 @@ class App(tk.Tk):
         self.notebook.add(self.tickets, text='Tickets')
         
         #Vincular evento de pestañas 
-        
         self.notebook.bind('<<NotebookTabChanged>>', self.on_tab_selected)
         
         #ttk.Button(self.notebook, text='*').place(x=1280, y=25)

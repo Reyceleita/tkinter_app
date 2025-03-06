@@ -134,4 +134,7 @@ def subir_abiertos(tabla, frame, reporte, progressbar):
         ErrorAlert(frame, 'Error al subir los datos')
     finally:
         progressbar.destroy()
-        Completado(frame, f'Se cargaron correctamente los registros \nSe agregaron {coneto_nuevo} tickers \nSe actualizaron {conteo_actu} tickets \nSe escalaron {conteo_esc} tickets \n{conteo_sin} tickets no tuvieron cambios')
+        if coneto_nuevo > 0 or conteo_esc > 0 or conteo_actu > 0 or conteo_sin > 0:
+            Completado(frame, f'Se cargaron correctamente los registros \nSe agregaron {coneto_nuevo} tickers \nSe actualizaron {conteo_actu} tickets \nSe escalaron {conteo_esc} tickets \n{conteo_sin} tickets no tuvieron cambios')
+        else:
+            ErrorAlert(frame, 'Archivo vacio/icorrecto')

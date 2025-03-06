@@ -5,6 +5,7 @@ from tkinter import ttk
 
 from controller.tickets.consultar import *
 from controller.tickets.subir_tickets import *
+from view.alertas.progressbar import Progressbar
 from view.tickets.editar_ticket import *
 from controller.tickets.filtro import *
 
@@ -90,7 +91,9 @@ class TabTickets(ttk.Frame):
         self.contador.set(f"Se muestran: {self.conteo.get()}")
     
     def subir_archivo(self, frame):
-        subir_tickets(self.tabla, frame)
+        reporte = cargar_datos(frame)
+        progressbar = Progressbar(self)
+        self.after(100, lambda: subir_tickets(self.tabla, self, reporte, progressbar))
         self.conteo.set(mostrar_datos(query_datos(), self.tabla))
         self.contador.set(f'Se muestran: {self.conteo.get()}')
     
@@ -100,6 +103,10 @@ class TabTickets(ttk.Frame):
 
     def on_hover(self, event):
         item = self.tabla.identify_row(event.y)
+        
+        if self.last_hover and self.last_hover not in self.tabla.get_children():
+            self.last_hover = None
+        
         if item and item != self.last_hover:
             
             if self.last_hover:
@@ -111,6 +118,7 @@ class TabTickets(ttk.Frame):
             self.last_hover = item
     
     def on_leave(self, event):
-        if self.last_hover:
+        if self.last_hover and self.last_hover in self.tabla.get_children():
             self.tabla.item(self.last_hover, tags=())
-            self.last_hover = None
+        
+        self.last_hover = None

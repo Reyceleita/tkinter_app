@@ -11,7 +11,9 @@ class Ajustes(tk.Toplevel):
         super().__init__(parent)
         
         #Crear y agregar franes
+        self.wm_attributes("-topmost", True)
         self.grid()
+        self.title('Cosas')
         self.columnconfigure(5, weight=1)
         self.rowconfigure(5, weight=1)
         opciones = ttk.Frame(self)
@@ -29,6 +31,7 @@ class Ajustes(tk.Toplevel):
         ttk.Separator(self, orient='vertical').grid(row=1, column=0, rowspan=10, sticky='ens')
         
         #Redimensión y cambio de posición de la ventana
+        self.update_idletasks()
         self.geometry("")
         x = (self.winfo_screenwidth() // 2) - (800 // 2)
         y = (self.winfo_screenheight() // 2) - (500 // 2)

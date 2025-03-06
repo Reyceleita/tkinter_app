@@ -62,3 +62,12 @@ class EditarTecnico(tk.Toplevel):
 
         #Cargar datos en combobox
         cargar_cargo(self.cargo_id, self.cargo_campo)
+        
+        self.update_idletasks()
+        self.geometry("")
+        ancho = self.winfo_reqwidth()
+        alto = self.winfo_reqheight()
+        x = (self.winfo_screenwidth() // 2) - (ancho // 2)
+        y = (self.winfo_screenheight() // 2) - (alto // 2)
+        self.geometry(f"{ancho}x{alto}+{x}+{y}")
+        self.grab_set()

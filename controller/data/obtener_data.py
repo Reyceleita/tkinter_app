@@ -65,7 +65,7 @@ def cargar_tecnico(tecnico, tecnico_list):
         tecnico_list[tecnico_] = id_tecnico
         tecnico['values'] = list(tecnico_list.keys())
 
-#Obtener las observaciones de base de datos
+#Obtener las observaciones de base de datos 
 def cargar_observacion(tabla, id):
     command = f"SELECT observaciones FROM {tabla} WHERE id_ticket = ?"
     cursor.execute(command, (id, ))

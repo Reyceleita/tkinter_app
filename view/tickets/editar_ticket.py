@@ -47,18 +47,18 @@ class EditarTicket(tk.Toplevel):
         ttk.Label(self, text='Fecha de la solución', font=('Arial', 12)).grid(row=4, column=2, pady=5, padx=40, sticky='e')
         
         #Campos de entrada
-        ttk.Entry(self, textvariable=id_ticket, width=8, state='readonly').grid(row=1, column=0, pady=5, padx=5, sticky='w')
-        ttk.Entry(self, textvariable=self.titulo, state='readonly').grid(row=1, column=0, columnspan=3, padx=65, sticky='we')
+        ttk.Entry(self, textvariable=id_ticket, width=8, state='readonly', style="Label.TEntry").grid(row=1, column=0, pady=5, padx=5, sticky='w')
+        ttk.Entry(self, textvariable=self.titulo, state='readonly', style="Label.TEntry").grid(row=1, column=0, columnspan=3, padx=65, sticky='we')
         tecnico = ttk.Combobox(self, textvariable=self.tecnico_db, state='readonly', width=30)
         solucion = ttk.Combobox(self, textvariable=self.solucion_db, state='readonly', width=30)
-        observacion = tk.Entry(self, width=30, textvariable=self.observacion_db)
+        observacion = ttk.Entry(self, width=30, textvariable=self.observacion_db)
         script = ttk.Combobox(self, textvariable=self.script_db, state='readonly', width=30)
         fecha = ttk.Entry(self, textvariable=self.fecha_db, width=33)
         
         #Posicionamiento de widgets en la interfaz
         tecnico.grid(row=3, column=0, pady=5, padx=40)
         solucion.grid(row=3, column=2, pady=5, padx=40, sticky='e')
-        observacion.grid(row=7, column=0, pady=5, padx=40, rowspan=2)
+        observacion.grid(row=7, column=0, pady=5, padx=40, columnspan=3, sticky='we')
         script.grid(row=5, column=0, pady=5, padx=40)
         fecha.grid(row=5, column=2, pady=5, padx=40, sticky='e')
         
@@ -74,4 +74,14 @@ class EditarTicket(tk.Toplevel):
                 self.observacion_db.get(), self, tecnico_lista, script_lista, solucion_lista, tabla
             )
         )
-        self.guardar.grid(row=7, column=2, rowspan=2, pady=5, padx=40, sticky='e') #Posicionamiento del botón
+        self.guardar.grid(row=8, column=2, rowspan=2, pady=25, padx=40, sticky='e') #Posicionamiento del botón
+        
+        #Ajustes de ventana
+        self.update_idletasks()
+        self.geometry("")
+        ancho = self.winfo_reqwidth()
+        alto = self.winfo_reqheight()
+        x = (self.winfo_screenwidth() // 2) - (ancho // 2)
+        y = (self.winfo_screenheight() // 2) - (alto // 2)
+        self.geometry(f"{ancho}x{alto}+{x}+{y}")
+        self.grab_set()

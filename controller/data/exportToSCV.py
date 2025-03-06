@@ -31,7 +31,7 @@ def exportar_datos(frame):
 
         conn.close()
 
-        Completado(frame, f"Se han guardado {len(tables)} tablas como archivos CSV en {output_folder}")
+        Completado(frame, f"Se han guardado {len(tables)} tablas como archivos CSV en tkinter_app/csv/")
     except Exception as e:
         logger.error('No se pudo exportar %s', e)
         ErrorAlert(frame, 'Error al exportar')
