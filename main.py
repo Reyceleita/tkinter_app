@@ -27,9 +27,11 @@ from settings.settings import *
 #Mejorar colores y agregar imágenes en alertas :P
 #Crear más temas >:O
 #
+#Considerar cambiar state de combobox  con validación nose >:^(
+#
 #Agregar pestaña para manejo de datos/*pro gre so x2*/
 #Agregar lógica para vaciar tablas de DB /*LISTOOO*/
-#Agregar modificacion a tablas de DB/*pro gre so*/
+#Agregar modificacion a tablas de DB/*LISTOOO*/
 #Cerrar conexiones después de usarlas :,[
 #Organizar fechas 
 #

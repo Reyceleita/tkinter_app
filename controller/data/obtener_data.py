@@ -65,6 +65,20 @@ def cargar_tecnico(tecnico, tecnico_list):
         tecnico_list[tecnico_] = id_tecnico
         tecnico['values'] = list(tecnico_list.keys())
 
+#Obtener datos de tablas específicas
+def cargar_tablas(datos, tabla_list, tabla):
+    datos.set('')
+    datos['values'] = []
+    tabla_list.clear()
+    
+    command = f"SELECT * FROM {tabla}"
+    cursor.execute(command)
+    tecnicos = cursor.fetchall()
+    
+    for id_dato, dato_ in tecnicos:
+        tabla_list[dato_] = id_dato
+        datos['values'] = list(tabla_list.keys())
+
 #Obtener las observaciones de base de datos 
 def cargar_observacion(tabla, id):
     command = f"SELECT observaciones FROM {tabla} WHERE id_ticket = ?"
