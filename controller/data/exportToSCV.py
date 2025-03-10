@@ -8,15 +8,16 @@ from view.alertas.correcto import *
 from logs.logger_config import logger
 
 # Carpeta donde se guardarán los CSV
-output_folder = r"..\csv"
+output_folder = r".\csv"
 
 # Crear la carpeta si no existe
 os.makedirs(output_folder, exist_ok=True)
 
 # Conectar con SQLite
-conn = connection_to_db()
+
 
 def exportar_datos(frame):
+    conn = connection_to_db()
     try:
         # Obtener nombres de todas las tablas
         tables = pd.read_sql_query("SELECT name FROM sqlite_master WHERE type='table';", conn)

@@ -65,3 +65,4 @@ def actualizar_ticket(id_ticket, solucion, tecnico, script, fecha, observacion, 
     except Exception as e:
         logger.error('No se pudieron guardar los cambios: %s', e)
         ErrorAlert(frame, 'Error al actualizar')
+        

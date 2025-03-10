@@ -1,31 +1,37 @@
-from tkinter import *
 
-
-#Estilizar interfaz
-def dark_theme(style):
+def solarized_theme(style):
     style.theme_create(
-        "Dark_theme",
+        "Solarized_theme",
         parent="default",  
         settings={
             ".": {
                 "configure": {
-                    "background": "#121212", 
-                    "foreground": "#B0B0B0"
+                    "background": "#FDF6E3", 
+                    "foreground": "#657B83"
                 }
             },
             "Treeview":{
-                "layout": [
-                    ("Treeview.treearea", {"sticky": "nswe"})
-                ],
                 "configure": {
-                    "background": "#1E1E1E",
+                    "background": "#e6e6e6",
+                    "bordercolor": "#fdedbd"
                 }
             },
             "Treeview.Heading":{
                 "configure": {
-                    "background": "#1E1E1E",
-                    "relief": "solid",
-                    "borderwidth": 2
+                    "background": "#FFFFFF",                  
+                }
+            },
+            "TButton": {
+                "configure": {
+                    "background": "#268BD2",
+                    "foreground": "white",
+                    "bordercolor": "#073642",
+                    "relief": "raised",
+                    "padding": (5,0,5,0),
+                    "borderwidth": 5
+                },
+                "map": {
+                    "background": [("active", "#2AA198")]
                 }
             },
             "TScrollbar": {
@@ -37,34 +43,13 @@ def dark_theme(style):
                     ]})
                 ],
                 "configure": {
-                    "background": "#121212",
-                    "troughcolor": "#121212",
+                    "background": "#FDF6E3",
+                    "troughcolor": "#fcf0d1",
                     "bordercolor": "#E0E0E0",
                     "arrowcolor": "#A0A0A0",
                     "troughrelief": "flat",
                     "darkcolor": "#A0A0A0",
                     "relief": "ridge"
-                }
-            },
-            "TButton": {
-                "layout": [
-                    ("Button.border", {"sticky": "nswe", "border": 1,  "children": [
-                        ("Button.padding", {"sticky": "nswe",  "children": [
-                            ("Button.label", {"sticky": "nswe"})
-                        ]})
-                    ]})
-                ],
-                "configure": {
-                    "background": "#00C896",
-                    "foreground": "black",
-                    "relief": "raised",
-                    "bordercolor": "#005F46",
-                    "padding": (5,0,5,0),
-                    "borderwidth": 5
-                    #"font": ["Arial", 24]
-                },
-                "map": {
-                    "background": [("active", "#119876")]
                 }
             },
             "TEntry": {
@@ -77,11 +62,11 @@ def dark_theme(style):
                     ]})
                 ],
                 "configure": {
-                    "background": "#c7c7c7",
+                    "background": "#fcf0d1",
                     "foreground": "black",
-                    "fieldbackground": "#c7c7c7",
+                    "fieldbackground": "#ffdab0",
                     "insertborderwidth": 10,
-                    "relief": "raised",
+                    "relief": "flat",
                     "bordercolor": "black",
                     "padding": (5,3,3,3),
                     "insertbackground": "blue",
@@ -100,17 +85,17 @@ def dark_theme(style):
                     ]})
                 ],
                 "configure": {
-                    "background": "#1E1E1E",
-                    "foreground": "#00C896",
-                    "fieldbackground": "#1E1E1E",
+                    "background": "#e6e6e6",
+                    "foreground": "#657B83",
+                    "fieldbackground": "#e6e6e6",
                     "insertborderwidth": 10,
                     "relief": "flat",
-                    "bordercolor": "#1E1E1E",
+                    "bordercolor": "#e6e6e6",
                     "padding": (5,3,3,3),
-                    "insertbackground": "#1E1E1E",
+                    "insertbackground": "#e6e6e6",
                 },
                 map: {
-                    "insertbackgroud": [("focus", "#1E1E1E")]
+                    "insertbackgroud": [("focus", "#e6e6e6")]
                 }
             },
             "Titulo.TLabel": {
@@ -136,19 +121,18 @@ def dark_theme(style):
                     ]})
                 ],
                 "configure": {
-                    "fieldbackground": "#1E1E1E",
-                    "background": "#1E1E1E",
-                    "borderclor": "white",
+                    "fieldbackground": "#e6e6e6",
+                    "background": "#e6e6e6",
+                    "borderclor": "#83860b",
                     "padding": (5,5,5,5),
                 },
                 "map": {
                     "bordercolor": [("focus", "green")],
                     "background": [("active", "white")],
                     "arrowcolor": [("active", "blue")],
-                    "fieldbackground": [("readonly", "#1E1E1E")]
+                    "fieldbackground": [("readonly", "#c3c3c3" )]
                 }
-            },
-            "Advertencia.TLabel":{
+            },            "Advertencia.TLabel":{
                 "layout": [
                     ("Label.border", {"sticky": "nswe", "children":[
                         ("Label.padding", {"sticky": "nswe", "children": [
@@ -161,8 +145,7 @@ def dark_theme(style):
                     "foreground": "yellow",
                     "background": "#A0A0A0"
                 }
-            },
-            "TextAdvertencia.TLabel":{
+            },"TextAdvertencia.TLabel":{
                 "layout": [
                     ("Label.border", {"sticky": "nswe", "children":[
                         ("Label.padding", {"sticky": "nswe", "children": [
@@ -177,8 +160,7 @@ def dark_theme(style):
                     "padding": (5,5,15,5)
                     
                 }
-            },
-            "Error.TLabel":{
+            },"Error.TLabel":{
                 "layout": [
                     ("Label.border", {"sticky": "nswe", "children":[
                         ("Label.padding", {"sticky": "nswe", "children": [

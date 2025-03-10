@@ -2,7 +2,6 @@ import tkinter as tk
 from tkinter import *
 from tkinter import ttk
 
-from model.connection import *
 from controller.data.obtener_data import *
 from controller.tecnicos.actualizar import *
 

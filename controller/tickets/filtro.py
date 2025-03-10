@@ -1,10 +1,9 @@
 from model.connection import *
 
-connection = connection_to_db()
-cursor = connection.cursor()
-
 
 def filtro(tabla, filter=None):
+    connection = connection_to_db()
+    cursor = connection.cursor()
 
     tabla.delete(*tabla.get_children())
 
@@ -47,5 +46,5 @@ def filtro(tabla, filter=None):
 
     for ri in r:
         tabla.insert("", "end", value=ri)
-
+    
     return r

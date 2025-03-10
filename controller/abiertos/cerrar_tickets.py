@@ -8,11 +8,11 @@ from view.alertas.correcto import *
 from view.alertas.error import *
 from logs.logger_config import logger
 
-connection = connection_to_db()
-cursor = connection.cursor()
 
 #Pasar tickets resueltos a la respectiva tabla.
 def cerrar_abierto(tabla, frame):
+    connection = connection_to_db()
+    cursor =  connection.cursor()
     try:
         #Traer datos necesarios
         revisados = query_revisados_abiertos() #Tickets abiertos en estado revisado

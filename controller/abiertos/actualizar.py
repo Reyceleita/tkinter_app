@@ -7,16 +7,18 @@ from view.alertas.warning import *
 from view.alertas.error import *
 from logs.logger_config import logger
 
-connection = connection_to_db()
-cursor =  connection.cursor()
-
 #Fucnión para actualizar el estado de un ticket abierto
 def actualizar_estado_abiertos(estado, ticket):
+    connection = connection_to_db()
+    cursor =  connection.cursor()
     cursor.execute('UPDATE tickets_diarios SET estado_t = ? WHERE id_ticket = ?', (estado, ticket))
     connection.commit()
+    
 
 #Actualizar estado del ticket abiento en base de datos
 def actualizar_abiertos(tecnico_i, estado, fecha_actu, estado_t, id_ticket):
+    connection = connection_to_db()
+    cursor =  connection.cursor()
     command = """
         UPDATE tickets_diarios
         SET tecnico_id = ?, estado = ?, fecha_actualiza = ?, estado_t = ?
@@ -24,9 +26,12 @@ def actualizar_abiertos(tecnico_i, estado, fecha_actu, estado_t, id_ticket):
     """
     cursor.execute(command, (tecnico_i, estado, fecha_actu, estado_t, id_ticket))
     connection.commit()
+    
 
 #Actualizar datos del ticket abierto en base de datos
 def actualizar_abierto(id_ticket, solucion, tecnico, script, fecha, observacion, frame, tecnico_list, script_list, solucion_list, tabla):
+    connection = connection_to_db()
+    cursor =  connection.cursor()
     try:
         solucion_id = obtener_campo_lista(solucion_list, solucion)
         tecnico_id = obtener_campo_lista(tecnico_list, tecnico)
@@ -65,6 +70,8 @@ def actualizar_abierto(id_ticket, solucion, tecnico, script, fecha, observacion,
     
 #Función para obtener campos especificos de un ticket específico
 def obtener_desplegables(id):
+    connection = connection_to_db()
+    cursor =  connection.cursor()
     command = """
         SELECT nombre, solucion, script, fecha_solucion
         FROM tickets_diarios
@@ -75,4 +82,5 @@ def obtener_desplegables(id):
     """
     cursor.execute(command, (id, ))
     info = list(cursor.fetchall()[0])
+    
     return info

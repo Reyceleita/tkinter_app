@@ -6,6 +6,8 @@ from view.alertas.warning import *
 from logs.logger_config import logger
 
 def actualizar_tecnico(id_tecnico, cargo_edit, fecha_i_editar, fecha_s_editar, nombre_edit, editar, cargo_id, tabla):
+    connection = connection_to_db()
+    cursor = connection.cursor()
     """
     Actualizar datos de un técnico.
     Parámetros:
@@ -47,4 +49,3 @@ def actualizar_tecnico(id_tecnico, cargo_edit, fecha_i_editar, fecha_s_editar, n
     except Exception as e:
         logger('o se logró actualizar el tecnico %s', e)
         ErrorAlert(editar, 'Error al actualizar el técnico')
-

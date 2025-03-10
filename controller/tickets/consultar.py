@@ -1,11 +1,10 @@
 from model.connection import *
 from controller.data.mostrar import *
 
-#Crear conexión y cursor de Base de datos
-connection = connection_to_db()
-cursor = connection.cursor()
 
 def query_datos():
+    connection = connection_to_db()
+    cursor = connection.cursor()
     """
     Consulta a la tabla tickers
     
@@ -22,9 +21,12 @@ def query_datos():
     """
     cursor.execute(command)
     datos = list(cursor.fetchall())
+    
     return datos
 
 def obtener_desplegables_tickets(id):
+    connection = connection_to_db()
+    cursor = connection.cursor()
     """
     Consultar valores de llaves foraneas de un ticket
     
@@ -45,9 +47,12 @@ def obtener_desplegables_tickets(id):
     """
     cursor.execute(command, (id, ))
     info = list(cursor.fetchall()[0])
+    
     return info
 
 def query_tickets():
+    connection = connection_to_db()
+    cursor = connection.cursor()
     command = """
         SELECT id_ticket, titulo, estado, fecha_apertura, fecha_limite, categoria, prioridad, solicitante, 
         localizacion, tecnico_id, forma_solucion_id, script_id, fecha_solucion, observaciones, revisado
@@ -56,4 +61,5 @@ def query_tickets():
     
     cursor.execute(command)
     datos = list(cursor.fetchall())
+    
     return datos

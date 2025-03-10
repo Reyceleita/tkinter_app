@@ -2,11 +2,11 @@ import datetime
 
 from model.connection import *
 
-connection = connection_to_db()
-cursor = connection.cursor()
 
 
 def cargar_tecnicos(tabla_tecnicos):
+    connection = connection_to_db()
+    cursor = connection.cursor()
     """
     Consultar y rrellenar la tabla con la información
     de los técnicos.
@@ -68,8 +68,11 @@ def cargar_tecnicos(tabla_tecnicos):
         except:
             fila.append('N/A')
             tabla_tecnicos.insert('', 'end', values=fila)
+    
 
 def tecnico_nobre(nombre):
+    connection = connection_to_db()
+    cursor = connection.cursor()
     """
     Consultar datos de un técnico por su nombre.
     Parámetros:
@@ -85,4 +88,5 @@ def tecnico_nobre(nombre):
             """
     cursor.execute(command, (nombre, ))
     tecnico = list(cursor.fetchall()[0])
+    
     return tecnico

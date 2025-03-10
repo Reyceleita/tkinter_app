@@ -11,12 +11,12 @@ from view.alertas.correcto import *
 from view.alertas.progressbar import *
 from logs.logger_config import logger
 
-connection = connection_to_db()
-cursor = connection.cursor()
 
 #♪
 #Agregar tickets en la interfaz de abiertos
 def subir_abiertos(tabla, frame, reporte, progressbar):
+    connection = connection_to_db()
+    cursor =  connection.cursor()
     try: 
         #Definición de variables para conteo
         conteo_actu = 0

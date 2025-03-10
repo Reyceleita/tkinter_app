@@ -1,11 +1,10 @@
 from model.connection import *
 
-connection = connection_to_db()
-cursor = connection.cursor()
 
 #Filtrar columnas según parámetros
 def filtro(tabla, filter=None):
-
+    connection = connection_to_db()
+    cursor =  connection.cursor()
     tabla.delete(*tabla.get_children())
 
     q = """
@@ -47,4 +46,5 @@ def filtro(tabla, filter=None):
     for ri in r:
         tabla.insert("", "end", values=ri)
 
+    
     return r

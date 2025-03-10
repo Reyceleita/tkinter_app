@@ -10,12 +10,11 @@ from view.alertas.correcto import *
 from view.alertas.error import *
 from logs.logger_config import logger
 
-#Crear conexión y cursor de Base de datos
-connection = connection_to_db()
-cursor = connection.cursor()
 
 #Cargar tickets abiertos en la tabla especificada
 def subir_tickets(tabla, frame, reporte, progress):
+    connection = connection_to_db()
+    cursor = connection.cursor()
     """
     Carga datos desde un archivo y los inserta o actualiza en la base de datos de tickets.
 
@@ -153,3 +152,4 @@ def subir_tickets(tabla, frame, reporte, progress):
             Completado(frame, f"No se cargó ningún registro nuevo")
         else:
             ErrorAlert(frame, 'Archivo vacio/icorrecto')
+        

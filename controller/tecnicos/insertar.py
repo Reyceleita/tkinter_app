@@ -9,6 +9,8 @@ from view.alertas.warning import *
 from logs.logger_config import logger
 
 def crear_tecnico(cargo_id, cargo, fecha_ingreso, nombre, fecha_salida, tabla_tecnicos, nombre_c, fecha_i_c, fecha_s_c, cargo_c, frame):
+    connection = connection_to_db()
+    cursor = connection.cursor()
     """
     Agrega un nuevo técnico a la base de datos
     
@@ -73,3 +75,4 @@ def crear_tecnico(cargo_id, cargo, fecha_ingreso, nombre, fecha_salida, tabla_te
             AdverteciaAlerta(frame, 'Complete todos los campos')
     else:
         AdverteciaAlerta(frame, 'Fecha inválida \nFormato correcto: YYYY-MM-DD')
+    

@@ -7,9 +7,9 @@ from view.settings.data import *
 
 #Ventana de configuraciones de app
 class Ajustes(tk.Toplevel):
-    def __init__(self, parent):
+    def __init__(self, parent,):
         super().__init__(parent)
-        
+        self.parent = parent
         #Crear y agregar franes
         self.wm_attributes("-topmost", True)
         self.grid()
@@ -26,8 +26,9 @@ class Ajustes(tk.Toplevel):
         #Elementos visuales de la app
         ttk.Label(self, text='Configuraciones').grid(row=0, column=0, sticky='we', columnspan=3)
         
-        ttk.Button(opciones, text='Datos', command=lambda: Datos(contenido)).grid(row=0, column=0, padx=10, pady=15, sticky='w')
-        ttk.Button(opciones, text='Preferencias', command=lambda: Preferencias(contenido)).grid(row=1, column=0, padx=10, sticky='w')
+        ttk.Button(opciones, text='Técnicos', command='').grid(row=0, column=0, padx=10, pady=10, sticky='w')
+        ttk.Button(opciones, text='Datos', command=lambda: Datos(contenido)).grid(row=1, column=0, padx=10, pady=10, sticky='w')
+        ttk.Button(opciones, text='Preferencias', command=lambda: Preferencias(contenido, self, self.parent)).grid(row=2, column=0, padx=10, pady=10, sticky='w')
         ttk.Separator(self, orient='vertical').grid(row=1, column=0, rowspan=10, sticky='ens')
         
         #Redimensión y cambio de posición de la ventana

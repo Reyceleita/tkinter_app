@@ -5,6 +5,12 @@ import json
 #Crear variable con la ruta de la DB
 archivo = r'.\settings\config.json'
 
+default = {
+    "tema": "Dark_theme",
+    "background": "#121212",
+    "foreground": "#B0B0B0"
+}
+
 def cargar_config():
     #Cargar configuración del archivo
     if os.path.exists(archivo):
@@ -12,7 +18,8 @@ def cargar_config():
             return json.load(f)
     #Si el archivo esta vacio,se crea uno nuevo
     else:
-        guardar_config(archivo)
+        guardar_config(default)
+        return default
 
 #Guardar el aechivo en la ruta
 def guardar_config(config):
@@ -20,12 +27,3 @@ def guardar_config(config):
         json.dump(config, f, indent=4)
 
 #Aplicar el estilo pasado cómo parámetro
-def aplicar_tema(style, main):
-    tema = cargar_config()
-    bg = tema['background']
-    fg = tema['foreground']
-    tema = tema['tema']
-    style.theme_use(tema)
-    
-    main.option_add("*background", bg)
-    main.option_add("*foreground", fg)
