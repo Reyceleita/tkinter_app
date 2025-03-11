@@ -15,7 +15,7 @@ class Completado(tk.Toplevel):
         self.overrideredirect(True)
         self.wm_attributes("-topmost", True)
         self.grid()
-        self.configure(bg='#A0A0A0', bd=10, relief='raised')
+        self.configure(bg='#dadada', bd=10, relief='raised')
 
         #Widgets que se mustran
         ttk.Label(self, text='Completado', style='Completado.TLabel').grid(column=0, row=0, columnspan=2)

@@ -9,7 +9,7 @@ class Progressbar(tk.Toplevel):
         self.overrideredirect(True)
         self.wm_attributes("-topmost", True)
         self.grid()
-        self.configure(bg='#A0A0A0', bd=10, relief='raised')
+        self.configure(bg='#dadada', bd=10, relief='raised')
 
         ttk.Label(self, text='Leyendo archivo...', style='TextCompletado.TLabel').grid(row=0, column=0, pady=15, padx=15)
         

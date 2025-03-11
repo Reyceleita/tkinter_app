@@ -1,7 +1,6 @@
 from tkinter import *
 from tkinter import ttk
 import tkinter as tk
-from tkinter import font
 
 from model.execution import *
 from view.abiertos.abiertos import *
@@ -17,10 +16,10 @@ from view.settings.settings import *
 #HACERRR
 #
 #Mejorar UI 
-#Completar y verificar estilos
+#Completar y verificar estilos /*LISTOOO*/
 #Crear Readme
 #Arreglar conteo de tickets para {alertas} .¿ /*ARREGLADO*/
-#Revisar para comentar/*pro gre so x2*/
+#Revisar para comentar/*pro gre so x3*/
 #Agregra loading.. para tickets :0 /*LISTOOO*/
 #Normalizar comentariado :/
 #Agregar hover para tablas /*LISTOOO*/
@@ -38,12 +37,11 @@ from view.settings.settings import *
 #
 #Cambiar sistema de técnicos y mejorar parte de tickets y abiertos :'(
 #
-#Verificar creación de DB po conexciones cerradas :/
 #
 #Agregar pestaña para manejo de datos/*pro gre so x3*/
 #Agregar lógica para vaciar tablas de DB /*LISTOOO*/
 #Agregar modificacion a tablas de DB/*LISTOOO*/
-#Cerrar conexiones después de usarlas :,[
+#Cerrar conexiones después de usarlas :,[ /*mejor no */
 #Organizar fechas 
 #
 #Formatear .¿
@@ -106,11 +104,15 @@ class App(tk.Tk):
         tema = cargar_config()
         bg = tema['background']
         fg = tema['foreground']
+        list_bg = tema['listbg']
+        list_fg = tema['listfg']
         tema = tema['tema']
         self.style.theme_use(tema)
 
         self.option_add("*background", bg)
         self.option_add("*foreground", fg)
+        self.option_add("*TCombobox*Listbox.background", list_bg)
+        self.option_add("*TCombobox*Listbox.foreground", list_fg)
 
 #Ejecución de aplicación
 if __name__ == '__main__':

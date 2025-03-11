@@ -71,7 +71,7 @@ def solarized_theme(style):
                     "padding": (5,3,3,3),
                     "insertbackground": "blue",
                 },
-                map: {
+                "map": {
                     "insertbackgroud": [("focus", "white")]
                 }
             },
@@ -94,7 +94,7 @@ def solarized_theme(style):
                     "padding": (5,3,3,3),
                     "insertbackground": "#e6e6e6",
                 },
-                map: {
+                "map": {
                     "insertbackgroud": [("focus", "#e6e6e6")]
                 }
             },
@@ -115,7 +115,7 @@ def solarized_theme(style):
                     ("Combobox.border", {"sticky": "nswe", "children":[
                         ("Combobox.padding", {"sticky": "nswe", "children": [
                             ("Combobox.label", {"sticky": "nswe"}),
-                            ("Combobx.textarea", {"sticky": "nswe"}),
+                            ("Combobox.textarea", {"sticky": "nswe"}),
                             ("Combobox.downarrow", {"side": "right"}),
                         ]})
                     ]})
@@ -123,6 +123,7 @@ def solarized_theme(style):
                 "configure": {
                     "fieldbackground": "#e6e6e6",
                     "background": "#e6e6e6",
+                    "foreground": "#657B83",
                     "borderclor": "#83860b",
                     "padding": (5,5,5,5),
                 },
@@ -132,7 +133,8 @@ def solarized_theme(style):
                     "arrowcolor": [("active", "blue")],
                     "fieldbackground": [("readonly", "#c3c3c3" )]
                 }
-            },            "Advertencia.TLabel":{
+            },            
+            "Advertencia.TLabel":{
                 "layout": [
                     ("Label.border", {"sticky": "nswe", "children":[
                         ("Label.padding", {"sticky": "nswe", "children": [
@@ -143,7 +145,7 @@ def solarized_theme(style):
                 "configure": {
                     "font": ("Arial", 16, "bold"),
                     "foreground": "yellow",
-                    "background": "#A0A0A0"
+                    "background": "#dadada"
                 }
             },"TextAdvertencia.TLabel":{
                 "layout": [
@@ -156,7 +158,7 @@ def solarized_theme(style):
                 "configure":{
                     "font": ("Arial", 10),
                     "foreground": '#121212',
-                    "background": "#A0A0A0",
+                    "background": "#dadada",
                     "padding": (5,5,15,5)
                     
                 }
@@ -171,7 +173,7 @@ def solarized_theme(style):
                 "configure": {
                     "font": ("Arial", 16, "bold"),
                     "foreground": "Red",
-                    "background": "#A0A0A0",
+                    "background": "#dadada",
                     "padding": (5,5,15,5)
                 }
             },
@@ -186,7 +188,7 @@ def solarized_theme(style):
                 "configure": {
                     "font": ("Arial", 16, "bold"),
                     "foreground": "green",
-                    "background": "#A0A0A0",
+                    "background": "#dadada",
                     "padding": (5,5,15,5)
                     
                 }
@@ -202,7 +204,7 @@ def solarized_theme(style):
                 "configure": {
                     "font": ("Arial", 10),
                     "foreground": '#121212',
-                    "background": "#A0A0A0"
+                    "background": "#dadada"
                 }
             }
         }

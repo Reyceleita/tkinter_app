@@ -1,7 +1,3 @@
-from tkinter import *
-
-
-#Estilizar interfaz
 def dark_theme(style):
     style.theme_create(
         "Dark_theme",
@@ -29,7 +25,7 @@ def dark_theme(style):
                 }
             },
             "TScrollbar": {
-                "Layout": [
+                "layout": [
                     ("Scrollbar.trough", {"children": [
                         ("Scrollbar.uparrow", {"side": "top", "sticky": "n"}),
                         ("Scrollbar.downarrow", {"side": "bottom", "sticky": "s"}),
@@ -61,7 +57,6 @@ def dark_theme(style):
                     "bordercolor": "#005F46",
                     "padding": (5,0,5,0),
                     "borderwidth": 5
-                    #"font": ["Arial", 24]
                 },
                 "map": {
                     "background": [("active", "#119876")]
@@ -85,9 +80,10 @@ def dark_theme(style):
                     "bordercolor": "black",
                     "padding": (5,3,3,3),
                     "insertbackground": "blue",
+                    #Agregaaaaaar lossss selecteddddd
                 },
-                map: {
-                    "insertbackgroud": [("focus", "white")]
+                "map": {
+                    "insertbackground": [("focus", "white")]
                 }
             },
             "Label.TEntry": {
@@ -109,8 +105,8 @@ def dark_theme(style):
                     "padding": (5,3,3,3),
                     "insertbackground": "#1E1E1E",
                 },
-                map: {
-                    "insertbackgroud": [("focus", "#1E1E1E")]
+                "map": {
+                    "insertbackground": [("focus", "#1E1E1E")]
                 }
             },
             "Titulo.TLabel": {
@@ -130,7 +126,7 @@ def dark_theme(style):
                     ("Combobox.border", {"sticky": "nswe", "children":[
                         ("Combobox.padding", {"sticky": "nswe", "children": [
                             ("Combobox.label", {"sticky": "nswe"}),
-                            ("Combobx.textarea", {"sticky": "nswe"}),
+                            ("Combobox.textarea", {"sticky": "nswe"}),
                             ("Combobox.downarrow", {"side": "right"}),
                         ]})
                     ]})
@@ -138,8 +134,10 @@ def dark_theme(style):
                 "configure": {
                     "fieldbackground": "#1E1E1E",
                     "background": "#1E1E1E",
-                    "borderclor": "white",
+                    "bordercolor": "white",
                     "padding": (5,5,5,5),
+                    "selectbackground": "",
+                    "selectforeground": "#B0B0B0"
                 },
                 "map": {
                     "bordercolor": [("focus", "green")],
@@ -159,7 +157,7 @@ def dark_theme(style):
                 "configure": {
                     "font": ("Arial", 16, "bold"),
                     "foreground": "yellow",
-                    "background": "#A0A0A0"
+                    "background": "#dadada"
                 }
             },
             "TextAdvertencia.TLabel":{
@@ -173,7 +171,7 @@ def dark_theme(style):
                 "configure":{
                     "font": ("Arial", 10),
                     "foreground": '#121212',
-                    "background": "#A0A0A0",
+                    "background": "#dadada",
                     "padding": (5,5,15,5)
                     
                 }
@@ -189,7 +187,7 @@ def dark_theme(style):
                 "configure": {
                     "font": ("Arial", 16, "bold"),
                     "foreground": "Red",
-                    "background": "#A0A0A0",
+                    "background": "#dadada",
                     "padding": (5,5,15,5)
                 }
             },
@@ -204,7 +202,7 @@ def dark_theme(style):
                 "configure": {
                     "font": ("Arial", 16, "bold"),
                     "foreground": "green",
-                    "background": "#A0A0A0",
+                    "background": "#dadada",
                     "padding": (5,5,15,5)
                     
                 }
@@ -220,7 +218,7 @@ def dark_theme(style):
                 "configure": {
                     "font": ("Arial", 10),
                     "foreground": '#121212',
-                    "background": "#A0A0A0"
+                    "background": "#dadada"
                 }
             }
         }

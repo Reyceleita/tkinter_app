@@ -14,7 +14,7 @@ class AdverteciaAlerta(tk.Toplevel):
         self.overrideredirect(True)
         self.wm_attributes('-topmost', True)
         self.grid()
-        self.configure(bg='#A0A0A0', bd=10, relief='raised')
+        self.configure(bg='#dadada', bd=10, relief='raised')
 
         #Widgets que se mustran
         ttk.Label(self, text='Advertencia', style='Advertencia.TLabel').grid(column=0, row=0, columnspan=2)

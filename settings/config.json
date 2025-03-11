@@ -1,5 +1,7 @@
 {
-    "tema": "Neon_theme",
-    "background": "#101010",
-    "foreground": "#B0B0B0"
+    "tema": "Dark_theme",
+    "background": "#121212",
+    "foreground": "#B0B0B0",
+    "listbg": "#121212",
+    "listfg": "#B0B0B0"
 }
