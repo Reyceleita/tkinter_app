@@ -2,47 +2,56 @@ import tkinter as tk
 from tkinter import *
 from tkinter import ttk
 
-from settings.settings import * 
+from settings.settings import *
 from view.alertas.warning import *
 
-#Canbiar el tema de la app
-class Preferencias():
-    def __init__(self, frame, p, parent):
-        for widget in frame.winfo_children():
-            widget.destroy()
-        
-        #Frames padres
-        self.fra = p
+# Canbiar el tema de la app
+
+
+class Preferencias(ttk.Frame):
+    def __init__(self, p, pa, parent):
+        super().__init__(p)
+
+        self.grid(row=0, column=0, sticky='nswe')
+        self.columnconfigure(0, weight=1)
+        self.rowconfigure(6, weight=1)
+
+        # Frames padres
+        self.fra = pa
         self.parent = parent
-        
-        #Lista de temas
+
+        # Lista de temas
         self.temas = {
             'Tema oscuro': 'Dark_theme',
             'Tema claro': 'Light_theme',
             'Tema neon': 'Neon_theme',
             'Tema solar': 'Solarized_theme'
         }
-        
-        #Widgets
-        ttk.Label(frame, text='Preferencias').grid(row=0, column=0, columnspan=2, sticky='we')
-        ttk.Label(frame, text='Tema: ').grid(row=1, column=0, padx=25, sticky='w')
-        self.tema = ttk.Combobox(frame, values=('Tema oscuro', 'Tema claro', 'Tema neon', 'Tema solar'), state='readonly')
+
+        # Widgets
+        ttk.Label(self, text='Preferencias').grid(
+            row=0, column=0, columnspan=2, sticky='we')
+        ttk.Label(self, text='Tema: ').grid(
+            row=1, column=0, padx=25, sticky='w')
+        self.tema = ttk.Combobox(self, values=(
+            'Tema oscuro', 'Tema claro', 'Tema neon', 'Tema solar'), state='readonly')
         self.tema.grid(row=2, column=0, padx=25)
-        ttk.Button(frame, text='Aplicar', command=self.cambiar_tema).grid(row=3, column=1, sticky='w')
-    
-    #Función para guardar y aplicar un tema
+        ttk.Button(self, text='Aplicar', command=self.cambiar_tema).grid(
+            row=3, column=1, sticky='w')
+
+    # Función para guardar y aplicar un tema
     def cambiar_tema(self):
-        
+
         tema = self.tema.get()
         tema = self.temas.get(tema)
         if tema is None:
-            AdverteciaAlerta(self.parent, 'Debe escoger un tema')
+            AdverteciaAlerta(self, 'Debe escoger un tema')
             return
         bg = ''
         fg = ''
         list_bg = ''
         list_fg = ''
-#-----------------------------------aaaaaaaaaa-----------------------------------#
+# -----------------------------------aaaaaaaaaa-----------------------------------#
         if tema == 'Dark_theme':
             bg = '#121212'
             fg = '#B0B0B0'
@@ -63,7 +72,7 @@ class Preferencias():
             fg = '#657B83'
             list_bg = '#FDF6E3'
             list_fg = '#657B83'
-        
+
         config = {
             "tema": tema,
             "background": bg,
@@ -71,7 +80,7 @@ class Preferencias():
             "listbg": list_bg,
             "listfg": list_fg
         }
-        
+
         guardar_config(config)
         self.parent.aplicar_tema()
         self.fra.destroy()

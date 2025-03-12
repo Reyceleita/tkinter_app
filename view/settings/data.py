@@ -11,27 +11,37 @@ from view.settings.delete_data import *
 # Vista para opciones generales
 
 
-class Datos():
-    def __init__(self, frame):
+class Datos(ttk.Frame):
+    def __init__(self, parent):
+        super().__init__(parent)
 
-        for widget in frame.winfo_children():
-            widget.destroy()
+        self.grid(row=0, column=0, sticky='nswe')
+        self.columnconfigure(2, weight=1)
+        self.rowconfigure(8, weight=1)
+
+        self.opciones = ttk.Frame(self)
+        self.opciones.grid(row=0, column=0)
+        self.opciones.rowconfigure(5, weight=1)
+        self.contenido = ttk.Frame(self)
+        self.contenido.grid(row=0, column=1)
+        self.contenido.rowconfigure(5, weight=1)
 
         # Mostrar opciones
-        ttk.Label(frame, text='Datos').grid(
-            row=0, column=0, columnspan=2, sticky='we')
-        ttk.Label(frame, text='Elimminar datos').grid(
-            row=1, column=0, padx=5, sticky='w')
-        ttk.Button(frame, text='Eliminar BD local', command=self.confrmar_eliminar).grid(
-            row=2, column=0, padx=20, pady=10)
-        ttk.Button(frame, text='Exportar a csv', command=lambda: exportar_datos(
-            frame)).grid(row=3, column=0, padx=20, pady=10)
-        ttk.Button(frame, text='Agregar datos', command=lambda: InsertData(
-            frame)).grid(row=4, column=0, padx=20, pady=10)
-        ttk.Button(frame, text='Modificar Datos', command=lambda: UpdateTablas(
-            frame)).grid(row=5, column=0, padx=20, pady=10)
-        ttk.Button(frame, text='Eliinar un dato', command=lambda: DeleteData(
-            frame)).grid(row=6, column=0, padx=20, pady=10)
+        ttk.Button(self.opciones, text='Agregar datos', command=lambda: InsertData(
+            self.contenido)).grid(row=4, column=0, padx=20, pady=10)
+        ttk.Button(self.opciones, text='Modificar Datos', command=lambda: UpdateTablas(
+            self.contenido)).grid(row=5, column=0, padx=20, pady=10)
+        ttk.Button(self.opciones, text='Eliinar un dato', command=lambda: DeleteData(
+            self.contenido)).grid(row=6, column=0, padx=20, pady=10)
+        ttk.Button(self.opciones, text='Eliminar BD local', command=self.confrmar_eliminar).grid(
+            row=9, column=0, padx=20, pady=10)
+        ttk.Button(self.opciones, text='Exportar a csv', command=lambda: exportar_datos(
+            self)).grid(row=10, column=0, padx=20, pady=10)
+
+        ttk.Separator(self.opciones, orient='horizontal').grid(
+            row=8, column=0, columnspan=2, padx=5, sticky='swe')
+        ttk.Separator(self, orient='vertical').grid(
+            row=0, column=1, rowspan=10, sticky='wns')
 
     def confrmar_eliminar(self):
         confirmar = tk.Toplevel()

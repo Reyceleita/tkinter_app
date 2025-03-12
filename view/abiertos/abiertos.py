@@ -28,6 +28,7 @@ class TabAbiertos(ttk.Frame):
         self.grid(row=0, column=0, sticky='nswe')
         self.columnconfigure(0, weight=1)
         self.rowconfigure(6, weight=1)
+        
         for i in range(len(self.columnas) + 1):
             self.grid_columnconfigure(i, weight=1)
             
