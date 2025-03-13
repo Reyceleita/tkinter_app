@@ -13,7 +13,8 @@ def query_datos_activos():
         FROM tickets_diarios
         INNER JOIN tecnicos ON tickets_diarios.tecnico_id = tecnicos.id_tecnico
         INNER JOIN forma_solucion ON tickets_diarios.forma_solucion_id = forma_solucion.id_solucion
-        INNER JOIN scripts ON tickets_diarios.script_id = scripts.id_script;
+        INNER JOIN scripts ON tickets_diarios.script_id = scripts.id_script
+        ORDER BY fecha_apertura DESC;
     """
     cursor.execute(command)
     datos.clear()

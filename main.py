@@ -35,6 +35,8 @@ from view.settings.settings import *
 # Colocar validacion de None en combobox de datos
 # Considerar cambiar state de combobox con validación nose >:^( /* NOP */
 #
+#Buscar hacer paginación )= 
+#
 # Cambiar sistema de técnicos y mejorar parte de tickets y abiertos :'( /*pro gre so*/
 #
 # Colocar botones de regresar/cancelar
@@ -49,6 +51,8 @@ from view.settings.settings import *
 # Cambiar nombre de app
 #
 # .¿
+#
+#TERMINAR {-.-}
 
 
 # Se crea app principal
@@ -65,7 +69,7 @@ class App(tk.Tk):
         neon_theme(self.style)
 
         # Configura ventana principal
-        self.title('App')
+        self.title('Tickets')
         screen_width = self.winfo_screenwidth()
         screen_height = self.winfo_screenheight()
         self.geometry(f"{screen_width}x{screen_height}-0+0")
@@ -87,7 +91,6 @@ class App(tk.Tk):
         self.notebook.bind('<<NotebookTabChanged>>', self.on_tab_selected)
         self.aplicar_tema()
 
-        # ttk.Button(self.notebook, text='*').place(x=1280, y=25)
 
     # Cargar datos al cambiar de pestaña
     def on_tab_selected(self, event):
