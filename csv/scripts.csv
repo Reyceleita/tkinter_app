@@ -1,0 +1,55 @@
+id_script,script
+1,Actualiza Centro Servicio
+2,Actualiza comprobante caja
+3,Actualiza datos Canal de Venta
+4,Actualiza datos pre envío
+5,Actualiza Guía
+6,Actualiza Guía Notificaciones
+7,Actualiza IDEstadoGuia
+8,Actualiza Lista Precios
+9,Actualiza Localidad Estado
+10,Actualiza Motivo
+11,Actualiza parámetros para pago
+12,Actualiza Planilla Asignación Mensajero
+13,Actualiza planilla comprobante caja
+14,Actualiza zonas difícil acceso
+15,Actualización Fecha Entrega
+16,Actualizar datos cliente frecuente
+17,Actualizar Fecha Estimada en Años
+18,Actualizar microzonas
+19,Actualizar usuario interno
+20,Actualizar usuario portal
+21,Agrupación Factura
+22,Cambio de estado
+23,Cambio Estado planilla
+24,Causación manual
+25,Condonar Listas Restrictivas
+26,Consulta a base de datos
+27,Creación de SACAS
+28,Delete descargue mensajero anterior
+29,Elimina archivos digitalización
+30,Eliminar Cliente Frecuente
+31,Eliminar huella tercero
+32,Eliminar recibido
+33,Eliminar usuario portal
+34,Eliminar Datos Usuario
+35,EliminaTrazaGuía
+36,Insertar Actualizar clave usuario
+37,Insertar Agencia APP
+38,Insertar Cajas al CS
+39,Insertar Causal
+40,Insertar Centros Penitenciarios
+41,Insertar Controller masivo SAC
+42,Insertar Corresponsal Inegocio
+43,Insertar Guías a Custodia
+44,Insertar Provision Suministro
+45,Liquidación PAMI
+46,Movimiento de bodega / inventario
+47,Reactivación manual para pago
+48,Retirar check de cancelado
+49,Ruta imágenes app
+50,Usuario null
+51,Reiniciar reintentos
+52,Actualiza limite de texto
+53,No aplica
+54,Sin asignar

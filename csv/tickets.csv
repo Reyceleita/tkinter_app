@@ -1,0 +1,3 @@
+id_ticket,titulo,estado,fecha_apertura,fecha_limite,categoria,prioridad,solicitante,localizacion,tecnico_id,forma_solucion_id,script_id,fecha_solucion,observaciones,revisado
+2789452,Consulta producción,En curso (asignada),2025-03-13 08:28,2025-03-13 16:28,OPERACIÓN > Restauraciones > Bases de datos servicios CORE,Alta,Ivan Felipe Celeita Rey,BOGOTA,1,1,54,2025-03-13,Sin observaciones,Revisado
+2789666,Consulta producción,En curso (asignada),2025-03-13 09:17,2025-03-13 17:17,OPERACIÓN > Restauraciones > Bases de datos servicios CORE,Alta,Ivan Felipe Celeita Rey,BOGOTA,1,1,54,2025-03-13,Sin observaciones,Revisado

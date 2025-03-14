@@ -39,6 +39,7 @@ def filtro(tabla, filter=None):
             if str(value.strip()) != "":
                 q += f" AND {db_col} LIKE ?"
                 p.append(f"%{value}%")
+        q += 'ORDER BY fecha_apertura DESC'
 
     cursor.execute(q, p)
     r = cursor.fetchall()

@@ -1,0 +1,624 @@
+﻿"ID";"Título";"Entidad";"Última actualización";"Estado";"Fecha de Apertura";"Tiempo de solución";"Categoría";"Prioridad";"Solicitante - Solicitante";"Asignado a: - Técnico";"Asignado a: - Grupo de Tecnicos";"Fecha de cierre";"Localización";"Encuesta de satisfacción - Satisfacción";"Descripción";"Fecha de solución";"Tareas - Fecha Final";
+"2 792 770";"CAUSACION GUIAS PAGO EN CASA";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-14 14:03";"En curso (asignada)";"2025-03-14 08:39";"2025-03-19 12:39";"SERVICIOS TI > Aplicaciones > Novasoft";"Alta";"Diego Mauricio Quintero Diaz";"Jairo Esteban Rodriguez Jimenez";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buen día ingenieros solicito de su colaboración ya que el reporte de contrapago SI, generó 8.449 guías, pero al validarlo con el reporte cxp se identifica que 402 guías las cuales suman un valor de $ 53.598.509 las cuales no son procedentes para pago, no se encuentran causadas.
+
+Por favor de manera urgente ya que se evidencia guias que no han sido causadas y ya cuentan con todo con varios dias.";"";"";
+"2 792 863";"Guias con cierre logistico vuelven a quedar ingresadas a Bodega";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-14 14:02";"En curso (asignada)";"2025-03-14 09:00";"2025-03-20 10:30";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"Jorge Eduardo Ramirez Villegas";"Juan Pablo Alfonso Beltran";"Soporte Niv.3 - Operaciones_";"";"MONTERIA";"";"Buenos dias.
+Ing:
+700151812926
+240025630220
+240025548211
+
+Estas guías luego de tener el cierre logístico al 100% y después de estar Prueba Entrega Archivada, el sistema las vuelve a dejar en estado Ingresado a Bodega 
+Le comparto imagen.
+
+Este error se viene presentando con la agencia de Arboletes.
+Adjunto un ticket 2783929 donde ya le habian dado solución a otras guías de esta agencia.";"";"";
+"2 777 523";"SOLICITUD DESBLOQUEO DE ENVIOS (ESTADO: DISTRIBUCIÓN URBANA POR USUARIO DE ADMISIÓN AGE)";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-14 13:02";"En curso (asignada)";"2025-03-08 03:24";"2025-03-14 15:00";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"Omar Andres Gomez Granados";"Juan Pablo Alfonso Beltran";"Soporte Niv.3 - Operaciones_";"";"BUCARAMANGA";"";"Cordial saludo, 
+
+Se solicita de su valiosa ayuda para verificar y desbloquear los siguientes envíos:
+240025022087
+240025326640
+240025339072
+240025260029
+240025423200
+260004196926
+240025381672
+240025328586
+240025425764
+240025548918
+Los envíos están en distribución urbana por el usuario de admisión y no se puede descargar ni dar ingreso, se necesita generar el proceso de devolución.
+
+Se puede tomar como ejemplo de esta solicitud el ticket 2731396 ya que fue la misma novedad.
+
+Quedo pendiente de sus comentarios.
+
+Gracias.";"";"";
+"2 789 744";"ERROR ADMISIO ORIGEN AQUITANIA";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-14 11:52";"En curso (asignada)";"2025-03-13 09:31";"2025-03-19 13:31";"SERVICIOS TI > Aplicaciones > POS WPF";"Alta";"Alix Adriana Torres Velasquez";"";"Soporte Niv.3 - Operaciones_";"";"TUNJA";"";"Ticket# 2780389 - escalado anteriormente 
+
+Cordial saludo, 
+
+nuevamente se escala la novedad que se presenta Origen Aquitania - destino : Monguí - Chameza - Floresta - Mongua. 
+
+Ticket escalado previamente 2732758 sin solución a la fecha";"";"";
+"2 785 676";"HABILITACION DE USURIOA BAJO DOMINIO GEO MANUAL";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-14 11:26";"En curso (asignada)";"2025-03-11 18:33";"2025-03-18 08:30";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"Diana Marcela Casilimas Salazar";"";"Soporte Niv.3 - Operaciones_";"";"GIRARDOT";"";"Buenas tardes requiero de colaboración para el usuarios del dominio para GEO MANUAL ya que me aparece de la siguiente manera en la primera imagen y la segunda imagen aparce que la agencia no cuenta con ciudades habilitadas para la georreferencia que es la agencia 1261 GIRARDOT .usuario dianamcsalazar cc 1070585501.
+a la espera de una pronta y positiva respuesta
+ATT. diana casilimas
+jefe de agencia";"";"";
+"2 775 551";"Tiempos de respuesta en endpoints TEMU";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-14 09:26";"En curso (asignada)";"2025-03-07 10:31";"2025-03-12 14:31";"SERVICIOS TI > Aplicaciones > API Integraciones";"Alta";"Manuel Antonio Chaves Clavijo";"Mauricio Enrique Hernandez Cabrera";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"";"";"";
+"2 743 023";"AP/M Novedad servicio apprunner2-listarestrictivaservicios2";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-14 08:54";"En curso (asignada)";"2025-02-24 07:52";"2025-02-27 15:52";"INFRAESTRUCTURA > Dynatrace > Herramientas";"Baja";"Santiago Parra Leon";"Estefania Becerra Eslava";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buen dia.
+
+Se evidencia afectación en el servicio de AWS ''apprunner-listarestrictivaservicios'', detectado mediante dynatrace, errores 4xx:
+
+Adicional, se verifica el servicio directamente en AWS:
+
+log indica que el servicio esta corriendo ''Service status is set to RUNNING.''
+
+A nivel de métricas en errores HTTP response code 4xx presenta varios picos como se puede captar:";"";"";
+"2 791 231";"NOVEDAD PROCESO DE ADMISION CLIENTES ID 5576";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-14 08:09";"En curso (asignada)";"2025-03-13 14:34";"2025-03-19 08:04";"SERVICIOS TI > Aplicaciones > Portal Cliente WEB";"Alta";"Henry Andres Escobar Rubiano";"Jairo Esteban Rodriguez Jimenez";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buen dia, solciitamos de su gestion con la novedad reportada por el canal de vemta, donde informa que al momento de realizar el pago en casa en el POS con el numero de guia le trae una informacion de otro cliente por lo cual no le puede hacer la admision, agradezco si nos ayudan con la novedad con el punto ya que esto afecta la venta y el servicio. 
+
+Adjunto imagente y datos del cliente afectado. 
+
+Wladimir Sebastian Díaz. Gaitan
+1030529373
+3178006500
+Djwlady86@gmail.com
+Cra 79f-45-17 sur.";"";"";
+"2 788 822";"FALLA PARA ADMITIR GUIAS DE RECOELCCION CLIENTE YANBAL";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-14 08:09";"En curso (asignada)";"2025-03-12 17:22";"2025-03-19 08:22";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"Jhon Alexander Arevalo Rojas";"Jimmy Alexander Menjura Calvo";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Cordial saludo 
+
+por favor de su apoyo con la validación con el error presentado para admitir las guías de recolección del cliente Yanbal
+ya que en validaciones con el área comercial el contrato del cliente Yanbal está vigente y tenemos actualmente asignado el rango de guías así:130010269738 / 130010274737
+
+Por favor comunicarse de manera urgente el día de mañana desde las 8 am hasta la 1 pm ya que es un tema que llevamos escalando en varas ocasiones y el cliente necesita el servicio de recogidas por medio de estas guías, gracias.";"";"";
+"2 773 176";"Configuracion motivos Rehusados";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-13 17:59";"En curso (asignada)";"2025-03-06 12:21";"2025-03-11 16:21";"SERVICIOS TI > Aplicaciones > Logística Inversa WPF";"Alta";"William Fernando Diaz Duarte";"Jairo Miller Urrego Garay";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Configuracion motivos Rehusados
+
+Se solicita crear los siguientes motivos de devolución aprobados por la VICEPRESIDENCIA LOGÍSTICA para MENSAJEROS y AGENCIAS.
+En el archivo adjunto se encuentran 3 hojas, el cual corresponde a:
+1. MODIFICAR MotivoGuia_MEN = Se deben modificar los nombres de unos motivos de guía actuales y ocultar dos motivos que ya no aplicarán.
+2. CREAR MOTIVO MotivoGuia_MEN = Se deben crear estos nuevos motivos de devolución de acuerdo a la configuración relacionado en el excel. Al crearse los motivos se deben posterior crear la configuración de Transición estado que se encuentra en la siguiente hoja MotivoGuiaTransicionEstado. En el campo MOG_IdTipoMotivoGuia el id 6 corresponde a los motivos para MENSAJERO y Id 7 para AGENCIAS
+3. MotivoGuiaTransicionEstado = Corresponde a la configuración de transición de estado para los nuevos motivos de devolución, para que una vez se creen los ID de los motivos del punto 2, se configuren en esta tabla de acuerdo a que si son para Mensajero o agencia.
+Agradezco escalar este ticket al ingeniero Faiver Leguizamo quien ya conoce la solicitud desde la Vicepresidencia.
+Adjunto autorización desde la Vicepresidencia Logística.";"";"";
+"2 777 274";"Sin geo Bogotá";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-13 17:44";"En curso (asignada)";"2025-03-07 18:14";"2025-03-14 08:30";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"Jesus Alexander Osorio Yate";"";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Cordial saludo
+
+Me permito relacionar base de muestra de envíos que están apareciendo sin georeferenciación en la ciudad de bogotá, una vez se hace el cruce con Serviinformación nos trae geo sin novedad, pero en las guías y en los informes para Interrapidisimo no aparece microzona.
+
+Muestra tomada movilizados del 02 al 06 de marzo.
+
+Se adjunta base discriminando el tipo de guía (Interna, credito, admisión POS, admisión APP)
+
+quedo atento a sus comentarios.";"";"";
+"2 766 154";"instalacion pos";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-13 17:42";"En curso (asignada)";"2025-03-04 11:05";"2025-03-10 11:05";"SERVICIOS TI > Aplicaciones > POS WPF";"Alta";"William Robayo";"Laura Natalia Forero Artunduaga";"Soporte Niv.3 - Operaciones_";"";"CHIQUINQUIRA";"";"Buenos dias
+
+solicito instalación aplicativo pos 
+
+gracias.";"";"";
+"2 643 051";"PROBLEMAS EN EL CONTROLLER";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-13 17:40";"En curso (asignada)";"2025-01-16 12:26";"2025-01-22 12:26";"SERVICIOS TI > Aplicaciones > Controller App";"Alta";"Jhon Harold Romero Olmos";"Laura Natalia Forero Artunduaga";"Soporte Niv.3 - Operaciones_";"";"FLORENCIA";"";"BUENA TARDE 
+POR FAVOR ME AYUDAN CON EL APP DE LA AGENCIA DE SAN VICENTE QUE PRESENTA PROBLEMAS AL MOMENTO DE DESCARGA LAS RECOGIDAS. 
+MUCHAS GRACIAS 
+HAROLD ROMERO";"";"";
+"2 787 628";"INCONSISTENCIA EN POS";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-13 17:30";"En curso (asignada)";"2025-03-12 13:34";"2025-03-18 07:04";"SERVICIOS TI > Aplicaciones > POS WPF";"Alta";"pas3717.bogota";"Jairo Esteban Rodriguez Jimenez";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buenas tardes, nuevamente solicito verificar la inconsitencia que se esta presentando desde el dia 04 de marzo/2025. Se realizo el cobro de unos envios devueltos a un cliente de pago en casa. El dinero ingreso a la caja pero todavia se sigue reflejando dichois cobros. 
+Es de aclara";"";"";
+"2 776 250";"PUNTO PROPI 1299";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-13 17:26";"En curso (asignada)";"2025-03-07 13:17";"2025-03-12 17:17";"SERVICIOS TI > Aplicaciones > POS WPF";"Alta";"Juan Carlos Cardona Cuervo";"Laura Natalia Forero Artunduaga";"Soporte Niv.3 - Operaciones_";"";"MANIZALES";"";"BUENAS TARDES ME PUEDEN COLABORAR YA QUE EN RECLAMO OFC NO ACTULIZA Y SALE UN LETRWERO";"";"";
+"2 728 373";"FALLAS EN APP";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-13 17:02";"En curso (asignada)";"2025-02-18 09:36";"2025-02-24 13:36";"SERVICIOS TI > Aplicaciones > Controller App";"Alta";"Cristian Mauricio Castaneda Toledo";"Juan David Becerra Molano";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buenos días 
+
+Por favor de su ayuda, no me permite realizar devoluciones, y me registra varios envíos entregados cuando no es así.
+
+Por favor contactarse, al siguiente número 3212773797
+
+Muchas gracias";"";"";
+"2 738 156";"NO ES POSIBLE GENERAR LA PLANILLA DE LAS CERTIFICACIONES (NOTIFICACIONES)";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-13 15:22";"En curso (asignada)";"2025-02-21 01:51";"2025-02-27 08:30";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"Camilo Andres Gonzalez Bastidas";"Mauricio Enrique Hernandez Cabrera";"Soporte Niv.3 - Operaciones_";"";"NEIVA";"";"Buen dia
+Amablemente solicito de su colaboracion ya que no es posible generar la planilla de las certificaciones .
+Agradezco de su colaboracion.";"";"";
+"2 786 916";"NOVEDAD GUIAS RUIZ CHANCI ASOCIADOS SAS";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-13 15:21";"En curso (asignada)";"2025-03-12 11:02";"2025-03-17 15:32";"SERVICIOS TI > Aplicaciones > Carga Masiva";"Alta";"Gladis Estella Lopez Ocampo";"Jimmy Alexander Menjura Calvo";"Soporte Niv.3 - Operaciones_";"";"MEDELLIN";"";"Cordial saludo 
+
+Agradezco no cerrar los ticket con este cliente que presenta novedad en la plantilla que carga a carga masiva , se estan liquidando valores diferentes al subir la informacion y esta generando error en la admision del punto , no estan contactando al cliente que lleva 1 mes con la misma novedad 
+Contacto punto julio 301 4885067
+contacto cliente 3175512502 
+liliana3009916448
+
+Quedo atenta";"";"";
+"2 730 074";"certificaciones";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-13 15:07";"En curso (asignada)";"2025-02-18 15:16";"2025-02-25 16:16";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"Edwin Alexander Mayordomo";"Mauricio Enrique Hernandez Cabrera";"Soporte Niv.3 - Operaciones_";"";"TUNJA";"";"buenas tardes
+solicito de su valiosa colaboración en revisar el aplicativo controller, logística inversa , certificaciones de entrega ya que desde el día de ayer no permite generar certificaciones de entrega aparece un mensaje el cual indica que la información esta duplicada 
+adjunto evidencia
+quedo muy atento a cualquier comentario y pronta respuesta positiva del mismo";"";"";
+"2 789 432";"CAUSACION GUIAS PAGO EN CASA";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-13 14:09";"En curso (asignada)";"2025-03-13 08:22";"2025-03-18 12:22";"SERVICIOS TI > Aplicaciones > Novasoft";"Alta";"Diego Mauricio Quintero Diaz";"Jairo Esteban Rodriguez Jimenez";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buen día ingenieros solicito de su colaboración ya que el reporte de contrapago SI, generó 8.774 guías, pero al validarlo con el reporte cxp se identifica que 311 guías las cuales suman un valor de $ 40.020.197 el cual no es procedente para pago, por que las guias no se encuentran causadas.";"";"";
+"2 777 263";"Error Georeferenciación";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-13 11:00";"En curso (asignada)";"2025-03-07 18:07";"2025-03-14 08:30";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"Jesus Alexander Osorio Yate";"Laura Natalia Forero Artunduaga";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Cordial saludo
+
+Me permito se valide la novedad que se viene presentando con la Geo en la ciudad de bogotá, donde en la guia y informes de interrapidisimo sale una microzona que no corresponde a la dirección y una vez se valida con SITADA estas no coinciden y nos están generando reprocesos al momento de discriminar a que microzona corresponde.
+
+Quedo atento a sus comentarios";"";"";
+"2 789 186";"ELIMINAR ULTIMO ESTADO GUIA 700141642980 - 700141692709";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-13 08:46";"En curso (asignada)";"2025-03-12 21:56";"2025-03-19 08:30";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"Lettelyer Lopez Diaz";"Juan Pablo Alfonso Beltran";"Soporte Niv.3 - Operaciones_";"";"QUIBDO";"";"Cordial saludo,
+
+solicito de su colaboración ya que se requiere eliminar el ultimo estado de la guia 700141642980 Y 700141692709 el cual figura como reclame en oficina, pero antes de este el estado es Prueba Entrega Archivada
+
+Se requiere que queden en el estado de PRUEBA ENTREGA ARCHIVADA.
+
+Grcs
+
+Favor tomar como referencia el siguiente Tk que ya cuenta con solucion por la misma novedad Ticket# 2779100 description";"";"";
+"2 740 939";"Solicitud soporte Woocommerce - MIXO";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-13 08:44";"En curso (asignada)";"2025-02-21 17:59";"2025-02-27 11:00";"SERVICIOS TI > Aplicaciones > API Integraciones";"Alta";"Manuel Antonio Chaves Clavijo";"Jimmy Alexander Menjura Calvo";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Cordial saludo,
+El cliente MIXO requiere asistencia de TI de INTER RAPIDÍSIMO, ya que el plugin Woocommerce en su marketplace no está funcionando. A continuación, comparto el espacio agendado por el cliente para su amable acompañamiento:
+Sesión de Integración / MIXO
+Lunes, 24 de febrero · 10:00 – 11:00 a.m.
+Zona horaria: América/Bogotá
+Google Meet: https://meet.google.com/ypf-fwub-nqi
+
+Agradezco su atención y apoyo.";"";"";
+"2 787 832";"Novedades de registro en portal / Cliente no se puede registrar";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-13 07:35";"En curso (asignada)";"2025-03-12 14:22";"2025-03-18 07:52";"SERVICIOS TI > Aplicaciones > Portal Cliente WEB";"Alta";"Yulieth Natalia Bolanos Giron";"Jairo Esteban Rodriguez Jimenez";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buen día
+Por favor solicito de su colaboración con este caso, cliente indica lo siguiente :
+''hola buenas tarde es que no me puedo registrar es que me registre mal la anterior vez y me quedo mal el correo y numero de celular muchas gracias ''
+Por favor solicito de su colaboración si es posible eliminar la cuenta anterior para que el cliente pueda inscribir una nueva
+Muchas gracias por su colaboración 
+
+Cliente: JHON LONDOÑO 
+celular: 3228620523 - 6023727819
+documento: 1144202303
+correo: jhonpie1212@gmail.com";"";"";
+"2 788 651";"Eliminación perfil cliente Yessenia Mora López CC. 1122648695";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-13 07:35";"En curso (asignada)";"2025-03-12 16:52";"2025-03-18 10:22";"SERVICIOS TI > Aplicaciones > Portal Cliente WEB";"Alta";"Diana Carolina Rojas Caceres";"Jairo Esteban Rodriguez Jimenez";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buenas tardes,
+
+Solicito de su amable colaboración eliminando perfil del cliente en pago en casa no cuenta con envíos realizados y cliente exige la eliminación, toda vez que no tiene acceso al portal, indica que no le llegan los códigos.
+
+Yessenia Mora López 
+CC. 1122648695
+TEL. 3156776402
+
+NOTA IMPORTANTE: No hay historial de envíos, NO HAY PAGOS PENDIENTES cliente requiere la eliminación del portal.
+
+Quedo atenta, muchas gracias";"";"";
+"2 788 459";"CAUSACION GUIA 600170040025";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-12 17:54";"En curso (asignada)";"2025-03-12 16:17";"2025-03-18 09:47";"SERVICIOS TI > Aplicaciones > Novasoft";"Alta";"Diego Mauricio Quintero Diaz";"Jairo Esteban Rodriguez Jimenez";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buena tarde, solicito de su colaboracion con la guia 600170040025 la cual no esta causada y el cliente esta reclamando";"";"";
+"2 787 732";"Error de ingreso guías 240025425773 - 260004199557";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-12 16:08";"En curso (asignada)";"2025-03-12 14:01";"2025-03-18 07:31";"SERVICIOS TI > Aplicaciones > Controller App";"Alta";"Maria Yasmin Franco Valencia";"Juan Pablo Alfonso Beltran";"Soporte Niv.3 - Operaciones_";"";"MANIZALES";"";"Buenas tardes. 
+
+Solicito de su colaboración ya que las guías 240025425773 - 260004199557 no permiten ser ingresadas al sistema. 
+
+Muchas gracias y feliz tarde.";"";"";
+"2 772 653";"INCIDENCIA APP CONTROLLER ID 11792";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-12 15:15";"En curso (asignada)";"2025-03-06 10:59";"2025-03-11 14:59";"SERVICIOS TI > Aplicaciones > Controller App";"Alta";"Nestor Daniel Hernandez Monsalve";"Juan David Becerra Molano";"Soporte Niv.3 - Operaciones_";"";"MEDELLIN";"";"Cordial saludo, 
+Lo que pasa es voy a realizar una venta por la aplicación del Controller App y luego de ingresar la primera información me arroja una advertencia, quisiera saber el por que me sale esta advertencia y si pasa algo. 
+Quedo muy atenta, Muchas gracias.";"";"";
+"2 770 156";"problemas en el pos";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-12 14:12";"En curso (asignada)";"2025-03-05 14:02";"2025-03-11 07:32";"SERVICIOS TI > Aplicaciones > POS WPF";"Alta";"Jhon Harold Romero Olmos";"Jimmy Alexander Menjura Calvo";"Soporte Niv.3 - Operaciones_";"";"FLORENCIA";"";"problema en el pos Envios internacionales";"";"";
+"2 784 589";"ERROR CON SISTEMA A LA HORA DE REALIZAR SERV. INTERNACIONAL.";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-12 14:10";"En curso (asignada)";"2025-03-11 14:49";"2025-03-17 08:49";"SERVICIOS TI > Aplicaciones > POS WPF";"Alta";"pas5994.bquilla";"Jimmy Alexander Menjura Calvo";"Soporte Niv.3 - Operaciones_";"";"BARRANQUILLA";"";"Deseamos mediante a su apoyo requerir solución a la hora de realizar envió internacional, hemos reiniciado y aun así persistía el error.
+Deseamos instrucciones mediante a llamada tel para solucion de este.
+Agradecemos atencion, feliz dia.";"";"";
+"2 786 633";"CAUSACION GUIAS PAGO EN CASA";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-12 12:08";"En curso (asignada)";"2025-03-12 10:14";"2025-03-17 14:44";"SERVICIOS TI > Aplicaciones > Novasoft";"Alta";"Diego Mauricio Quintero Diaz";"Jairo Esteban Rodriguez Jimenez";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buen día ingenieros solicito de su colaboración ya que el reporte de contrapago SI, generó 8.642 guías, pero al validarlo con el reporte cxp se identifica que 245 guías las cuales suman un valor de $ 33.870.490 el cual no es procedente para pago, por que las guias no se encuentran causadas.";"";"";
+"2 771 216";"Solicitud Base de datos";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-12 10:00";"En curso (asignada)";"2025-03-05 17:31";"2025-03-11 12:00";"SERVICIOS TI > Inteligencia de Negocios - BI > Extracción y Análisis de Información BI";"Alta";"Cielo Andrea Camargo Forero";"";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Estimados,
+compartimos base de datos de devoluciones en donde la SEGUNDA causal es ''NO reclamado en oficina'' esto sucede por que la agencia cambia el tipo de entrega, necesitamos el detallado de cuales son las agencias que tienen esa mala practica, exceptuando aquellas donde el sistema ya marca que no tiene tipo de entrega en dirección, por favor relacionar: RACOL, CIUDAD, ID NOMBRE, GUIAS ASOCIADAS";"";"";
+"2 781 227";"FALLA MULTIENTREGA";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-12 07:47";"En curso (asignada)";"2025-03-10 15:08";"2025-03-11 09:08";"SERVICIOS TI > Pruebas de Entregas";"Alta";"YURLEY ARIAS";"Juan David Becerra Molano";"Soporte Niv.3 - Operaciones_";"";"VILLAVICENCIO";"";"Cordial saludo, estoy presentando falla con CONTROLLER APP al cerrar guias por multientrega al cerrarlas no aparecen las fotos individuales de cada paquete entregado sino la general que lo habitual cierro con una foto del sello de la agencia. 
+
+adjunto ejemplo";"";"";
+"2 776 841";"FALLA CONTROLLER";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-12 07:44";"En curso (asignada)";"2025-03-07 15:52";"2025-03-14 16:52";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"Karen Yurley Ariza Guerrero";"Juan Pablo Alfonso Beltran";"Soporte Niv.3 - Operaciones_";"";"YOPAL";"";"Buenas tardes, 
+Solicito de su amable colaboración, ya que el envío con guía 700149133870 se dio entrega exitosa, un minutos después apareció en el sistema con último proceso para reclamar en oficina, el envío ya tenía entrega exitosa.";"";"";
+"2 321 917";"PORTAL PAGO EN CASA NOVEDAD INGRESO MODULO FACEBOOK";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-11 18:19";"En curso (asignada)";"2024-09-07 13:21";"2024-09-12 11:00";"SERVICIOS TI > Aplicaciones > Portal Cliente WEB";"Alta";"Adriana Mabel Escobar Vidal";"Jairo Esteban Rodriguez Jimenez";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buen dia,
+solicito de su colaboracion con ayuda para ingreso al portal del cliente CC 1018469311 Cristian David Cifuentes Chaves ya que inicialmente se registro por facebook y al dia de hoy nopuede ingresar porque le sale ERROR, es necesario que el cliente ingresa para poder restabelecer la cuenta y adjuntar pantallazos para la causacion de unas guias pendientes por pago. 
+Mil gracias";"";"";
+"2 783 200";"Revisión app controller";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-11 17:45";"En curso (asignada)";"2025-03-11 10:01";"2025-03-14 14:31";"SERVICIOS TI > Aplicaciones > Controller App";"Alta";"Sergio Stiven Toro Velosa";"Juan David Becerra Molano";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buen dia 
+revisión del sistema ya que no esta permitiendo cerrar las guías, Muchas Gracias";"";"";
+"2 780 711";"NOVEDADES POS";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-11 15:37";"En curso (asignada)";"2025-03-10 12:55";"2025-03-13 16:55";"SERVICIOS TI > Aplicaciones > POS WPF";"Alta";"Julieth Patricia Estremor Castro";"Jimmy Alexander Menjura Calvo";"Soporte Niv.3 - Operaciones_";"";"BARRANQUILLA";"";"Cordial saludo agradezco su ayuda tengo novedad para asignar la paquetería ID 13619";"";"";
+"2 674 202";"GUIAS DEVUELTAS A REMITENTE";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-11 11:58";"En curso (asignada)";"2025-01-28 11:54";"2025-02-04 12:54";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"Diego Mauricio Quintero Diaz";"Mauricio Enrique Hernandez Cabrera";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buena tarde ingenieros, solicito de su colaboracion teniendo en cuenta que aun se sigue presentando novedades con las guias que son devueltas al remitente y no esta realizando el egreso correspondiente en la caja. 
+Adjunto guias de ejemplo las cuales deberian haber teniendo el egreso correspondiente y confirmar como se va proceder con la novedad.
+240022450036 
+700147169092 
+240022423274 
+240022583008 
+700147081403
+240022223291 
+750012972679 
+750012973878 
+240022601436 
+240022677714 
+240022068391 
+700147093106 
+240022070688 
+700147171756 
+700147343657 
+240022656166 
+240022650853 
+240022357165 
+240022825923 
+240022650853 
+240022994404";"";"";
+"2 772 000";"GUIA NO CREADA POR API";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-11 09:35";"En curso (asignada)";"2025-03-06 08:49";"2025-03-11 12:49";"SERVICIOS TI > Aplicaciones > API Integraciones";"Alta";"Yivi Tatiana Torres Alvarado";"Jimmy Alexander Menjura Calvo";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buenos Días
+Agradezco de sus validaciones para revisar la guía 240025103940 la cuál no fue creada bajo INTEGRACIÓN
+Quedo atenta a sus validaciones, por favor llamar de lunes a viernes de 8am a 5pm
+Gracias";"";"";
+"2 771 789";"NOVEDAD GUIAS CARGA MASIVA";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-11 09:20";"En curso (asignada)";"2025-03-06 07:44";"2025-03-11 11:44";"SERVICIOS TI > Aplicaciones > Carga Masiva";"Alta";"Jonathan Javier Cuchivaguen Martinez";"Jimmy Alexander Menjura Calvo";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Cordial saludo,
+Solicito de su amable colaboracion con la novedad que presento el aplicativo carga masiva con las guia del cliente unilever Colombia, ya que se crean con los destinos correctos pero quedan con un destino incorrecto,adjunto imagenes de las guias para la validacion.
+
+Muchas gracias";"";"";
+"2 781 828";"ELIMINACION ULTIMO ESTADO DE FLUJO DE LAS GUIAS 240025321277 - 240025356596";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-11 08:05";"En curso (asignada)";"2025-03-10 16:34";"2025-03-17 07:34";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"Juan David Nunez Capera";"Juan Pablo Alfonso Beltran";"Soporte Niv.3 - Operaciones_";"";"NEIVA";"";"Buen día, solicito de la colaboración con la eliminación del último de estado de las guías 240025321277 - 240025356596, ya que después de que se le diera entrega exitosa estas pasaron a distribución urbana. Quedo atento a sus comentarios";"";"";
+"2 386 015";"Incongruencias Cotizador Cliente Crédito";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-10 15:41";"En curso (asignada)";"2024-10-08 11:13";"2024-10-15 15:13";"SERVICIOS TI > Aplicaciones > Portal Cliente WEB";"Alta";"Manuel Antonio Chaves Clavijo";"";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Cordial saludo estimados,
+Los clientes crédito informan que se esta presentando información incongruente de tiempos y fechas de entrega para algunos trayectos en el cotizador del cliente crédito del portal de clientes corportativos:
+URL portal de clientes corporativos:
+https://www3.interrapidisimo.com/Portalconsulta/login.aspx
+URL cotizador cliente crédito:
+https://www3.interrapidisimo.com/Portalconsulta/Vista/Tarificador/TarificadorNacionalClienteCredito.aspx
+
+Ejemplo, entre Briceño (Antioquia) y Amalfi (Antioquia) en el campo de “Tiempo Estimado Entrega” se presenta 0 y “Fecha Estimada Entrega” se presenta 01 de enero de 0001:
+
+Muchas gracias por la atención prestada.";"";"";
+"2 728 315";"ERROR EN GEOREFERENCIACION";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-10 14:39";"En curso (asignada)";"2025-02-18 09:27";"2025-02-24 11:27";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"Jeisson Andres Bernal Calderon";"Laura Natalia Forero Artunduaga";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Compañeros, bune día por favor validar erroes de sistema en GEO, debido a que la dirección de los envios es cporrecta y aparece en CITIDATA, sin embargo, el cruce con Georreferencia esta eerado, adjunto ejemplos con onfo de la guia dirección real, pero GEO que no cruza";"";"";
+"2 779 319";"Cambio de bodega";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-10 12:06";"En curso (asignada)";"2025-03-10 08:43";"2025-03-14 10:13";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"Jhonatan Cabanzo Quiñones";"Laura Natalia Forero Artunduaga";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buenos dias, por favor realizar el cambio del centro de servicio del envio 3000216401547, el cual esta en el centro de servicio 1 y se requiere en el 2653, el cual es el que pertenece a custodia, muchas gracias";"";"";
+"2 778 755";"ELIMINACIÓN ÚLTIMO ESTADO A GUÍAS";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-10 08:59";"En curso (asignada)";"2025-03-08 15:59";"2025-03-14 08:30";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"BLANCA JUDITH MANJARRES ANTURI";"Juan Pablo Alfonso Beltran";"Soporte Niv.3 - Operaciones_";"";"PITALITO";"";"Buenas tardes 
+
+Solicito el favor de realizar eliminación de último estado a la relación de envíos que menciono a continuación debido a que estos ya contaban con su cierre logístico (entrega exitosa), pero por la novedad o falla en el sistema que desde hace meses se están presentando con las guías de consecutivos 24 y 13 cambiaron nuevamente a distribución.
+
+230017601126
+240025221181
+240025353039
+240025356596
+240025358082
+240025415185
+240025441425
+240025489940
+240025516383
+240025521682
+240025562814
+240025382834
+240024638123
+
+Agradezco la gestión para darle cierre definitivo a estos envíos 
+
+Gracias";"";"";
+"2 771 154";"NOVEDAD SITEMA RECAUDO GUIA 700144804154";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-10 08:53";"En curso (asignada)";"2025-03-05 17:15";"2025-03-12 08:15";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"Maryury Lizeth Ortigoza Duran";"Juan Pablo Alfonso Beltran";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buenas tardes 
+cordial saludo 
+de su amable colaboración con la novedad presentada con la guía 700144804154 ya que por error del sistema aparece que se le realizo afectación de caja pero no sumo en el sistema al mensajero Alexander portilla, ni a la caja de la 1284 al momento del cuadre
+
+NOTA 1: Ya se había solicitado con ticket #2719172
+NOTA 2: Horario laboral de 8 a.m -11 am y 5p.m a 11p.m";"";"";
+"2 778 420";"SOLICITUD ELIMINACIÓN DE TRAZA GUIAS 230017605378, 240025422501";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-10 08:07";"En curso (asignada)";"2025-03-08 12:51";"2025-03-14 08:30";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"Diego Fernando Urbano Yaqueno";"Juan Pablo Alfonso Beltran";"Soporte Niv.3 - Operaciones_";"";"MOCOA";"";"Buena tarde
+Favor escalar al area correspondiente para la eliminación de traza de las guias 230017605378 y 240025422501, toda vez que el sistema cambia el estado por error, tal como se muestra :
+
+Ev1. 230017605378 cambiar a estado Prueba de entrega archivada
+
+Ev2. 240025422501, cambiar a estado Para reclamar en oficina";"";"";
+"2 748 937";"NOVEDAD LOGISTICA 92027 - SELLER/SKYBRANDS COLOMBIA SAS";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-07 14:23";"En curso (asignada)";"2025-02-25 16:12";"2025-03-04 07:12";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"Aura Natalia Daza Romero";"Jimmy Alexander Menjura Calvo";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Ticket# 1739755 description
+
+Buenas tardes, equipo de tecnología.
+Espero que se encuentren muy bien. Me permito la presente para solicitarles amablemente la verificación del seller 92027 - SELLER/SKYBRANDS COLOMBIA SAS, ya que desde el año pasado se ha venido presentando un error en la admisión de guías de este seller y se han generado cobros logísticos que no son procedentes, lo cual está afectando diferentes áreas internas de Inter Rapidísimo S.A.
+Se ha identificado que las admisiones se están realizando desde el año pasado en diversas ciudades del país, lo que ha generado inquietud en el seller debido a los cobros y también ha ocasionado novedades en áreas como ecommerce, cartera y control de cuentas.
+Adjunto el archivo con el ticket del año pasado, donde se indicó que se requerían nuevas guías recientes. También incluyo el concepto del Ingeniero Santiago Correa Ramírez, sin embargo, el error persiste. Las guías registradas no son reales y continúan generando inconvenientes. Es necesario identificar al responsable de estos tres pre-envíos recientes y tomar las acciones pertinentes para mitigar este error y evitar que se sigan registrando admisiones no reales respecto a las ventas en Alcarrito.
+Además, incluyo el correo de Mauricio González, Subgerente de Cartera, quien expone que ya se castigó una cartera por más de 1.000.000 de pesos el año pasado debido a este problema, el cual vuelve a presentarse.
+Guías recientes que no son reales como venta de Alcarrito (diciembre 2024 y enero 2025):240006482228240006505007240006411200
+Agradezco mucho su gestión y quedo atento a cualquier comentario o requerimiento adicional.
+Cordialmente,";"";"";
+"2 756 532";"ERROR ADMISION CLIENTE BAJO CONVENIO POS";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-07 13:35";"En curso (asignada)";"2025-02-27 20:38";"2025-03-05 11:00";"SERVICIOS TI > Aplicaciones > POS WPF";"Alta";"Alix Adriana Torres Velasquez";"Jairo Miller Urrego Garay";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"3226818609
+
+CORDIAL SALUDO, 
+
+POR FAVOR DE SU AYUDA SE PRESENTA ERROR AL ADMITIR ORIGEN TUNJA - DESTINO MEDELLIN CLIENTE TIGO";"";"";
+"2 741 274";"ERROR AL EDITAR GUIA 76000";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-07 11:16";"En curso (asignada)";"2025-02-22 03:25";"2025-02-27 15:00";"SERVICIOS TI > Aplicaciones > Divulgación Mesa de servicios";"Alta";"Elkin Ardila Gonzalez";"Jairo Miller Urrego Garay";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buenas noches, 
+
+Cordial saludo solicito de su colaboración con un error que se está generando al tratar de editar una guía 76000 y esta guía fue creada offline, este error se presenta al momento de estar colocando el número de identificación del remitente, es de aclarar que esta guía ya fue creada e impresa por la pami pero no se está dejando editar por este error que arroja.
+
+Adjunto imagen del error generado al editar la guía y guía con datos del remitente y guía a editar.";"";"";
+"2 693 831";"Error Consulta API - Dificil Acceso";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-07 09:09";"En curso (asignada)";"2025-02-04 16:15";"2025-02-05 17:15";"SERVICIOS TI > Dispositivos Tecnológicos > Computador";"Alta";"Manuel Antonio Chaves Clavijo";"Mauricio Enrique Hernandez Cabrera";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Cordial saludo estimados y su amable ayuda, se presenta error en la información presentada en api de consulta de centros de servicios:
+
+URL: https://www3.interrapidisimo.com/Apicontroller/api/CentrosServicio/ObtenerCentrosServicioNacional
+
+Por ejemplo, en este caso se muestra que el destino 'PUERTO NARIÑO' no figura como de difícil acceso, aunque en realidad lo es:
+
+Gracias y quedamos atentos al arreglo de esto.";"";"";
+"2 715 184";"NOVEDAD CON APLICACION GUIAS CONTROLLER";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-06 17:27";"En curso (asignada)";"2025-02-12 16:04";"2025-02-14 15:04";"SEGURIDAD DE LA INFORMACIÓN > Autorizaciones > Instalación de Aplicaciones";"Alta";"Karen Liseth Sanabria Lopez";"Faiver Leguizamo Rojas";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buen dia 
+Requiero de su apoyo validando la siguiente novedad, ya que no permite generar las imagenes de las guias.";"";"";
+"2 767 185";"Solicitud soporte Woocommerce - Calzado DModa";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-06 16:39";"En curso (asignada)";"2025-03-04 14:54";"2025-03-05 07:54";"SERVICIOS TI > Dispositivos Tecnológicos > Otros";"Alta";"Manuel Antonio Chaves Clavijo";"Jimmy Alexander Menjura Calvo";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Cordial saludo,
+
+El cliente Calzado DModa requiere asistencia de TI de INTER RAPIDÍSIMO, ya que el plugin Woocommerce en su marketplace no está funcionando. Contacto cliente Jhonny Eusse - 3003486189.
+Agradezco su atención y apoyo.";"";"";
+"2 466 480";"Falla en controller app";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-06 10:18";"En curso (asignada)";"2024-11-14 18:18";"2024-11-20 11:00";"SERVICIOS TI > Aplicaciones > Controller App";"Alta";"Herman Saucedo Lezama";"Juan David Becerra Molano";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Solicito su amable colaboración ya que la PAMI 7418 informa que no puede descargar recogidas desde la aplicación, agradezco su pronta colaboración ya que se encuentra en cierre de caja";"";"";
+"2 714 170";"Guias Devueltas a Remitente";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-06 10:13";"En curso (asignada)";"2025-02-12 12:18";"2025-02-18 13:48";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"Deisy Carolina Agray Mendoza";"Juan Pablo Alfonso Beltran";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buen día
+Por que el sistema no genero el egreso correspondiente en las cajas siendo las guías devueltas a remitente:
+240022646441
+240023517692
+700149172604
+700148502200";"";"";
+"2 441 758";"DEVOLUCIONES MAL GENERADAS";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-06 08:42";"En curso (asignada)";"2024-11-02 08:40";"2024-11-08 11:30";"SERVICIOS TI > Aplicaciones > Logística Inversa WPF";"Alta";"Jenny Paola Monroy Orjuela";"Laura Natalia Forero Artunduaga";"Soporte Niv.3 - Operaciones_";"";"YOPAL";"";"Buen Dia;
+
+Solicito de su amable colaboración con las siguientes guías las cuales son de Yopal y los envíos están en físico acá, pero la guía 3000 las generaron en Bogotá. 
+
+240018230641 3000216807868
+750011928732 3000216807871
+240018018595 3000216807865
+240018237457 3000216807869
+240018183649 3000216807867
+240018274307 3000216807870
+240018065285 3000216807866
+
+Esta es la relacion de las guías 
+
+Gracias";"";"";
+"2 767 104";"Clientes en API de recogidas";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-06 08:18";"En curso (asignada)";"2025-03-04 14:41";"2025-03-10 08:41";"SERVICIOS TI > Aplicaciones > API Integraciones";"Alta";"Manuel Antonio Chaves Clavijo";"German Orlando Ramirez Sarmiento";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Cordial saludo, agradecemos tu amable colaboración para informarnos qué clientes están actualmente consumiendo el servicio de recogidas esporádicas vía API. El endpoint correspondiente es:
+http://www3.interrapidisimo.com/ApiVentaCredito/api/Recogida/InsertarRecogidaCliente/
+Muchas gracias, quedamos atentos a su respuesta.";"";"";
+"2 722 125";"SERVICIOS TI > Aplicaciones > Controller Web";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-05 18:04";"En curso (asignada)";"2025-02-14 17:35";"2025-02-20 11:00";"SERVICIOS TI > Aplicaciones > Centro Acopio WPF";"Alta";"Jose Eduardo Gomez";"Miguel Angel Pardo Reyes";"Soporte Niv.3 - Operaciones_";"";"POPAYAN_RACOL";"";"Cordial saludo
+
+De su amable colaboración de verificación de novedad persisten el en aplicativo centro de acopio ingreso de unidades de devoluciones por agencia para realizar proceso retrasa la operación de devoluciones";"";"";
+"2 750 684";"SOLICITUD ACTUALIZACION DE TARIFAS CLIENTE LA PREVISORA NIT: 860002400";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-05 16:12";"En curso (asignada)";"2025-02-26 10:35";"2025-03-05 07:35";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"Henry Manuel Cordoba Redondo";"Jairo Miller Urrego Garay";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Cordial saludo estimados ingenieros.
+Requerimos de su amable colaboración actulizando las tarifas del cliente LA PREVISORA S.A COMPAÑIA DE SEGUROS NIT: 860002400-2 más especificamente las tarifas del contrato ID 6985 (08/VILLAVICENCIO/LA PREVISORA S.A. COMPAÑIA DE SEGUROS) para cambiarlas de TARIFA PLENA CONTADO 2024 y que queden con las tarifas penas vigentes TARIFA PLENA 2024-2025. Relaciono datos del cliente, autorizaciones y ruta para su validación y gestión.cliente: LA PREVISORA S.A COMPAÑIA DE SEGUROSnit: 860002400id controller cliente: 1211id controller contrato: 6985
+RUTA: RACOL BOGOTA 1 > COMERCIAL > CLIENTES CREDITO > ADMINISTRAR CLIENTES CREDITO > FILTRO > CODIGO > 1211 > BUSCAR > CONFIG > CONTRATO 6985 > EDITAR > SERVICIOS.";"";"";
+"2 740 666";"Solicitud anulación Preenvíos DROPI";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-05 15:03";"En curso (asignada)";"2025-02-21 16:47";"2025-02-27 16:47";"SERVICIOS TI > Aplicaciones > API Integraciones";"Alta";"Manuel Antonio Chaves Clavijo";"Juan Pablo Alfonso Beltran";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Cordial saludo,
+
+Agradezco su colaboración con la anulación de los preenvíos del cliente DROPI S.A.S., NIT: 901411985 (idCliente: 9381), generados entre el 1° de enero de 2024 y el 19 de febrero de 2025, que se encuentran en estado creado.
+
+Estos no son envíos admitidos y no requieren validación por parte del área de control de cuentas. Ticket de ejemplo: 1854539.
+
+Muchas gracias, quedamos atentos.";"";"";
+"2 671 916";"NO DEJA ADMITIR ENVIOS CLIENTE CREDITO";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-05 08:38";"En curso (asignada)";"2025-01-27 16:20";"2025-02-03 09:20";"SERVICIOS TI > Aplicaciones > Controller App";"Alta";"Sebastian Castillo Velandia";"Juan David Becerra Molano";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buenas tardes 
+necesito de su colaboracion ya que la app desde el viernes pasado no deja admitir los envios cliente credito desde la app ya se borro datos y cache y se sincronizo y la falla aun persiste";"";"";
+"2 765 355";"Falla en controller app";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-05 08:33";"En curso (asignada)";"2025-03-04 08:13";"2025-03-07 12:43";"SERVICIOS TI > Aplicaciones > Controller App";"Alta";"Herman Saucedo Lezama";"Juan David Becerra Molano";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buenos días ; solicito su amable colaboración ya que la PAMI 8579 informa que la aplicación no le permite realizar descargas.
+Se reinicio la aplicación y ya se efectuó la actualización de la misma y no funciona 
+Agradezco su colaboración";"";"";
+"2 734 932";"Guias pago en casa peaton sin recaudo";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-04 12:26";"En curso (asignada)";"2025-02-20 07:45";"2025-02-26 09:15";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"Diego Mauricio Quintero Diaz";"Laura Natalia Forero Artunduaga";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buen dia ingeinieros, solicito de su colaboracion con las siguientes guias las cuales realizaron el recaudo correspondiente pero no se evidencia la afectacion de la cajaGuias Valor Comercial Calor total 700147900610 31.000 18.170700147849479 74.000 21.180700148011002 133.000 16.810";"";"";
+"2 763 940";"FALLA EN INGRESO DE ENVIOS A L CENTRO DE CONFIRMACIONES Y DEVOLUCIONES";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-04 11:47";"En curso (asignada)";"2025-03-03 14:47";"2025-03-07 08:17";"SERVICIOS TI > Aplicaciones > Centro Acopio WPF";"Alta";"Luz Adriana Rojas Masias";"Miguel Angel Pardo Reyes";"Soporte Niv.3 - Operaciones_";"";"MOCOA";"";"Buenas tardes,
+
+Amablemente solicito colaboración con error en WPF- Centro de confirmaciones y devoluciones, adjunto pantallazo de error.
+Espero pronta respuesta, Gracias.";"";"";
+"2 749 901";"GUIA ANULADA CON TRAZA 700149660178";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-04 08:10";"En curso (asignada)";"2025-02-26 07:43";"2025-03-04 09:13";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"Diego Mauricio Quintero Diaz";"Juan David Becerra Molano";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buen dia ingenieros, solicito de su colaboracion con la guia 700149660178, que se encontraba anulada pero le permitio realizar la trazabilidad en el cual no realizo la reactivacion correspondiente dejando el anulado y sin valores.
+Para que por favor se le coloque los valores correspondientes y se quite el anulado.";"";"";
+"2 700 985";"GN/A/ Alertamiento Admisiones Offline";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-03-01 16:54";"En curso (asignada)";"2025-02-06 18:16";"2025-02-10 22:16";"INFRAESTRUCTURA > Dynatrace > Herramientas";"Baja";"Santiago Parra Leon";"German Orlando Ramirez Sarmiento";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buen Dia
+
+Se presenta alertamiento sobre el servicio Controller:80,443 (/AdmisionesOffline).";"";"";
+"2 409 660";"PROBLEMAAS POR DOBLE INGRESO EN DIFERENTRE RACOLES";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-02-26 17:26";"En curso (asignada)";"2024-10-19 10:18";"2024-10-24 11:00";"SERVICIOS TI > Aplicaciones > Centro Acopio WPF";"Alta";"Johan Fabian Granados Gomez";"Juan David Becerra Molano";"Soporte Niv.3 - Operaciones_";"";"MANIZALES";"";"Buenas tardes
+
+hemos venido presenando una serie de fallas por doble ingreso con un mismo usuario en diferentes racoles,
+
+compo pueden ver en la imagen las guias trienen ingreso con un suario de manizales en manizales y en otra racol.";"";"";
+"2 444 236";"Novedad WS - YANBAL";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-02-26 15:45";"En curso (asignada)";"2024-11-05 11:35";"2024-11-12 11:35";"SERVICIOS TI > Aplicaciones > API Integraciones";"Alta";"Manuel Antonio Chaves Clavijo";"Mauricio Enrique Hernandez Cabrera";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Cordial saludo,
+El cliente YANBAL nos ha informado que tiene múltiples órdenes sin actualización en los estados de entrega a través del Web Service proporcionado por INTER RAPIDÍSIMO. Agradecemos su amable colaboración para validar y corregir lo que sea necesario.
+Contacto: Mauricio Vázquez - 313 8592339
+Quedamos atentos a su pronta respuesta.";"";"";
+"2 724 886";"Estafa en Usuario de Recogidas";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-02-26 07:31";"En curso (asignada)";"2025-02-17 10:00";"2025-02-19 09:00";"SEGURIDAD DE LA INFORMACIÓN > Autorizaciones > Instalación de Aplicaciones";"Alta";"LINA RODRIGUEZ";"Jairo Miller Urrego Garay";"Soporte Niv.3 - Operaciones_";"";"ZIPAQUIRA";"";"Cordial saludo
+Con el presente, solicito intervencion inmediata a las diferentes estafas que estas sucediendo a partir de la asignación de recogidas con mi usuario, desde el mes de noviembre se vienen presentando estas situaciones y ya se han reportado al personal de recogidas y sigues estafando a los clientes con mis datos y ustedes mismos siguen enviandome las mismas solicitudes de los estafadores, la direccion que siempre se ha reportado para recogias des la carrera 15 # 4-65, direccion que no existe en zipaquira.
+
+El dia martes 10 de febrero, se acerco una persona que vino desde bogota haciendo reclamos de que lo habian robado con 2 millones de pesos porque supuestamente nosotros le habiamos recogido un televisor, la persona mostro evidencias de la conversacion en la cual daban todos mis datos con cedula, nombre y direccion.
+Solicito que desde el area competente, me sea garantizada la proteccion de datos personales como representante legal y se indague a profundidad lo sucedido
+Ya que el usuario dio a conocer que el mismo genero la guia desde la pagina de ustedes para tener la tranquilidad y aun asi fue estafado, lo cual da evidencias que esto esta sucediendo con personal interno de ustedes.
+
+Anexo evidencias de las conversaciones del cliente con los estafadores y la guia generada por el directamente desde la pagina de interrapidisimo.";"";"";
+"2 741 449";"FALLA EN COMPONENTE ICACentroAcopioSvc";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-02-25 10:14";"En curso (asignada)";"2025-02-22 08:53";"2025-02-22 16:53";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"Didier Alexander Villamil Jimenez";"German Orlando Ramirez Sarmiento";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buen día;
+Respetados Ingenieros; 
+Se reporta por este medio la falla generada en ICACentroAcopioSvc:
+Comportamiento del Incidente:
+
+Contexto del error:
+
+Método en afectación por el componente ICACentroAcopioSvc:
+
+Errores generados por comportamiento del método en la entrada de Token y flujo transaccional:
+
+¡Agradezco su apoyo en la revisión técnica de la novedad presentada!";"";"";
+"2 741 976";"FALLA EN COMPONENTE IRGRecogidasSvc";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-02-25 10:14";"En curso (asignada)";"2025-02-22 11:27";"2025-02-22 15:27";"INFRAESTRUCTURA > Herramientas de Seguridad > DLP";"Alta";"Didier Alexander Villamil Jimenez";"German Orlando Ramirez Sarmiento";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buen día;
+Respetados Ingenieros;
+De su valiosa colaboración con la novedad presentada en componente IRGRecogidasSvc, en donde al realizar análisis de la novedad se logra apreciar el siguiente comportamiento: 
+Distribución de traza de fallas:
+
+Flujo de métodos en interacción de componentes y metodos:
+
+Contexto del error:
+
+Error a nivel aplicación:
+
+Error a nivel de capa de datos:
+
+Agradezco su apoyo";"";"";
+"2 742 286";"FALLA COMPONENTE ICCControlCuentasSvc";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-02-25 10:14";"En curso (asignada)";"2025-02-22 13:00";"2025-02-22 17:00";"INFRAESTRUCTURA > Herramientas de Seguridad > DLP";"Alta";"Didier Alexander Villamil Jimenez";"German Orlando Ramirez Sarmiento";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buen día;
+Respetados Ingenieros;
+De su valiosa colaboración con la falla que se presenta en el componente ICCControlCuentasSvc:
+Tasa de fallas:
+
+Componente de la falla:
+
+Detallado de la falla:
+
+Excepción y flujo de de componentes y métodos de la falla:
+
+¡Agradezco su valiosa colaboración!";"";"";
+"2 740 577";"GUIAS NN";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-02-24 09:32";"En curso (asignada)";"2025-02-21 16:29";"2025-02-27 09:59";"SERVICIOS TI > Aplicaciones > Centro Acopio WPF";"Alta";"Yimmi Alfonso Pino Becerra";"Miguel Angel Pardo Reyes";"Soporte Niv.3 - Operaciones_";"";"FLORENCIA";"";"Buen día 
+No me deja asociar una guía, la asocio pero sigue apareciendo en NN 
+
+Gracias";"";"";
+"2 726 642";"Error DANEs API Integraciones";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-02-20 11:54";"En curso (asignada)";"2025-02-17 15:38";"2025-02-21 09:08";"SERVICIOS TI > Aplicaciones > API Integraciones";"Alta";"Manuel Antonio Chaves Clavijo";"Mauricio Enrique Hernandez Cabrera";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Cordial saludo,
+Me permito informar error en los números identificadores de localidades con los que funciona el producto API Integraciones Cliente Crédito. Son 76 los números de localidades que no coinciden con los códigos oficiales (DANE) en el sistema (adjunto relación). Se solicita atención para corregir esta novedad.
+Agradezco la atención prestada.";"";"";
+"2 724 669";"GUIAS MAL LIQUIDADAS CIERRE ENERO";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-02-18 08:46";"En curso (asignada)";"2025-02-17 09:22";"2025-02-21 10:52";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"Diego Mauricio Quintero Diaz";"Mauricio Enrique Hernandez Cabrera";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buen dia ingenieros, solicito de su colabroacion con las siguientes 51 guias las cuales se encuentran mal liquidadas y por debajo de los valores minimos establecidos, el valor adicional no esta tomando el porcentaje que corresponde y tampoco suma el adicional.
+
+Teniendo en cuenta que:
+Valor adicional es el 5% sobre el valor de la Comercial
+La prima es el 2% sobre el valor comercial
+El total debe ser la suma de Adiconal+transporte+prima
+
+Informo que la novedad se sigue presentando ya que ya se habia notificado en los Ticket# 2175425 - Ticket# 2164990 - Ticket# 2383545 - Ticket# 2383545 - Ticket# 2400659 - Ticket# 2464739 - Ticket# 2556086 - Ticket# 2627015
+Es de aclarar que mes a mes se esta aumentando la novedad aun no se evidencia la correccion del problema";"";"";
+"2 287 634";"''Error Consulta API - Reclame Oficina''";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-02-17 17:16";"En curso (asignada)";"2024-08-21 16:49";"2024-08-27 10:19";"SERVICIOS TI > Aplicaciones > API Integraciones";"Alta";"Manuel Antonio Chaves Clavijo";"Mauricio Enrique Hernandez Cabrera";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Cordial saludo estimados, su amable ayuda en revisión de información presentada en api de consulta de centros de servicios:
+
+URL: https://www3.interrapidisimo.com/Apicontroller/api/CentrosServicio/ObtenerCentrosServicioNacional
+
+Por ejemplo acá nos muestra que TELLO no tiene Reclame en Oficina:
+
+Sin embargo en la api Venta Crédito si permite con este tipo de entrega realizar los preenvios:
+
+Muchas gracias y quedamos atentos.";"";"";
+"2 722 055";"Validación de guias";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-02-17 15:43";"En curso (asignada)";"2025-02-14 17:10";"2025-02-21 08:10";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"Monica Lucia Quiroga Galvis";"Juan Pablo Alfonso Beltran";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buena tarde
+Solciito de su colaboración para la validación de las guias que aun presentan fecha de entrega estimada los días sabados y domingos, se adjunta base con las guias se solicita apoyo para ajustar las fechas y corregir los indicadores.
+Quedo atenta.";"";"";
+"2 499 276";"FALLAS AL REALIZAR DEVOLUCION DE GUIA";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-02-17 09:34";"En curso (asignada)";"2024-11-28 07:54";"2024-12-03 11:54";"SERVICIOS TI > Aplicaciones > Logística Inversa WPF";"Alta";"Jose Eduardo Gomez";"Miguel Angel Pardo Reyes";"Soporte Niv.3 - Operaciones_";"";"POPAYAN_RACOL";"";"Cordila Saludo 
+De su amable colaboración en la verificación que se viene presentando en la Racol Popayan en el área de Cierre Diario la guía al revisar presenta que se encuentra asignada a la pamis 
+PAMI RICHARD HERNANDEZ RPL ID 4026
+PAMI JHON GONZALEZ RPL ID 4760
+PAMI ROQUE MENESES RPL ID 7367
+PAMI ROQUE MENESES RPL ID 7367
+PAMI YOAN GARCIA RPL ID 6144
+PAMI YOAN GARCIA RPL ID 6144
+PAMI YOAN GARCIA RPL ID 6144
+PAMI YOAN GARCIA RPL ID 6144
+PAMI YOAN GARCIA RPL ID 6144
+PAMI YOAN GARCIA RPL ID 6144
+PAMI MICHELLE KARINA MONTENEGRO RPL ID 5163
+PAMI MICHELLE KARINA MONTENEGRO RPL ID 5163
+PAMI MICHELLE KARINA MONTENEGRO RPL ID 5163
+PAMI MICHELLE KARINA MONTENEGRO RPL ID 5163
+En el área de Cierre Diario en el modulo de Logística no se evidencia las unidad que se encuentran asignadas a las pamis con planilla quedando sin trazabilidad alguna perjudicando los procesos logísticos y financieros
+GUIA DESTINO ESTADO FECHA DE ASIGNACION MENSAJERO PLANILLA
+1 240019656670 POPAYAN En Distribución Urbana 26/11/2024 10:07:31 a. m. PAMI RICHARD HERNANDEZ RPL ID 4026 5745259
+
+1 240019541399 POPAYAN En Distribución Urbana 27/11/2024 9:29:18 a. m. PAMI JHON GONZALEZ RPL ID 4760 5759253
+
+1 240019672465 POPAYAN En Distribución Urbana 27/11/2024 9:31:30 a. m. PAMI ROQUE MENESES RPL ID 7367 5759372
+2 240019658183 POPAYAN En Distribución Urbana 27/11/2024 9:31:33 a. m. PAMI ROQUE MENESES RPL ID 7367 5759372
+
+1 700142747618 POPAYAN En Distribución Urbana 27/11/2024 9:25:45 a. m. PAMI YOAN GARCIA RPL ID 6144 5759284
+2 700143112817 POPAYAN En Distribución Urbana 27/11/2024 9:25:57 a. m. PAMI YOAN GARCIA RPL ID 6144 5759284
+3 240019559863 POPAYAN En Distribución Urbana 27/11/2024 9:25:42 a. m. PAMI YOAN GARCIA RPL ID 6144 5759284
+4 240019508751 POPAYAN En Distribución Urbana 27/11/2024 9:26:00 a. m. PAMI YOAN GARCIA RPL ID 6144 5759284
+5 240019565356 POPAYAN En Distribución Urbana 27/11/2024 9:25:55 a. m. PAMI YOAN GARCIA RPL ID 6144 5759284
+6 700142712019 POPAYAN En Distribución Urbana 27/11/2024 9:25:52 a. m. PAMI YOAN GARCIA RPL ID 6144 5759284
+
+1 700142936707 POPAYAN En Distribución Urbana 27/11/2024 9:30:41 a. m. PAMI MICHELLE KARINA MONTENEGRO RPL ID 5163 5759282
+2 240019543653 POPAYAN En Distribución Urbana 27/11/2024 9:30:49 a. m. PAMI MICHELLE KARINA MONTENEGRO RPL ID 5163 5759282
+3 240019638852 POPAYAN En Distribución Urbana 27/11/2024 9:30:43 a. m. PAMI MICHELLE KARINA MONTENEGRO RPL ID 5163 5759282
+4 700143058385 POPAYAN En Distribución Urbana 27/11/2024 9:30:56 a. m. PAMI MICHELLE KARINA MONTENEGRO RPL ID 5163 5759282
+
+GUIADESTINO ESTADO FECHA DE ASIGNACIONMENSAJERO PLANILLA1240019656670POPAYANEn Distribución Urbana26/11/2024 10:07:31 a. m.PAMI RICHARD HERNANDEZ RPL ID 40265745259 1240019541399POPAYANEn Distribución Urbana27/11/2024 9:29:18 a. m.PAMI JHON GONZALEZ RPL ID 47605759253 1240019672465POPAYANEn Distribución Urbana27/11/2024 9:31:30 a. m.PAMI ROQUE MENESES RPL ID 736757593722240019658183POPAYANEn Distribución Urbana27/11/2024 9:31:33 a. m.PAMI ROQUE MENESES RPL ID 73675759372 1700142747618POPAYANEn Distribución Urbana27/11/2024 9:25:45 a. m.PAMI YOAN GARCIA RPL ID 614457592842700143112817POPAYANEn Distribución Urbana27/11/2024 9:25:57 a. m.PAMI YOAN GARCIA RPL ID 614457592843240019559863POPAYANEn Distribución Urbana27/11/2024 9:25:42 a. m.PAMI YOAN GARCIA RPL ID 614457592844240019508751POPAYANEn Distribución Urbana27/11/2024 9:26:00 a. m.PAMI YOAN GARCIA RPL ID 614457592845240019565356POPAYANEn Distribución Urbana27/11/2024 9:25:55 a. m.PAMI YOAN GARCIA RPL ID 614457592846700142712019POPAYANEn Distribución Urbana27/11/2024 9:25:52 a. m.PAMI YOAN GARCIA RPL ID 61445759284 1700142936707POPAYANEn Distribución Urbana27/11/2024 9:30:41 a. m.PAMI MICHELLE KARINA MONTENEGRO RPL ID 516357592822240019543653POPAYANEn Distribución Urbana27/11/2024 9:30:49 a. m.PAMI MICHELLE KARINA MONTENEGRO RPL ID 516357592823240019638852POPAYANEn Distribución Urbana27/11/2024 9:30:43 a. m.PAMI MICHELLE KARINA MONTENEGRO RPL ID 516357592824700143058385POPAYANEn Distribución Urbana27/11/2024 9:30:56 a. m.PAMI MICHELLE KARINA MONTENEGRO RPL ID 51635759282";"";"";
+"2 718 031";"FALLA MODULO ASIGNACION DE INVENTARIOS A PUNTOS ***URGENTE*****";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-02-17 09:31";"En curso (asignada)";"2025-02-13 14:39";"2025-02-19 14:39";"SERVICIOS TI > Aplicaciones > Centro Acopio WPF";"Alta";"Jaime Alejandro Galindo Vargas";"Miguel Angel Pardo Reyes";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buenas tardes, por favor su colaboracion ya que desde el día de ayer no se puede ingresar al modulo del asunto en mención ya que al momento de seleccionar un punto se cae el sistema arrojando este error
+
+}
+
+La ruta para ingresar es";"";"";
+"2 481 794";"LENTITUD EN EL PROCESO DE ASOCIACION";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-02-13 10:00";"En curso (asignada)";"2024-11-21 09:58";"2024-11-26 13:58";"SERVICIOS TI > Aplicaciones > Centro Acopio WPF";"Alta";"Sandra Mabel Gaitan Salazar";"Miguel Angel Pardo Reyes";"Soporte Niv.3 - Operaciones_";"";"CALI";"";"Buenos dìas 
+Comparto con ustedes video de la lentitud que genera el sistema al momento de asociar NN.
+Agradezco su apoyo
+DIEGO QUINTERO";"";"";
+"2 623 721";"INFORMES LISTADOS DE PRODUCCION";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-02-11 09:40";"En curso (asignada)";"2025-01-09 17:29";"";"INFRAESTRUCTURA > Listado de producción";"Alta";"Yeraldin Martinez Pulido";"German Orlando Ramirez Sarmiento";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buena tarde, Ingenieros teniendo en cuenta la facturación electrónica que se está generando en la organización y los pagos tributaros se requiere que al listado de producción que se genera todos los días en la mañana y se deposita en DRIVE para la consulta del proceso de cobranza se excluya las siguientes columnas:
+
+ADM_IdCiudadOrigen
+ADM_IdCiudadDestino
+ESTADOGestion
+CiudadEstadoGestion
+ADM_TelefonoDestinatario
+
+E incluir las siguientes columnas:Fecha de último de estadoEstado gestiónNit o Cedula de clienteNumero de factura electrónicaNumero de Nota crédito.";"";"";
+"1 297 215";"NOVEDAD LAMBDA DESCARGUMENSAJEROAPP";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-02-11 09:05";"En curso (asignada)";"2023-08-14 10:26";"2023-09-28 18:00";"INFRAESTRUCTURA > Dynatrace > Herramientas";"Baja";"Michael Javier Rodriguez Hernandez";"German Orlando Ramirez Sarmiento";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buen Dia
+Agradezco su colaboración verificando la LAMBDA (ApiLambdaDescargueMensajeroAPP), ya que esta se encuentra presentando de forma reiterativa.Adjunto Logs E Informe técnico.
+
+Cordialmente.
+Michael J Rodríguez H.";"";"";
+"1 528 575";"ApiLambdaDescargueMensajeropost";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-02-11 09:02";"En curso (asignada)";"2023-11-16 15:44";"2024-01-04 18:00";"INFRAESTRUCTURA > Dynatrace > Herramientas";"Baja";"Santiago Parra Leon";"German Orlando Ramirez Sarmiento";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buen día
+
+Se solicita apoyo para la validación de las fallas en time out para la lambda ApiLambdaDescargueMensajeropost
+Se deja informe técnico para las validaciones";"";"";
+"2 597 232";"SOLICITUD SOPORTE CONTROLLER APP PAMI 9415";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-02-11 08:35";"En curso (asignada)";"2024-12-30 11:29";"2025-01-03 15:29";"SERVICIOS TI > Aplicaciones > Controller App";"Alta";"Edwin Fabian Casteblanco Torres";"Juan David Becerra Molano";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buen dia, solicito de su amable colaboracion brindando soporte a la Pami 9415 ya que manifiesta que le estan asignando en la App guias que no las llevan y al visualizar el explorador de envios, las tienen asignadas apoyos.
+Agradezco la atencion prestada y pronta respuesta.";"";"";
+"2 665 463";"NOVEDAD ADMISION";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-02-07 17:10";"En curso (asignada)";"2025-01-24 11:08";"2025-01-29 15:47";"SERVICIOS TI > Aplicaciones > POS WPF";"Alta";"Jenny Paola Betancur Garcia";"Mauricio Enrique Hernandez Cabrera";"Soporte Niv.3 - Operaciones_";"";"TUNJA";"";"Compañeros buenos días 
+agradezco validación novedad con agencia MONGUA 6375 que reporta que no le permite admisión para municipio de FIRAVITOBA.";"";"";
+"2 694 084";"Error Cotizador API - TE / ContraPago";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-02-06 17:06";"En curso (asignada)";"2025-02-04 17:01";"2025-02-06 07:01";"SERVICIOS TI > Dispositivos Tecnológicos > Computador";"Alta";"Manuel Antonio Chaves Clavijo";"Mauricio Enrique Hernandez Cabrera";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Cordial saludo,
+Solicito tu amable colaboración. El cotizador API de integraciones para el cliente de crédito está mostrando información incorrecta en los tiempos y la fecha estimada de entrega. Además, el campo ''ValoContrapago'' aparece en ceros, lo cual es una inconsistencia en esta causando problemas a los clientes:
+
+Agradezco tu pronta ayuda para corregir este inconveniente.
+Muchas gracias.";"";"";
+"2 627 015";"GUIAS MAL LIQUIDADAS CIERRE DICIEMBRE";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-02-06 16:56";"En curso (asignada)";"2025-01-10 16:28";"2025-01-16 09:58";"SERVICIOS TI > Aplicaciones > Controller App";"Alta";"Diego Mauricio Quintero Diaz";"Mauricio Enrique Hernandez Cabrera";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buen dia ingenieros, solicito de su colabroacion con las siguientes 110 guias las cuales se encuentran mal liquidadas y por debajo de los valores minimos establecidos y tampoco suma el adicional que corresponde
+
+Teniendo en cuenta que:
+Valor adicional es el 5% sobre el valor de la Comercial
+La prima es el 2% sobre el valor comercial
+El total debe ser la suma de Adiconal+transporte+prima
+
+Informo que la novedad se sigue presentando ya que ya se habia notificado en los Ticket# 2175425 - Ticket# 2164990 - Ticket# 2383545 - Ticket# 2383545 - Ticket# 2400659 - Ticket# 2464739 - Ticket# 2556086 
+Es de aclarar que mes a mes se esta aumentando la novedad aun no se evidencia la correccion del problema";"";"";
+"2 679 179";"Validación tiempos de entrega";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-02-05 11:08";"En curso (asignada)";"2025-01-29 18:26";"2025-02-05 11:00";"SERVICIOS TI > Aplicaciones > Divulgación Mesa de servicios";"Alta";"Monica Lucia Quiroga Galvis";"Jairo Miller Urrego Garay";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buena tarde
+Solicito de su colaboración con la validación de la base adjunta donde se evidencian guias con fechas estimadas de entrega para los días sabados o domingos, y de acuerdo a las reglas para los indicadores no se debe tener fecha estimada de entrega para los sabados ni domingos.
+Quedo atenta.";"";"";
+"2 006 719";"Falla API Preenvios Integraciones";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-02-05 09:13";"En curso (asignada)";"2024-05-08 15:23";"2024-05-16 08:23";"SERVICIOS TI > Aplicaciones > API Integraciones";"Alta";"Manuel Antonio Chaves Clavijo";"Laura Natalia Forero Artunduaga";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buenas tardes estimados y cordial saludo, se informa que se presenta en este momento indisponibilidad del servicio:
+
+URL API:
+https://www3.interrapidisimo.com/ApiVentaCredito/api/Admision/InsertarAdmision/
+
+Muchas gracias y quedamos atentos.";"";"";
+"2 615 259";"Actualización Codigos Postal";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-02-04 17:41";"En curso (asignada)";"2025-01-07 16:19";"2025-01-09 10:19";"SEGURIDAD DE LA INFORMACIÓN > Autorizaciones > Bases de Datos y Roles";"Alta";"Johan Stiven Sarmiento Becerra";"Jairo Miller Urrego Garay";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buenas tardes, Faiver.
+
+Por medio de la presente solicito su amable colaboración y como se definio en la reunión sostenida con la celula Master, el objetivo es realizar la gestión de codigos Postal en las guias que tienen esta campo vacio de la tabla de AdmisionMensajeria en la Base de Datos Icontroller y en las tablas TBLGUIA y TBLREMITE de la Base de Datos DB_SISPOSTAL, para esta tarea se debe tener en cuenta las guias que se encuentran en el archivo .csv o .txt adjunto en este ticket.
+
+Ruta:
+https://drive.google.com/drive/folders/1vFxwHZRTFcx5_ySWTky73sDe6i3hKCpX
+
+Nota: Por favor asignar a Faiver Leguizamo Rojas del Grupo de Mantenimiento de software - Soprte Nivel 3";"";"";
+"2 685 242";"Error Consulta API - Pago en Casa";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-02-04 15:04";"En curso (asignada)";"2025-01-31 15:05";"2025-02-06 08:35";"SERVICIOS TI > Aplicaciones > API Integraciones";"Alta";"Manuel Antonio Chaves Clavijo";"Mauricio Enrique Hernandez Cabrera";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Cordial saludo estimados y su amable ayuda, se presenta error en la información presentada en api de consulta de centros de servicios:
+
+URL: https://www3.interrapidisimo.com/Apicontroller/api/CentrosServicio/ObtenerCentrosServicioNacional
+
+Por ejemplo acá nos muestra que EL CHARCO tiene Pago en Casa:
+
+Cuando en realidad ese destino no tiene Pago en Casa habilitado:
+
+Gracias y quedamos atentos al arreglo de esto.";"";"";
+"2 689 863";"novedad transmisión de viajes error longitud latitud";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-02-04 12:37";"En curso (asignada)";"2025-02-03 14:41";"2025-02-07 16:11";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"Oscar David Hernandez Medina";"Faiver Leguizamo Rojas";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Cordial saludo.
+buenas tardes, plataforma control t esta presentando novedad con la territorial llanos al momento de cargar los viajes y validar el log de errores este arroja un error asociado a la longitud y latitud.
+
+se adjunta imagen
+
+Agradezco la atención prestada";"";"";
+"2 670 340";"Validación de Errores en la Transmisión";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-01-29 17:22";"En curso (asignada)";"2025-01-27 11:01";"2025-01-31 12:31";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"Ana Maria Berrio Ortiz";"Faiver Leguizamo Rojas";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Cordial saludo equipo,
+
+Solicito su acostumbrada colaboración, validando la siguiente causal por la cual se esta presentando fallas al momento de trasmitir los viajes desde controller a control t, teniendo en cuenta que el operativo trasmite por integración 
+1543271252071185 BOGOTA-NILO (REGIONAL) 27/01/2025 06:48:40 GUR716 INTERRAPIDISIMO
+Manifiesto:1543271252071185";"";"";
+"2 544 007";"URGENTE: EVIDENCIA DE VALOR DECLARADO";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-01-29 15:28";"En curso (asignada)";"2024-12-12 17:34";"2024-12-19 08:30";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"Luis Arturo Duarte puerta";"Jairo Miller Urrego Garay";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buenos días Ingenieros, desde la Sub Gerencia de PQR se evidencio que el sistema esta permitiendo dejar declarar los envios por mas de 5 SMLMV, por favor validar herramienta y realizar escalonamiento al ingeniero encargado. adjunto prueba y guias donde se evidencia la misma novedad, este hechos es grave si se llega a configurar una perdida. 
+260003378834 260003378773 260003378555 260003378811 260003378575 260003378778 260003378589 260003378518 260003378551 260003378502 260003378735 260003378684 260003378774";"";"";
+"2 459 295";"VALIDACION DE VIAJES";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-01-17 16:59";"En curso (asignada)";"2024-11-12 15:17";"2024-11-18 09:17";"SERVICIOS TI > Aplicaciones > API Integraciones";"Alta";"William Leonardo Pardo Cardenas";"Faiver Leguizamo Rojas";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buen dia 
+De manera atenta solicito su valiosa colaboracion para que se validen el motivo por el cual se siguen transmitiendo viajes huerfanos en control t.
+adjunto viajes que no transmitieron el dia 12/11/2024, ID N_VIAJE
+3501463 RTUNe178310112420091201211202413
+3501466 RTUN146110112420091191211202410
+3501469 RTUNe178310112420091201211202413R
+3502503 RBOG154111112420092151211202411
+3503401 REOH13721111242009317121120247
+3503402 REOH13721111242009317121120247R
+Quedo atento a su pronta respuesta.";"";"";
+"2 639 292";"Novedad consola de recogidas";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-01-16 11:03";"En curso (asignada)";"2025-01-15 11:57";"2025-01-20 16:27";"SERVICIOS TI > Aplicaciones > Consola de Recogidas";"Alta";"Victor Manuel Gonzalez Devia";"Miguel Angel Pardo Reyes";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buen día.
+
+Ingenieros solicitamos de su colaboración validando y en lo posible realizando ajuste a la herramienta Consola de Recogidas ya que se ha venido presentando novedad con el acceso a esa.
+
+Actualmente solo se puede acceder a este sitio con protocolo HTTP ya que cuando se ingresa con HTTPS esta no ingresa y se que en el login.
+
+Se puede evidencia que cuando se ingresa como http://www3.interrapidisimo.com/recogisdasweb este ingresa sin problemas.
+
+Al intentar como sitio seguro https://www3.interrapidisimo.com se evidencia que este no ingresa y arroja el siguiente error, el cual genera bloqueo debido a que solicita un contenido no seguro.
+
+Se requeire de su ajuste debido a que los usuarios reportan constantemente esta novedad.";"";"";
+"2 408 962";"Actualización Puertas y Casilleros Territorial Sur";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-01-14 15:03";"En curso (asignada)";"2024-10-18 18:02";"2024-10-25 15:00";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"Santiago Jose Gutierrez Pinto";"Faiver Leguizamo Rojas";"Soporte Niv.3 - Operaciones_";"";"IBAGUE";"";"Buen día,
+Se adjunta base de la territorial sur, para actualizar puertas y casilleros esto debido a los nuevos operativos que ingresaron y modificaciones que se realizaron.
+
+Un saludo";"";"";
+"2 381 597";"Novedad Actualizaciòn Puerta Y Casilleros Cùcuta";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2025-01-14 15:02";"En curso (asignada)";"2024-10-05 11:10";"2024-10-11 08:30";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"Cesar Augusto Monsalve Carreno";"Faiver Leguizamo Rojas";"Soporte Niv.3 - Operaciones_";"";"BUCARAMANGA";"";"Buen Dìa!
+
+Adjunto archivo de puerta y casilleros para actualizar de nuevo y comparto las novedades presentadas.
+
+Bucaramaga - Directo Barranquilla, en la foto se refleja Bogota
+
+Bucaramanga - Cali Directo y en la foto se ve transito por Bogota";"";"";
+"2 502 436";"Novedades en DNS Reporteador";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2024-12-04 09:23";"En curso (asignada)";"2024-11-28 21:46";"2024-12-03 01:46";"INFRAESTRUCTURA > Dynatrace > Herramientas";"Baja";"Michael Javier Rodriguez Hernandez";"Diego Andres Villa Cardona";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Buen Dia Ing.
+Solicito de su amable colaboración, verificando la novedad que se reporta para el sitio web (http://reportes.interrapidisimo.com/Reportes/Cajas/ReporteConsolidadoMovimientos.aspx?keyInter=1).Esto teniendo en cuenta que como se evidencia, cuenta con DNS publicos.
+Adjunto evidencia: 
+
+Cordialmente.
+Michael J Rodríguez H.";"";"";
+"2 445 070";"PARAMETRIZAR ZONAS MEDELLIN";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2024-11-15 16:48";"En curso (asignada)";"2024-11-05 15:07";"2024-11-12 17:07";"SERVICIOS TI > Aplicaciones > Controller Silverlight";"Alta";"Andres Felipe Oyola Poloche";"Lina Rocio Torres Perafan";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Cordial Saludo
+Me permito solicitar los siguientes ajustes en las correspondientes microzonas en la ciudad de Medellín.
+Microzona R16: Recortar por la línea negra y renombrar ''PC16''
+Microzona PC16-A: Recortar la zona azul agregar a nueva zona ''PC16''
+
+Microzona PC16-A: Recortar la zona azul agregar a nueva zona ''PC16''
+
+Microzona PC9:Recortar y renombrar PC16_A
+
+Microzona PC9: Recortar de la microzona PC9 y renombrar como C5
+
+Microzona PC15: Recortar microzona PC15 Y Renombrar R15
+
+https://www.google.com/maps/d/edit?mid=1RTEXvPmu1A9g5R1twWg_ZNDiogRQLdQ&amp;usp=sharing
+En este momento ya nos dieron respuesta de la solicitud y se envió a producción por parte de ellos, por lo que requerimos de su apoyo ajustando de esta misma manera en nuestros sistemas de información.
+
+Quedo atento a sus comentarios.
+Por su colaboración, gracias.";"";"";
+"2 185 692";"Cambiar documento de las categorias en GLPI";"INTERRAPIDISIMO > TECNOLOGÍA > MESA DE SERVICIO";"2024-07-17 07:37";"En curso (asignada)";"2024-07-11 08:46";"2024-07-11 16:46";"SERVICIOS TI > Aplicaciones > RAPS 2.0";"Alta";"Angie Paola Benavides Vanegas";"Miguel Angel Pardo Reyes";"Soporte Niv.3 - Operaciones_";"";"BOGOTA";"";"Cordial saludo
+
+Requiero su apoyo cambiando el documento que aparece en la categoria de Asignación de permisos y Usuarios Nuevos al nuevo documento que adjunto en el mismo.
+
+Quedo atenta.
+Gracias";"";"";

@@ -26,7 +26,7 @@ from view.settings.settings import *
 # Manejo de errores y agregar logs? /*LISTOOO*/
 # Agregar confirmación en según que partes /*LISTOOO*/
 # Buscar cómo convertirlo en app .¿
-# Revisar que al subir reporte mensual no sobreescriba los revisados (creo q si valida ._.) >:/ (Revisar lógica actualizar abierto, [no actualiza si el cambio es sin cambios X_X]) /*ARREGLADOOOOOO*/
+# Revisar que al subir reporte mensual no sobreescriba los revisados (creo q si valida ._.) >:/ (Revisar lógica actualizar abierto, [no actualiza si el cambio es sin cambios X_X]) /*ARREGLADOOOOOO*/ ALGO FALLAAAAAAAAAAAAAAAA >:0 >:0 >:0 >:0 >:0 >:0 >:0
 #
 # Mejorar colores y agregar imágenes en alertas :P
 # Crear más temas >:O  /*LISTOOO*/
