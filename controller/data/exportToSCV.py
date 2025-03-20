@@ -20,7 +20,9 @@ def exportar_datos(frame):
     conn = connection_to_db()
     try:
         # Obtener nombres de todas las tablas
-        tables = pd.read_sql_query("SELECT name FROM sqlite_master WHERE type='table';", conn)
+        tables = pd.read_sql_query(
+            "SELECT name FROM sqlite_master WHERE type='table';", conn
+        )
 
         # Exportar cada tabla a un archivo CSV
         for table in tables["name"]:
@@ -32,7 +34,10 @@ def exportar_datos(frame):
 
         conn.close()
 
-        Completado(frame, f"Se han guardado {len(tables)} tablas como archivos CSV en tkinter_app/csv/")
+        Completado(
+            frame,
+            f"Se han guardado {len(tables)} tablas como archivos CSV en tkinter_app/csv/",
+        )
     except Exception as e:
-        logger.error('No se pudo exportar %s', e)
-        ErrorAlert(frame, 'Error al exportar')
+        logger.error("No se pudo exportar %s", e)
+        ErrorAlert(frame, "Error al exportar")

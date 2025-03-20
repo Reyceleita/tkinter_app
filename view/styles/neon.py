@@ -1,15 +1,11 @@
+# Definir tema Neon
 def neon_theme(style):
     style.theme_create(
         "Neon_theme",
-        parent="default",  
+        parent="default",
         settings={
-            ".": {
-                "configure": {
-                    "background": "#101010", 
-                    "foreground": "#0FF0FC"
-                }
-            },
-            "Treeview":{
+            ".": {"configure": {"background": "#101010", "foreground": "#0FF0FC"}},
+            "Treeview": {
                 "configure": {
                     "background": "#202020",
                     "fieldbackground": "#0FF0FC",
@@ -20,21 +16,27 @@ def neon_theme(style):
                     "background": "#FF00FF",
                     "foreground": "black",
                     "relief": "raised",
-                    "padding": (5,0,5,0),
+                    "padding": (5, 0, 5, 0),
                     "borderwidth": 5,
-                    "bordercolor": "#FF4500"
+                    "bordercolor": "#FF4500",
                 },
-                "map": {
-                    "background": [("active", "#FF4500")]
-                }
+                "map": {"background": [("active", "#FF4500")]},
             },
             "TScrollbar": {
                 "layout": [
-                    ("Scrollbar.trough", {"children": [
-                        ("Scrollbar.uparrow", {"side": "top", "sticky": "n"}),
-                        ("Scrollbar.downarrow", {"side": "bottom", "sticky": "s"}),
-                        ("Scrollbar.thumb", {"unit": "1", "sticky": "nswe"})
-                    ]})
+                    (
+                        "Scrollbar.trough",
+                        {
+                            "children": [
+                                ("Scrollbar.uparrow", {"side": "top", "sticky": "n"}),
+                                (
+                                    "Scrollbar.downarrow",
+                                    {"side": "bottom", "sticky": "s"},
+                                ),
+                                ("Scrollbar.thumb", {"unit": "1", "sticky": "nswe"}),
+                            ]
+                        },
+                    )
                 ],
                 "configure": {
                     "background": "#101010",
@@ -43,17 +45,30 @@ def neon_theme(style):
                     "arrowcolor": "#A0A0A0",
                     "troughrelief": "flat",
                     "darkcolor": "#A0A0A0",
-                    "relief": "ridge"
-                }
+                    "relief": "ridge",
+                },
             },
             "TEntry": {
                 "layout": [
-                    ("Entry.field", {"sticky": "nswe", "border": 1,  "children": [
-                        ("Entry.padding", {"sticky": "nswe",  "children": [
-                            ("Entry.label", {"sticky": "nswe"}),
-                            ("Entry.textarea", {"sticky": "nswe"})
-                        ]})
-                    ]})
+                    (
+                        "Entry.field",
+                        {
+                            "sticky": "nswe",
+                            "border": 1,
+                            "children": [
+                                (
+                                    "Entry.padding",
+                                    {
+                                        "sticky": "nswe",
+                                        "children": [
+                                            ("Entry.label", {"sticky": "nswe"}),
+                                            ("Entry.textarea", {"sticky": "nswe"}),
+                                        ],
+                                    },
+                                )
+                            ],
+                        },
+                    )
                 ],
                 "configure": {
                     "background": "#c7c7c7",
@@ -62,22 +77,33 @@ def neon_theme(style):
                     "insertborderwidth": 10,
                     "relief": "raised",
                     "bordercolor": "black",
-                    "padding": (5,3,3,3),
+                    "padding": (5, 3, 3, 3),
                     "insertbackground": "blue",
-                    #Agregaaaaaar lossss selecteddddd
+                    # Agregaaaaaar lossss selecteddddd
                 },
-                "map": {
-                    "insertbackground": [("focus", "white")]
-                }
+                "map": {"insertbackground": [("focus", "white")]},
             },
             "Label.TEntry": {
                 "layout": [
-                    ("Entry.field", {"sticky": "nswe", "border": 0,  "children": [
-                        ("Entry.padding", {"sticky": "nswe",  "children": [
-                            ("Entry.label", {"sticky": "nswe"}),
-                            ("Entry.textarea", {"sticky": "nswe"})
-                        ]})
-                    ]})
+                    (
+                        "Entry.field",
+                        {
+                            "sticky": "nswe",
+                            "border": 0,
+                            "children": [
+                                (
+                                    "Entry.padding",
+                                    {
+                                        "sticky": "nswe",
+                                        "children": [
+                                            ("Entry.label", {"sticky": "nswe"}),
+                                            ("Entry.textarea", {"sticky": "nswe"}),
+                                        ],
+                                    },
+                                )
+                            ],
+                        },
+                    )
                 ],
                 "configure": {
                     "background": "#1E1E1E",
@@ -86,124 +112,202 @@ def neon_theme(style):
                     "insertborderwidth": 10,
                     "relief": "flat",
                     "bordercolor": "#1E1E1E",
-                    "padding": (5,3,3,3),
+                    "padding": (5, 3, 3, 3),
                     "insertbackground": "#1E1E1E",
                 },
-                "map": {
-                    "insertbackground": [("focus", "#1E1E1E")]
-                }
+                "map": {"insertbackground": [("focus", "#1E1E1E")]},
             },
             "Titulo.TLabel": {
                 "layout": [
-                    ("Label.border", {"sticky": "nswe", "children":[
-                        ("Label.padding", {"sticky": "nswe", "children": [
-                            ("Label.label", {"sticky": "nswe"})
-                        ]})
-                    ]})
+                    (
+                        "Label.border",
+                        {
+                            "sticky": "nswe",
+                            "children": [
+                                (
+                                    "Label.padding",
+                                    {
+                                        "sticky": "nswe",
+                                        "children": [
+                                            ("Label.label", {"sticky": "nswe"})
+                                        ],
+                                    },
+                                )
+                            ],
+                        },
+                    )
                 ],
-                "configure":{
-                    "font": ("Arial", 16, "bold")
-                }
+                "configure": {"font": ("Arial", 16, "bold")},
             },
             "TCombobox": {
                 "layout": [
-                    ("Combobox.border", {"sticky": "nswe", "children":[
-                        ("Combobox.padding", {"sticky": "nswe", "children": [
-                            ("Combobox.label", {"sticky": "nswe"}),
-                            ("Combobox.textarea", {"sticky": "nswe"}),
-                            ("Combobox.downarrow", {"side": "right"}),
-                        ]})
-                    ]})
+                    (
+                        "Combobox.border",
+                        {
+                            "sticky": "nswe",
+                            "children": [
+                                (
+                                    "Combobox.padding",
+                                    {
+                                        "sticky": "nswe",
+                                        "children": [
+                                            ("Combobox.label", {"sticky": "nswe"}),
+                                            ("Combobox.textarea", {"sticky": "nswe"}),
+                                            ("Combobox.downarrow", {"side": "right"}),
+                                        ],
+                                    },
+                                )
+                            ],
+                        },
+                    )
                 ],
                 "configure": {
                     "fieldbackground": "#1E1E1E",
                     "background": "#1E1E1E",
                     "bordercolor": "white",
-                    "padding": (5,5,5,5),
+                    "padding": (5, 5, 5, 5),
                     "selectbackground": "",
-                    "selectforeground": "#B0B0B0"
+                    "selectforeground": "#B0B0B0",
                 },
                 "map": {
                     "bordercolor": [("focus", "green")],
                     "background": [("active", "white")],
                     "arrowcolor": [("active", "blue")],
-                    "fieldbackground": [("readonly", "#1E1E1E")]
-                }
+                    "fieldbackground": [("readonly", "#1E1E1E")],
+                },
             },
-            "Advertencia.TLabel":{
+            "Advertencia.TLabel": {
                 "layout": [
-                    ("Label.border", {"sticky": "nswe", "children":[
-                        ("Label.padding", {"sticky": "nswe", "children": [
-                            ("Label.label", {"sticky": "nswe"})
-                        ]})
-                    ]})
+                    (
+                        "Label.border",
+                        {
+                            "sticky": "nswe",
+                            "children": [
+                                (
+                                    "Label.padding",
+                                    {
+                                        "sticky": "nswe",
+                                        "children": [
+                                            ("Label.label", {"sticky": "nswe"})
+                                        ],
+                                    },
+                                )
+                            ],
+                        },
+                    )
                 ],
                 "configure": {
                     "font": ("Arial", 16, "bold"),
                     "foreground": "yellow",
-                    "background": "#dadada"
-                }
-            },
-            "TextAdvertencia.TLabel":{
-                "layout": [
-                    ("Label.border", {"sticky": "nswe", "children":[
-                        ("Label.padding", {"sticky": "nswe", "children": [
-                            ("Label.label", {"sticky": "nswe"})
-                        ]})
-                    ]})
-                ],
-                "configure":{
-                    "font": ("Arial", 10),
-                    "foreground": '#121212',
                     "background": "#dadada",
-                    "padding": (5,5,15,5)
-                    
-                }
+                },
             },
-            "Error.TLabel":{
+            "TextAdvertencia.TLabel": {
                 "layout": [
-                    ("Label.border", {"sticky": "nswe", "children":[
-                        ("Label.padding", {"sticky": "nswe", "children": [
-                            ("Label.label", {"sticky": "nswe"})
-                        ]})
-                    ]})
+                    (
+                        "Label.border",
+                        {
+                            "sticky": "nswe",
+                            "children": [
+                                (
+                                    "Label.padding",
+                                    {
+                                        "sticky": "nswe",
+                                        "children": [
+                                            ("Label.label", {"sticky": "nswe"})
+                                        ],
+                                    },
+                                )
+                            ],
+                        },
+                    )
+                ],
+                "configure": {
+                    "font": ("Arial", 10),
+                    "foreground": "#121212",
+                    "background": "#dadada",
+                    "padding": (5, 5, 15, 5),
+                },
+            },
+            "Error.TLabel": {
+                "layout": [
+                    (
+                        "Label.border",
+                        {
+                            "sticky": "nswe",
+                            "children": [
+                                (
+                                    "Label.padding",
+                                    {
+                                        "sticky": "nswe",
+                                        "children": [
+                                            ("Label.label", {"sticky": "nswe"})
+                                        ],
+                                    },
+                                )
+                            ],
+                        },
+                    )
                 ],
                 "configure": {
                     "font": ("Arial", 16, "bold"),
                     "foreground": "Red",
                     "background": "#dadada",
-                    "padding": (5,5,15,5)
-                }
+                    "padding": (5, 5, 15, 5),
+                },
             },
-            "Completado.TLabel":{
+            "Completado.TLabel": {
                 "layout": [
-                    ("Label.border", {"sticky": "nswe", "children":[
-                        ("Label.padding", {"sticky": "nswe", "children": [
-                            ("Label.label", {"sticky": "nswe"})
-                        ]})
-                    ]})
+                    (
+                        "Label.border",
+                        {
+                            "sticky": "nswe",
+                            "children": [
+                                (
+                                    "Label.padding",
+                                    {
+                                        "sticky": "nswe",
+                                        "children": [
+                                            ("Label.label", {"sticky": "nswe"})
+                                        ],
+                                    },
+                                )
+                            ],
+                        },
+                    )
                 ],
                 "configure": {
                     "font": ("Arial", 16, "bold"),
                     "foreground": "green",
                     "background": "#dadada",
-                    "padding": (5,5,15,5)
-                    
-                }
+                    "padding": (5, 5, 15, 5),
+                },
             },
-            "TextCompletado.TLabel":{
+            "TextCompletado.TLabel": {
                 "layout": [
-                    ("Label.border", {"sticky": "nswe", "children":[
-                        ("Label.padding", {"sticky": "nswe", "children": [
-                            ("Label.label", {"sticky": "nswe"})
-                        ]})
-                    ]})
+                    (
+                        "Label.border",
+                        {
+                            "sticky": "nswe",
+                            "children": [
+                                (
+                                    "Label.padding",
+                                    {
+                                        "sticky": "nswe",
+                                        "children": [
+                                            ("Label.label", {"sticky": "nswe"})
+                                        ],
+                                    },
+                                )
+                            ],
+                        },
+                    )
                 ],
                 "configure": {
                     "font": ("Arial", 10),
-                    "foreground": '#121212',
-                    "background": "#dadada"
-                }
-            }
-        }
+                    "foreground": "#121212",
+                    "background": "#dadada",
+                },
+            },
+        },
     )

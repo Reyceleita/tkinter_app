@@ -5,7 +5,7 @@ from controller.data.mostrar import *
 # Listar datos de tickets abiertos
 def query_datos_activos():
     connection = connection_to_db()
-    cursor =  connection.cursor()
+    cursor = connection.cursor()
     datos = list()
 
     command = """
@@ -20,14 +20,13 @@ def query_datos_activos():
     datos.clear()
     datos = list(cursor.fetchall())
 
-    
     return datos
 
 
 # Listar datos de tivkets revisados
 def query_revisados_abiertos():
     connection = connection_to_db()
-    cursor =  connection.cursor()
+    cursor = connection.cursor()
     datos = list()
 
     command = """
@@ -37,7 +36,6 @@ def query_revisados_abiertos():
         WHERE revisado = 'Revisado'
     """
 
-    
     cursor.execute(command)
     datos.clear()
     datos = list(cursor.fetchall())

@@ -4,7 +4,7 @@ from model.connection import connection_to_db
 connection = connection_to_db()
 cursor = connection.cursor()
 
-#Script para base de datos en sqlite
+# Script para base de datos en sqlite
 try:
     cursor.execute(
         """
@@ -69,7 +69,7 @@ try:
     );
         """
     )
-    
+
     cursor.execute(
         """
     CREATE TABLE IF NOT EXISTS tickets_diarios (
@@ -96,7 +96,7 @@ try:
     );
         """
     )
-    
+
     cursor.execute(
         """
     INSERT INTO cargos(cargo)
@@ -108,7 +108,7 @@ try:
     ('QA');
         """
     )
-    
+
     cursor.execute(
         """
     INSERT INTO forma_solucion(solucion)
@@ -120,7 +120,7 @@ try:
     ('Sin asignar');
         """
     )
-    
+
     cursor.execute(
         """
     INSERT INTO tecnicos('nombre', 'cargo_id')
@@ -141,8 +141,7 @@ try:
     ('Mauricio Enrique Hernandez Cabrera', 2);
         """
     )
-    
-    
+
     cursor.execute(
         """
     INSERT INTO scripts(script)

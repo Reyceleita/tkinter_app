@@ -9,47 +9,32 @@ from view.tecnicos.tecnicos import *
 
 # Ventana de configuraciones de app
 class Ajustes(tk.Toplevel):
-    def __init__(self, parent,):
+    def __init__(
+        self,
+        parent,
+    ):
         super().__init__(parent)
         self.parent = parent
-        # Crear y agregar franes
+
+        # Configuracion inicial de ventana
         self.wm_attributes("-topmost", True)
-        # self.grid()
-        self.title('Cosas')
+        self.title("Cosas")
         self.columnconfigure(0, weight=1)
         self.rowconfigure(0, weight=1)
-        # opciones = ttk.Frame(self)
-        # opciones.grid(row=0, column=0)
-        # opciones.rowconfigure(5, weight=1)
-        # contenido = ttk.Frame(self)
-        # contenido.grid(row=1, column=1)
-        # contenido.rowconfigure(5, weight=1)
 
+        # Crear manejo de pestañas
         self.notebook = ttk.Notebook(self)
-        self.notebook.grid(row=0, column=0, sticky='nswe')
+        self.notebook.grid(row=0, column=0, sticky="nswe")
         self.columnconfigure(0, weight=1)
         self.rowconfigure(0, weight=1)
 
+        # Crear y agregar pestañas
         self.datos = Datos(self.notebook)
         self.preferencias = Preferencias(self.notebook, self, parent)
         self.tecnicos = TabTecnicos(self.notebook)
-
-        self.notebook.add(self.datos, text='Datos')
-        self.notebook.add(self.preferencias, text='Preferencas')
-        self.notebook.add(self.tecnicos, text='Técnicos')
-
-        # Elementos visuales de la app
-        # ttk.Label(self, text='Configuraciones').grid(
-        #     row=0, column=0, sticky='we', columnspan=3)
-
-        # ttk.Button(opciones, text='Técnicos', command='').grid(
-        #     row=0, column=0, padx=10, pady=10, sticky='w')
-        # ttk.Button(opciones, text='Datos', command=lambda: Datos(contenido)).grid(
-        #     row=1, column=0, padx=10, pady=10, sticky='w')
-        # ttk.Button(opciones, text='Preferencias', command=lambda: Preferencias(
-        #     contenido, self, self.parent)).grid(row=2, column=0, padx=10, pady=10, sticky='w')
-        # ttk.Separator(self, orient='vertical').grid(
-        #     row=1, column=0, rowspan=10, sticky='ens')
+        self.notebook.add(self.datos, text="Datos")
+        self.notebook.add(self.preferencias, text="Preferencas")
+        self.notebook.add(self.tecnicos, text="Técnicos")
 
         # Redimensión y cambio de posición de la ventana
         self.update_idletasks()

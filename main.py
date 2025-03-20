@@ -32,16 +32,16 @@ from view.settings.settings import *
 # Crear más temas >:O  /*LISTOOO*/
 #
 # Remplazar todo por place ._. ._. (finde) :/ :/
-# Colocar validacion de None en combobox de datos
+# Colocar validacion de None en combobox de datos /* Terminar YA */
 # Considerar cambiar state de combobox con validación nose >:^( /* NOP */
 #
-#Buscar hacer paginación )= 
+# Buscar hacer paginación )=  /* Terminar YA */
 #
 # Cambiar sistema de técnicos y mejorar parte de tickets y abiertos :'( /*pro gre so*/
 #
-# Colocar botones de regresar/cancelar
+# Colocar botones de regresar/cancelar /* Terminar YA */
 #
-# Agregar pestaña para manejo de datos/*pro gre so x3*/
+# Agregar pestaña para manejo de datos/*pro gre so x3*/ /* Terminar YA */
 # Agregar lógica para vaciar tablas de DB /*LISTOOO*/
 # Agregar modificacion a tablas de DB/*LISTOOO*/
 # Cerrar conexiones después de usarlas :,[ /*mejor no */
@@ -52,7 +52,7 @@ from view.settings.settings import *
 #
 # .¿
 #
-#TERMINAR {-.-}
+# TERMINAR {-.-}
 
 
 # Se crea app principal
@@ -69,30 +69,31 @@ class App(tk.Tk):
         neon_theme(self.style)
 
         # Configura ventana principal
-        self.title('Tickets')
+        self.title("Tickets")
         screen_width = self.winfo_screenwidth()
         screen_height = self.winfo_screenheight()
         self.geometry(f"{screen_width}x{screen_height}-0+0")
 
         # Cear manejo de pestañas
         self.notebook = ttk.Notebook(self)
-        self.notebook.grid(row=0, column=0, sticky='nswe')
+        self.notebook.grid(row=0, column=0, sticky="nswe")
         self.columnconfigure(0, weight=1)
         self.rowconfigure(0, weight=1)
 
         # Iniciar y agregan pestañas
         self.abiertos = TabAbiertos(self.notebook)
         self.tickets = TabTickets(self.notebook)
-        self.notebook.add(self.abiertos, text='Abiertos')
-        self.notebook.add(self.tickets, text='Tickets')
-        ttk.Button(self.notebook, text='Ajustes', command=lambda: Ajustes(
-            self)).place(relx=0.97, rely=0.09, anchor='ne')
+        self.notebook.add(self.abiertos, text="Abiertos")
+        self.notebook.add(self.tickets, text="Tickets")
+        ttk.Button(self.notebook, text="Ajustes", command=lambda: Ajustes(self)).place(
+            relx=0.97, rely=0.09, anchor="ne"
+        )
         # Vincular evento de pestañas
-        self.notebook.bind('<<NotebookTabChanged>>', self.on_tab_selected)
+        self.notebook.bind("<<NotebookTabChanged>>", self.on_tab_selected)
         self.aplicar_tema()
 
-
     # Cargar datos al cambiar de pestaña
+
     def on_tab_selected(self, event):
         pestaña = self.notebook.index(self.notebook.select())
 
@@ -103,11 +104,11 @@ class App(tk.Tk):
 
     def aplicar_tema(self):
         tema = cargar_config()
-        bg = tema['background']
-        fg = tema['foreground']
-        list_bg = tema['listbg']
-        list_fg = tema['listfg']
-        tema = tema['tema']
+        bg = tema["background"]
+        fg = tema["foreground"]
+        list_bg = tema["listbg"]
+        list_fg = tema["listfg"]
+        tema = tema["tema"]
         self.style.theme_use(tema)
 
         self.option_add("*background", bg)
@@ -117,7 +118,7 @@ class App(tk.Tk):
 
 
 # Ejecución de aplicación
-if __name__ == '__main__':
+if __name__ == "__main__":
     first_execute()
     app = App()
     app.mainloop()

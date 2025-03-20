@@ -1,10 +1,10 @@
 from model.connection import *
 
 
-#Filtrar columnas según parámetros
+# Filtrar columnas según parámetros
 def filtro(tabla, filter=None):
     connection = connection_to_db()
-    cursor =  connection.cursor()
+    cursor = connection.cursor()
     tabla.delete(*tabla.get_children())
 
     q = """
@@ -15,7 +15,7 @@ def filtro(tabla, filter=None):
         INNER JOIN scripts ON tickets_diarios.script_id = scripts.id_script
         WHERE 1=1
     """
-    
+
     columnas = {
         "Código": "id_ticket",
         "Título": "titulo",
@@ -30,7 +30,7 @@ def filtro(tabla, filter=None):
         "Estado": "estado_t",
         "Revisado": "revisado",
     }
-    
+
     p = []
 
     if filter:
@@ -39,7 +39,7 @@ def filtro(tabla, filter=None):
             if str(value.strip()) != "":
                 q += f" AND {db_col} LIKE ?"
                 p.append(f"%{value}%")
-        q += 'ORDER BY fecha_apertura DESC'
+        q += "ORDER BY fecha_apertura DESC"
 
     cursor.execute(q, p)
     r = cursor.fetchall()
@@ -47,5 +47,4 @@ def filtro(tabla, filter=None):
     for ri in r:
         tabla.insert("", "end", values=ri)
 
-    
     return r

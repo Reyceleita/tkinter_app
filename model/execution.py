@@ -1,7 +1,8 @@
 from .connection import *
 import os
 
-#script para crear base de datos una vez
+
+# script para crear base de datos una vez
 def first_execute():
     connection = connection_to_db()
     cursor = connection.cursor()
@@ -11,6 +12,6 @@ def first_execute():
 
     if not result:
         from model import script
+
         cursor.execute("INSERT INTO execution_log (executed) VALUES (1)")
         connection.commit()
-        

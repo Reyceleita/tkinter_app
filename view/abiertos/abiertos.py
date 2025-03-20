@@ -110,10 +110,12 @@ class TabAbiertos(ttk.Frame):
         self.conteo.set(mostrar_datos(query_datos_activos(), self.tabla))
         self.contador.set(f'Se muestran: {self.conteo.get()}')
     
+    #Guardar tabla en variable para usar
     def traer_tabla(self):
         tabla = self.tabla
         return tabla
     
+    #Manejar hover (resalto) para la tabla
     def on_hover(self, event):
         item = self.tabla.identify_row(event.y)
         
