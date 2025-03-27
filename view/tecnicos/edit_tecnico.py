@@ -5,9 +5,8 @@ from tkinter import ttk
 from controller.data.obtener_data import *
 from controller.tecnicos.actualizar import *
 
+
 # Ventana para editar un técnico
-
-
 class EditarTecnico(tk.Toplevel):
     def __init__(self, parent, nombre, tabla_tecnicos, cargo_lista):
         super().__init__(parent)
@@ -29,6 +28,7 @@ class EditarTecnico(tk.Toplevel):
         self.nombre_tecnico_db.set(nombre)
 
         # Configuracion inicial de ventana
+        self.title("Editar técnico")
         self.geometry("355x250")
         self.grid()
         self.columnconfigure(2, weight=1)
@@ -85,6 +85,9 @@ class EditarTecnico(tk.Toplevel):
 
         # Cargar datos en combobox
         cargar_cargo(self.cargo_id, self.cargo_campo)
+        ttk.Button(
+            self, text="Cancelar", style="Adv.TButton", command=self.destroy
+        ).grid(row=5, column=0, padx=10, pady=5, sticky="e")
 
         # Configuracion finan de ventana
         self.wm_attributes("-topmost", True)

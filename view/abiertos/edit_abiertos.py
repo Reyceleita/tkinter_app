@@ -49,7 +49,7 @@ class EditarAbiertos(tk.Toplevel):
             row=2, column=0, pady=5
         )
         ttk.Label(self, text="Forma de solución", font=("Arial", 12)).grid(
-            row=2, column=2, pady=5, padx=40
+            row=2, column=1, pady=5, padx=40
         )
         ttk.Label(self, text="Observación", font=("Arial", 12)).grid(
             row=6, column=0, pady=5, padx=40
@@ -58,7 +58,7 @@ class EditarAbiertos(tk.Toplevel):
             row=4, column=0, pady=5, padx=40
         )
         ttk.Label(self, text="Fecha de solución", font=("Arial", 12)).grid(
-            row=4, column=2, pady=5, padx=40
+            row=4, column=1, pady=5, padx=40
         )
 
         # Campos de entrada
@@ -72,7 +72,8 @@ class EditarAbiertos(tk.Toplevel):
             state="readonly",
             style="Label.TEntry",
         ).grid(row=1, column=0, padx=10, pady=5, sticky="w")
-        obsevacion_campo = ttk.Entry(self, width=30, textvariable=self.observacion_db)
+        obsevacion_campo = ttk.Entry(
+            self, width=30, textvariable=self.observacion_db)
         fecha_campo = ttk.Entry(self, textvariable=self.fecha_db, width=33)
         tecnico_campo = ttk.Combobox(
             self, textvariable=self.tecnico_db, state="readonly", width=30
@@ -86,12 +87,12 @@ class EditarAbiertos(tk.Toplevel):
 
         # Posicionamiento de widgets
         tecnico_campo.grid(row=3, column=0, pady=5, padx=40)
-        solucion_campo.grid(row=3, column=2, pady=5, padx=40, sticky="e")
+        solucion_campo.grid(row=3, column=1, pady=5, padx=40, sticky="e")
         obsevacion_campo.grid(
             row=7, column=0, columnspan=3, pady=5, padx=40, sticky="we"
         )
         script_campo.grid(row=5, column=0, pady=5, padx=40)
-        fecha_campo.grid(row=5, column=2, pady=5, padx=40, sticky="e")
+        fecha_campo.grid(row=5, column=1, pady=5, padx=40, sticky="e")
 
         # Cargar datos en combobox
         cargar_solucion(solucion_campo, solucion_list)
@@ -102,7 +103,7 @@ class EditarAbiertos(tk.Toplevel):
         guardar = ttk.Button(
             self,
             text="Guardar",
-            width=25,
+            width=15,
             command=lambda: actualizar_abierto(
                 id_ticket.get(),
                 solucion_campo.get(),
@@ -118,8 +119,12 @@ class EditarAbiertos(tk.Toplevel):
             ),
         )
         guardar.grid(
-            row=8, column=2, rowspan=2, pady=15, padx=40, sticky="e"
+            row=8, column=1, pady=15, padx=40, sticky="w"
         )  # Posicionamiento de botón
+
+        ttk.Button(
+            self, text="Cancelar", width=15, style="Adv.TButton", command=self.destroy
+        ).grid(row=8, column=0, pady=15, padx=20, sticky="e")
 
         # Definir dimensiones de la alerta
         self.update_idletasks()

@@ -12,8 +12,7 @@ from view.alertas.progressbar import *
 from logs.logger_config import logger
 
 
-# ♪
-# Agregar tickets en la interfaz de abiertos
+# Agregar tickets en la Base de datos de abiertos
 def subir_abiertos(tabla, frame, reporte, progressbar):
     connection = connection_to_db()
     cursor = connection.cursor()

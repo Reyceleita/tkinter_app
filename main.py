@@ -15,13 +15,13 @@ from view.settings.settings import *
 
 # HACERRR
 #
-# Mejorar UI
+# Mejorar UI /*MEH*/
 # Completar y verificar estilos /*LISTOOO*/
 # Crear Readme
 # Arreglar conteo de tickets para {alertas} .¿ /*ARREGLADO*/
-# Revisar para comentar/*pro gre so x3*/
+# Revisar para comentar/*pro gre so x5*/
 # Agregra loading.. para tickets :0 /*LISTOOO*/
-# Normalizar comentariado :/
+# Normalizar comentariado :/ /*LISTOOO*/
 # Agregar hover para tablas /*LISTOOO*/
 # Manejo de errores y agregar logs? /*LISTOOO*/
 # Agregar confirmación en según que partes /*LISTOOO*/
@@ -31,7 +31,7 @@ from view.settings.settings import *
 # Mejorar colores y agregar imágenes en alertas :P
 # Crear más temas >:O  /*LISTOOO*/
 #
-# Remplazar todo por place ._. ._. (finde) :/ :/
+# Remplazar todo por place ._. ._. (finde) :/ :/ /* NOP */
 # Colocar validacion de None en combobox de datos /* Terminar YA */
 # Considerar cambiar state de combobox con validación nose >:^( /* NOP */
 #
@@ -39,17 +39,18 @@ from view.settings.settings import *
 #
 # Cambiar sistema de técnicos y mejorar parte de tickets y abiertos :'( /*pro gre so*/
 #
-# Colocar botones de regresar/cancelar /* Terminar YA */
+# Colocar botones de regresar/cancelar /* Terminar YA */ /* TERMINADO */
 #
 # Agregar pestaña para manejo de datos/*pro gre so x3*/ /* Terminar YA */
 # Agregar lógica para vaciar tablas de DB /*LISTOOO*/
 # Agregar modificacion a tablas de DB/*LISTOOO*/
 # Cerrar conexiones después de usarlas :,[ /*mejor no */
-# Organizar fechas
+#
 #
 # Formatear .¿
 # Cambiar nombre de app
 #
+#Crear diagrama de 'flujo' para presentación
 # .¿
 #
 # TERMINAR {-.-}

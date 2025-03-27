@@ -75,6 +75,37 @@ def dark_theme(style):
                 },
                 "map": {"background": [("active", "#119876")]},
             },
+            "Adv.TButton": {
+                "layout": [
+                    (
+                        "Button.border",
+                        {
+                            "sticky": "nswe",
+                            "border": 1,
+                            "children": [
+                                (
+                                    "Button.padding",
+                                    {
+                                        "sticky": "nswe",
+                                        "children": [
+                                            ("Button.label", {"sticky": "nswe"})
+                                        ],
+                                    },
+                                )
+                            ],
+                        },
+                    )
+                ],
+                "configure": {
+                    "background": "#f7dc22",
+                    "foreground": "black",
+                    "relief": "raised",
+                    "bordercolor": "#005F46",
+                    "padding": (5, 0, 5, 0),
+                    "borderwidth": 5,
+                },
+                "map": {"background": [("active", "#d8be07")]},
+            },
             "TEntry": {
                 "layout": [
                     (

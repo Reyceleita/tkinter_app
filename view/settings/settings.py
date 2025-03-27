@@ -29,7 +29,7 @@ class Ajustes(tk.Toplevel):
         self.rowconfigure(0, weight=1)
 
         # Crear y agregar pestañas
-        self.datos = Datos(self.notebook)
+        self.datos = Datos(self.notebook, self)
         self.preferencias = Preferencias(self.notebook, self, parent)
         self.tecnicos = TabTecnicos(self.notebook)
         self.notebook.add(self.datos, text="Datos")

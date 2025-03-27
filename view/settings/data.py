@@ -11,7 +11,7 @@ from view.settings.delete_data import *
 
 # Vista para opciones de datos
 class Datos(ttk.Frame):
-    def __init__(self, parent):
+    def __init__(self, parent, main):
         super().__init__(parent)
 
         # Mostrar frame
@@ -55,6 +55,9 @@ class Datos(ttk.Frame):
         )
         ttk.Separator(self, orient="vertical").grid(
             row=0, column=1, rowspan=10, sticky="wns"
+        )
+        ttk.Button(self.opciones, text="Regresar", style='Adv.TButton', command=main.destroy).grid(
+            row=11, column=0, padx=20, pady=20
         )
 
     # Confirmación para eliminar datos locales y llamado de función

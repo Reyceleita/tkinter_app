@@ -1,5 +1,3 @@
-from tkinter import messagebox
-
 from model.connection import *
 from controller.data.obtener_data import *
 from controller.data.validaciones import *

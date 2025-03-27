@@ -1,4 +1,3 @@
-import tkinter as tk
 from tkinter import *
 from tkinter import ttk
 
@@ -39,7 +38,7 @@ class DeleteData:
         self.campo.grid(row=2, column=1, padx=10, pady=10)
         self.tabla.bind("<<ComboboxSelected>>", self.cargar_datos)
 
-    # Agregar a desplegables los datos correspondientes
+    # Cargar a campos desplegables los datos correspondientes
     def cargar_datos(self, event):
         self.tablas = {
             "Cargos": "cargos",

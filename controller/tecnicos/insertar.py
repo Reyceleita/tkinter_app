@@ -1,4 +1,3 @@
-from tkinter import messagebox
 import tkinter as tk
 
 from controller.data.validaciones import *

@@ -7,13 +7,12 @@ from controller.tickets.actualizar import *
 from controller.data.cargar_datos import *
 
 # Ventana de edición para tickets
-
-
 class EditarTicket(tk.Toplevel):
     def __init__(self, parent, id, nombre, tabla):
         super().__init__(parent)
 
         # Configuración de ventana
+        self.title("Editar ticket")
         self.geometry("800x500")
         self.columnconfigure(2, weight=1)
         self.rowconfigure(9, weight=1)
@@ -48,7 +47,7 @@ class EditarTicket(tk.Toplevel):
             row=2, column=0, pady=5
         )
         ttk.Label(self, text="Forma de solución", font=("Arial", 12)).grid(
-            row=2, column=2, pady=5, padx=40, sticky="e"
+            row=2, column=1, pady=5, padx=40, sticky="e"
         )
         ttk.Label(self, text="Observación", font=("Arial", 12)).grid(
             row=6,
@@ -60,7 +59,7 @@ class EditarTicket(tk.Toplevel):
             row=4, column=0, pady=5, padx=40
         )
         ttk.Label(self, text="Fecha de la solución", font=("Arial", 12)).grid(
-            row=4, column=2, pady=5, padx=40, sticky="e"
+            row=4, column=1, pady=5, padx=40, sticky="e"
         )
 
         # Campos de entrada
@@ -84,14 +83,14 @@ class EditarTicket(tk.Toplevel):
         script = ttk.Combobox(
             self, textvariable=self.script_db, state="readonly", width=30
         )
-        fecha = ttk.Entry(self, textvariable=self.fecha_db, width=33)
+        fecha = ttk.Entry(self, textvariable=self.fecha_db, width=30)
 
         # Posicionamiento de widgets en la interfaz
         tecnico.grid(row=3, column=0, pady=5, padx=40)
-        solucion.grid(row=3, column=2, pady=5, padx=40, sticky="e")
+        solucion.grid(row=3, column=1, pady=5, padx=40, sticky="e")
         observacion.grid(row=7, column=0, pady=5, padx=40, columnspan=3, sticky="we")
         script.grid(row=5, column=0, pady=5, padx=40)
-        fecha.grid(row=5, column=2, pady=5, padx=40, sticky="e")
+        fecha.grid(row=5, column=1, pady=5, padx=40, sticky="e")
 
         # Alimentar combobox con su información
         cargar_solucion(solucion, solucion_lista)
@@ -102,7 +101,7 @@ class EditarTicket(tk.Toplevel):
         self.guardar = ttk.Button(
             self,
             text="Guardar",
-            width=25,
+            width=15,
             command=lambda: actualizar_ticket(
                 id_ticket.get(),
                 solucion.get(),
@@ -118,9 +117,12 @@ class EditarTicket(tk.Toplevel):
             ),
         )
         self.guardar.grid(
-            row=8, column=2, rowspan=2, pady=25, padx=40, sticky="e"
+            row=8, column=1, pady=25, padx=40, sticky="w"
         )  # Posicionamiento del botón
 
+        ttk.Button(self, text="Cancelar", width=15, style='Adv.TButton', command=self.destroy).grid(
+            row=8, column=0, pady=25, padx=10, sticky="e"
+        )
         # Ajustes de ventana
         self.update_idletasks()
         self.geometry("")

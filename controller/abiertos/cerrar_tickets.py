@@ -1,5 +1,3 @@
-from tkinter import messagebox
-
 from model.connection import *
 from controller.abiertos.consultar import *
 from controller.data.mostrar import *
