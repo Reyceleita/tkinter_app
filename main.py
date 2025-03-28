@@ -32,12 +32,14 @@ from view.settings.settings import *
 # Crear más temas >:O  /*LISTOOO*/
 #
 # Remplazar todo por place ._. ._. (finde) :/ :/ /* NOP */
-# Colocar validacion de None en combobox de datos /* Terminar YA */
+# Colocar validacion de None en combobox de datos :O :0 :o
 # Considerar cambiar state de combobox con validación nose >:^( /* NOP */
 #
 # Buscar hacer paginación )=  /* Terminar YA */
 #
 # Cambiar sistema de técnicos y mejorar parte de tickets y abiertos :'( /*pro gre so*/
+# Ajustar ventana técnicos y preferencias en ajustes
+# Agustar colores para botones según corresponda
 #
 # Colocar botones de regresar/cancelar /* Terminar YA */ /* TERMINADO */
 #
@@ -70,7 +72,7 @@ class App(tk.Tk):
         neon_theme(self.style)
 
         # Configura ventana principal
-        self.title("Tickets")
+        self.title("Gestión de tickets")
         screen_width = self.winfo_screenwidth()
         screen_height = self.winfo_screenheight()
         self.geometry(f"{screen_width}x{screen_height}-0+0")

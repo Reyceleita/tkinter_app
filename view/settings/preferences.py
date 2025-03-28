@@ -53,26 +53,25 @@ class Preferencias(ttk.Frame):
         fg = ""
         list_bg = ""
         list_fg = ""
-        # -----------------------------------aaaaaaaaaa-----------------------------------#
         if tema == "Dark_theme":
             bg = "#121212"
             fg = "#B0B0B0"
-            list_bg = "#121212"
+            list_bg = "#434447"
             list_fg = "#B0B0B0"
         elif tema == "Light_theme":
             bg = "#F5F5F5"
             fg = "#333333"
-            list_bg = "#F5F5F5"
+            list_bg = "#dfdfdf"
             list_fg = "#333333"
         elif tema == "Neon_theme":
             bg = "#101010"
             fg = "#B0B0B0"
-            list_bg = "#101010"
+            list_bg = "#373737"
             list_fg = "#B0B0B0"
         elif tema == "Solarized_theme":
             bg = "#FDF6E3"
             fg = "#657B83"
-            list_bg = "#FDF6E3"
+            list_bg = "#fcefcd"
             list_fg = "#657B83"
 
         config = {
