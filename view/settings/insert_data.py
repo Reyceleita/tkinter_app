@@ -4,6 +4,7 @@ from tkinter import ttk
 
 from controller.data.obtener_data import *
 from controller.BD.insert import *
+from view.alertas.warning import *
 
 
 # Vista para agregar un nuevo dato a alguna tabla
@@ -21,6 +22,7 @@ class InsertData:
             "Cargos": "cargos",
             "Scripts": "scripts",
             "Forma de solución": "forma_solucion",
+            '':''
         }
 
         # Widgets de información
@@ -50,6 +52,8 @@ class InsertData:
         tabla = self.tabla.get()
         tabla = self.tablas.get(tabla)
         nombre = self.nuevo.get()
+        if tabla == '':
+            AdverteciaAlerta(self.fra, 'Completa los campos')
         if tabla == "cargos":
             campo = "cargo"
         elif tabla == "scripts":

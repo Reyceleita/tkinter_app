@@ -123,6 +123,68 @@ def light_theme(style):
                 },
                 "map": {"insertbackgroud": [("focus", "#e5e5e5")]},
             },
+            "Adv.TButton": {
+                "layout": [
+                    (
+                        "Button.border",
+                        {
+                            "sticky": "nswe",
+                            "border": 1,
+                            "children": [
+                                (
+                                    "Button.padding",
+                                    {
+                                        "sticky": "nswe",
+                                        "children": [
+                                            ("Button.label", {"sticky": "nswe"})
+                                        ],
+                                    },
+                                )
+                            ],
+                        },
+                    )
+                ],
+                "configure": {
+                    "background": "#fee642",
+                    "foreground": "black",
+                    "relief": "raised",
+                    "bordercolor": "#005F46",
+                    "padding": (5, 0, 5, 0),
+                    "borderwidth": 5,
+                },
+                "map": {"background": [("active", "#ead43d")]},
+            },
+            "Scf.TButton": {
+                "layout": [
+                    (
+                        "Button.border",
+                        {
+                            "sticky": "nswe",
+                            "border": 1,
+                            "children": [
+                                (
+                                    "Button.padding",
+                                    {
+                                        "sticky": "nswe",
+                                        "children": [
+                                            ("Button.label", {"sticky": "nswe"})
+                                        ],
+                                    },
+                                )
+                            ],
+                        },
+                    )
+                ],
+                "configure": {
+                    "background": "#33d757",
+                    "foreground": "black",
+                    "relief": "raised",
+                    "bordercolor": "#005F46",
+                    "padding": (5, 0, 5, 0),
+                    "borderwidth": 5,
+                },
+                "map": {"background": [("active", "#2ec14e")]},
+            },
             "Titulo.TLabel": {
                 "layout": [
                     (

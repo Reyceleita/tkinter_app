@@ -41,5 +41,5 @@ class Ajustes(tk.Toplevel):
         self.geometry("")
         x = (self.winfo_screenwidth() // 2) - (800 // 2)
         y = (self.winfo_screenheight() // 2) - (500 // 2)
-        self.geometry(f"{800}x{500}+{x}+{y}")
+        self.geometry(f"{750}x{350}+{x}+{y}")
         self.grab_set()

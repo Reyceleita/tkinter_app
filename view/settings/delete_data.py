@@ -3,6 +3,7 @@ from tkinter import ttk
 
 from controller.data.obtener_data import *
 from controller.BD.delete import *
+from view.alertas.warning import *
 
 
 # Vista para eliminar algún dato de alguna tabla
@@ -11,6 +12,13 @@ class DeleteData:
         self.campo_list = {}
         self.fra = frame
 
+        self.tablas = {
+            "Cargos": "cargos",
+            "Scripts": "scripts",
+            "Forma de solución": "forma_solucion",
+            "":""
+        }
+        
         # Vista para actualizar datos de algunas tablas
         for widget in frame.winfo_children():
             widget.destroy()
@@ -26,7 +34,7 @@ class DeleteData:
         self.tabla = ttk.Combobox(
             frame, values=("Cargos", "Scripts", "Forma de solución"), state="readonly"
         )
-        self.campo = ttk.Combobox(frame, values="", state="readonly")
+        self.campo = ttk.Combobox(frame, state="readonly")
 
         # Botón de acción
         ttk.Button(frame, text="Eliminar", command=self.elimina).grid(
@@ -40,11 +48,6 @@ class DeleteData:
 
     # Cargar a campos desplegables los datos correspondientes
     def cargar_datos(self, event):
-        self.tablas = {
-            "Cargos": "cargos",
-            "Scripts": "scripts",
-            "Forma de solución": "forma_solucion",
-        }
 
         tabla = self.tabla.get()
 
@@ -57,6 +60,9 @@ class DeleteData:
         tabla = self.tabla.get()
         tabla = self.tablas.get(tabla)
         combobox = self.campo.get()
+        if combobox == '' or tabla == "":
+            AdverteciaAlerta(self.fra, 'Debes completar los campos')
+            return
         id = obtener_campo_lista(self.campo_list, combobox)
         if tabla == "cargos":
             valor = "id_cargo"

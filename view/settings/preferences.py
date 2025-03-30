@@ -11,8 +11,8 @@ class Preferencias(ttk.Frame):
         super().__init__(p)
 
         self.grid(row=0, column=0, sticky="nswe")
-        self.columnconfigure(0, weight=1)
-        self.rowconfigure(6, weight=1)
+        self.columnconfigure(2, weight=1)
+        self.rowconfigure(3, weight=1)
 
         # Frames padres
         self.fra = pa
@@ -38,7 +38,7 @@ class Preferencias(ttk.Frame):
         )
         self.tema.grid(row=2, column=0, padx=25)
         ttk.Button(self, text="Aplicar", command=self.cambiar_tema).grid(
-            row=3, column=1, sticky="w"
+            row=2, column=1, sticky="w"
         )
 
     # Función para guardar y aplicar un tema según parámetros

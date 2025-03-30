@@ -20,7 +20,69 @@ def neon_theme(style):
                     "borderwidth": 5,
                     "bordercolor": "#FF4500",
                 },
-                "map": {"background": [("active", "#FF4500")]},
+                "map": {"background": [("active", "#c60fc6")]},
+            },
+            "Adv.TButton": {
+                "layout": [
+                    (
+                        "Button.border",
+                        {
+                            "sticky": "nswe",
+                            "border": 1,
+                            "children": [
+                                (
+                                    "Button.padding",
+                                    {
+                                        "sticky": "nswe",
+                                        "children": [
+                                            ("Button.label", {"sticky": "nswe"})
+                                        ],
+                                    },
+                                )
+                            ],
+                        },
+                    )
+                ],
+                "configure": {
+                    "background": "#fee642",
+                    "foreground": "black",
+                    "relief": "raised",
+                    "bordercolor": "#005F46",
+                    "padding": (5, 0, 5, 0),
+                    "borderwidth": 5,
+                },
+                "map": {"background": [("active", "#cdb934")]},
+            },
+            "Scf.TButton": {
+                "layout": [
+                    (
+                        "Button.border",
+                        {
+                            "sticky": "nswe",
+                            "border": 10,
+                            "children": [
+                                (
+                                    "Button.padding",
+                                    {
+                                        "sticky": "nswe",
+                                        "children": [
+                                            ("Button.label", {"sticky": "nswe"})
+                                        ],
+                                    },
+                                )
+                            ],
+                        },
+                    )
+                ],
+                "configure": {
+                    "background": "#33d757",
+                    "foreground": "black",
+                    "relief": "raised",
+                    "bordercolor": "#005F46",
+                    "padding": (5, 0, 5, 0),
+                    "borderwidth": 5,
+                },
+                "map": {"background": [("active", "#28a744")]},
             },
             "TScrollbar": {
                 "layout": [
@@ -167,7 +229,7 @@ def neon_theme(style):
                     "bordercolor": "white",
                     "padding": (5, 5, 5, 5),
                     "selectbackground": "",
-                    "selectforeground": "#B0B0B0",
+                    "selectforeground": "#0FF0FC",
                 },
                 "map": {
                     "bordercolor": [("focus", "green")],

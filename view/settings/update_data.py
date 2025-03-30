@@ -3,13 +3,19 @@ from tkinter import ttk
 
 from controller.data.obtener_data import *
 from controller.BD.update import *
-
+from view.alertas.warning import *
 
 # Vista para actualizar datos de algunas tablas
 class UpdateTablas:
     def __init__(self, frame):
         self.campo_list = {}
         self.fra = frame
+        self.tablas = {
+            "Cargos": "cargos",
+            "Scripts": "scripts",
+            "Forma de solución": "forma_solucion",
+            '':''
+        }
 
         # Limpiar frame para agregar los eiddgets
         for widget in frame.winfo_children():
@@ -43,11 +49,6 @@ class UpdateTablas:
 
     # Agregar a desplegables los datos correspondientes
     def cargar_datos(self, event):
-        self.tablas = {
-            "Cargos": "cargos",
-            "Scripts": "scripts",
-            "Forma de solución": "forma_solucion",
-        }
 
         tabla = self.tabla.get()
 
@@ -62,6 +63,8 @@ class UpdateTablas:
         tabla = self.tablas.get(tabla)
         nombre = self.nuevo.get()
         combobox = self.campo.get()
+        if tabla == '' or combobox == '':
+            AdverteciaAlerta(self.fra, 'Debes completar los todos los campos')
         id = obtener_campo_lista(self.campo_list, combobox)
         if tabla == "cargos":
             campo = "cargo"

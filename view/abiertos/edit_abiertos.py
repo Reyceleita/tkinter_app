@@ -104,6 +104,7 @@ class EditarAbiertos(tk.Toplevel):
             self,
             text="Guardar",
             width=15,
+            style='Scf.TButton',
             command=lambda: actualizar_abierto(
                 id_ticket.get(),
                 solucion_campo.get(),

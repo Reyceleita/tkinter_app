@@ -25,21 +25,21 @@ from view.settings.settings import *
 # Agregar hover para tablas /*LISTOOO*/
 # Manejo de errores y agregar logs? /*LISTOOO*/
 # Agregar confirmación en según que partes /*LISTOOO*/
-# Buscar cómo convertirlo en app .¿
+# Buscar cómo convertirlo en app .¿ /* MEH */
 # Revisar que al subir reporte mensual no sobreescriba los revisados (creo q si valida ._.) >:/ (Revisar lógica actualizar abierto, [no actualiza si el cambio es sin cambios X_X]) /*ARREGLADOOOOOO*/ ALGO FALLAAAAAAAAAAAAAAAA >:0 >:0 >:0 >:0 >:0 >:0 >:0
 #
-# Mejorar colores y agregar imágenes en alertas :P
+# Mejorar colores y agregar imágenes en alertas :P /* MEH */
 # Crear más temas >:O  /*LISTOOO*/
 #
 # Remplazar todo por place ._. ._. (finde) :/ :/ /* NOP */
-# Colocar validacion de None en combobox de datos :O :0 :o
+# Colocar validacion de None en combobox de datos :O :0 :o /*LISTOOO*/
 # Considerar cambiar state de combobox con validación nose >:^( /* NOP */
 #
-# Buscar hacer paginación )=  /* Terminar YA */
+# Buscar hacer paginación )=  /* NOP */ 
 #
 # Cambiar sistema de técnicos y mejorar parte de tickets y abiertos :'( /*pro gre so*/
-# Ajustar ventana técnicos y preferencias en ajustes
-# Agustar colores para botones según corresponda
+# Ajustar ventana técnicos y preferencias en ajustes /*LISTOOO*/
+# Agustar colores para botones según corresponda /*LISTOOO*/
 #
 # Colocar botones de regresar/cancelar /* Terminar YA */ /* TERMINADO */
 #
@@ -52,7 +52,8 @@ from view.settings.settings import *
 # Formatear .¿
 # Cambiar nombre de app
 #
-#Crear diagrama de 'flujo' para presentación
+# Crear diagrama de 'flujo' para presentación
+# Crear presentación
 # .¿
 #
 # TERMINAR {-.-}

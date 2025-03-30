@@ -66,7 +66,7 @@ def dark_theme(style):
                     )
                 ],
                 "configure": {
-                    "background": "#00C896",
+                    "background": "#00c8b0",
                     "foreground": "black",
                     "relief": "raised",
                     "bordercolor": "#005F46",
@@ -105,6 +105,37 @@ def dark_theme(style):
                     "borderwidth": 5,
                 },
                 "map": {"background": [("active", "#d8be07")]},
+            },
+            "Scf.TButton": {
+                "layout": [
+                    (
+                        "Button.border",
+                        {
+                            "sticky": "nswe",
+                            "border": 1,
+                            "children": [
+                                (
+                                    "Button.padding",
+                                    {
+                                        "sticky": "nswe",
+                                        "children": [
+                                            ("Button.label", {"sticky": "nswe"})
+                                        ],
+                                    },
+                                )
+                            ],
+                        },
+                    )
+                ],
+                "configure": {
+                    "background": "#37ae51",
+                    "foreground": "black",
+                    "relief": "raised",
+                    "bordercolor": "#005F46",
+                    "padding": (5, 0, 5, 0),
+                    "borderwidth": 5,
+                },
+                "map": {"background": [("active", "#1e8c36")]},
             },
             "TEntry": {
                 "layout": [

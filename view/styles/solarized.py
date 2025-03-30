@@ -24,6 +24,68 @@ def solarized_theme(style):
                 },
                 "map": {"background": [("active", "#2AA198")]},
             },
+            "Adv.TButton": {
+                "layout": [
+                    (
+                        "Button.border",
+                        {
+                            "sticky": "nswe",
+                            "border": 1,
+                            "children": [
+                                (
+                                    "Button.padding",
+                                    {
+                                        "sticky": "nswe",
+                                        "children": [
+                                            ("Button.label", {"sticky": "nswe"})
+                                        ],
+                                    },
+                                )
+                            ],
+                        },
+                    )
+                ],
+                "configure": {
+                    "background": "#fee642",
+                    "foreground": "black",
+                    "relief": "raised",
+                    "bordercolor": "#005F46",
+                    "padding": (5, 0, 5, 0),
+                    "borderwidth": 5,
+                },
+                "map": {"background": [("active", "#ead43d")]},
+            },
+            "Scf.TButton": {
+                "layout": [
+                    (
+                        "Button.border",
+                        {
+                            "sticky": "nswe",
+                            "border": 1,
+                            "children": [
+                                (
+                                    "Button.padding",
+                                    {
+                                        "sticky": "nswe",
+                                        "children": [
+                                            ("Button.label", {"sticky": "nswe"})
+                                        ],
+                                    },
+                                )
+                            ],
+                        },
+                    )
+                ],
+                "configure": {
+                    "background": "#33d757",
+                    "foreground": "black",
+                    "relief": "raised",
+                    "bordercolor": "#005F46",
+                    "padding": (5, 0, 5, 0),
+                    "borderwidth": 5,
+                },
+                "map": {"background": [("active", "#2ec14e")]},
+            },
             "TScrollbar": {
                 "Layout": [
                     (
@@ -81,6 +143,7 @@ def solarized_theme(style):
                     "bordercolor": "black",
                     "padding": (5, 3, 3, 3),
                     "insertbackground": "blue",
+                    "selectbackground": "#c8c6c6",
                 },
                 "map": {"insertbackgroud": [("focus", "white")]},
             },
@@ -168,6 +231,8 @@ def solarized_theme(style):
                     "foreground": "#657B83",
                     "borderclor": "#83860b",
                     "padding": (5, 5, 5, 5),
+                    "selectbackground": "",
+                    "selectforeground": "#657B83",
                 },
                 "map": {
                     "bordercolor": [("focus", "green")],
