@@ -22,9 +22,9 @@ def ordenar_tabla(tabla, col, descendiente, columnas):
     for columna in columnas:
         tabla.heading(columna, text=columna)
         if descendiente:
-            tabla.heading(col, text=f"{column} ▲")
-        else:
             tabla.heading(col, text=f"{column} ▼")
+        else:
+            tabla.heading(col, text=f"{column} ▲")
 
     for index, (val, item) in enumerate(data):
         tabla.move(item, "", index)
