@@ -114,6 +114,8 @@ def subir_abiertos(tabla, frame, reporte, progressbar):
                     estado_t = "Actualizado"
                 elif ultima_actu_csv < fecha_db:
                     estado_t = "Sin cambios"
+                elif fecha_db == ultima_actu_csv:
+                    pass
 
                 # Aplicar cambios según el caso
                 if cambio:
