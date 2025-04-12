@@ -1,4 +1,4 @@
-import pandas as pd
+import pandas as pd 
 from tkinter import filedialog
 
 from view.alertas.error import *
