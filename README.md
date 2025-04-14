@@ -13,7 +13,7 @@ git clone https://github.com/Reyceleita/tkinter_app
 2. Navega al directorio del proyecto:
 
 ```bash
-cd  cd .\tkinter_app\
+cd .\tkinter_app\
 ```
 
 3. A continuación, navega a la carpeta `settings` donde se encuentra el archivo `requirements.txt`:
@@ -40,4 +40,4 @@ py -m venv venv
 pip install -r requirements.txt
 ```
 
-7. Ejecutar con F5
+7. Abre la carpeta con Visual Studio Code y ejecuta con F5
