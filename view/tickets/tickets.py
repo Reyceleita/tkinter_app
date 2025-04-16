@@ -48,9 +48,7 @@ class TabTickets(ttk.Frame):
         self.filters = {}
 
         # Etiquetas informativas
-        ttk.Label(self, text="Registro de tickets", style="Titulo.TLabel").grid(
-            row=0, column=5, columnspan=2, pady=20
-        )
+        ttk.Label(self, text="Registro de tickets", style="Titulo.TLabel").place(relx=0.55, rely=0, anchor='ne')
         ttk.Label(self, textvariable=self.contador, font=("Arial", 10)).grid(
             row=2, column=12, sticky="e"
         )
@@ -83,7 +81,7 @@ class TabTickets(ttk.Frame):
         # Boton de acción
         ttk.Button(
             self, text="Subir archivo", command=lambda: self.subir_archivo(self)
-        ).grid(row=1, column=0, padx=5, pady=5, sticky="w")
+        ).grid(row=1, column=0, padx=5, pady=20, sticky="w")
 
         # Configuración de encabezados de la tabla
         for columna in self.columnas:

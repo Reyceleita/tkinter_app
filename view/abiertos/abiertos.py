@@ -41,9 +41,9 @@ class TabAbiertos(ttk.Frame):
         
         
         #Etiquetas informativas
-        ttk.Label(self, text='Tickets abiertos', font=('Arial', 14)).place()
-        ttk.Label(self, text='Se muestran: ', font=('Arial', 10)).grid(row=2, column=11, padx=20, sticky='e')
-        ttk.Label(self, textvariable=self.conteo, font=('Arial', 10)).grid(row=2, column=11, sticky='e', padx=5)
+        ttk.Label(self, text='Tickets abiertos', style="Titulo.TLabel").place(relx=0.54, rely=0, anchor='ne')
+        ttk.Label(self, text='Se muestran: ', font=('Arial', 10)).grid(row=3, column=11, padx=20, sticky='e')
+        ttk.Label(self, textvariable=self.conteo, font=('Arial', 10)).grid(row=3, column=11, sticky='e', padx=5)
         
         
         self.progreso = ttk.Progressbar(self, orient='horizontal', length=250, mode='indeterminate')
@@ -77,8 +77,8 @@ class TabAbiertos(ttk.Frame):
         self.tabla.bind("<Leave>", self.on_leave)
         
         #Botones de acción
-        ttk.Button(self, text='Subir archivo', command=self.subir_archivo).grid(row=1, column=0, padx=5, sticky='w')
-        ttk.Button(self, text='Cerrar revisados', command=lambda: cerrar_abierto(self.tabla, self)).grid(row=3, column=0, padx=5, pady=5, sticky='w')
+        ttk.Button(self, text='Subir archivo', command=self.subir_archivo).grid(row=1, column=0, padx=5, pady=20, sticky='w')
+        ttk.Button(self, text='Cerrar revisados', command=lambda: cerrar_abierto(self.tabla, self)).grid(row=3, column=0, padx=5, pady=10, sticky='w')
         
         #Cargar datos en la tabla y actualizar conteo 
         mostrar_datos(query_datos_activos(), self.tabla)

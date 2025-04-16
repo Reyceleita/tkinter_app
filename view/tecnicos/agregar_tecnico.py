@@ -14,6 +14,7 @@ class AgregarTecnico(tk.Toplevel):
         self.wm_attributes("-topmost", True)
         self.columnconfigure(2, weight=1)
         self.rowconfigure(2)
+        self.title('Crear técnico')
         
         # Variables para almacenar información de técnicos
         self.cargo_id = {}

@@ -13,52 +13,6 @@ from view.styles.light_mode import *
 from settings.settings import *
 from view.settings.settings import *
 
-# HACERRR
-#
-# Mejorar UI /*MEH*/
-# Completar y verificar estilos /*LISTOOO*/
-# Crear Readme
-# Arreglar conteo de tickets para {alertas} .¿ /*ARREGLADO*/
-# Revisar para comentar/*pro gre so x5*/
-# Agregra loading.. para tickets :0 /*LISTOOO*/
-# Normalizar comentariado :/ /*LISTOOO*/
-# Agregar hover para tablas /*LISTOOO*/
-# Manejo de errores y agregar logs? /*LISTOOO*/
-# Agregar confirmación en según que partes /*LISTOOO*/
-# Buscar cómo convertirlo en app .¿ /* MEH */
-# Revisar que al subir reporte mensual no sobreescriba los revisados (creo q si valida ._.) >:/ (Revisar lógica actualizar abierto, [no actualiza si el cambio es sin cambios X_X]) /*ARREGLADOOOOOO*/ ALGO FALLAAAAAAAAAAAAAAAA >:0 >:0 >:0 >:0 >:0 >:0 >:0 /* yap o nose */
-#
-# Mejorar colores y agregar imágenes en alertas :P /* MEH */
-# Crear más temas >:O  /*LISTOOO*/
-#
-# Remplazar todo por place ._. ._. (finde) :/ :/ /* NOP */
-# Colocar validacion de None en combobox de datos :O :0 :o /*LISTOOO*/
-# Considerar cambiar state de combobox con validación nose >:^( /* NOP */
-#
-# Buscar hacer paginación )=  /* NOP */ 
-#
-# Cambiar sistema de técnicos y mejorar parte de tickets y abiertos :'( /*pro gre so*/
-# Ajustar ventana técnicos y preferencias en ajustes /*LISTOOO*/
-# Agustar colores para botones según corresponda /*LISTOOO*/
-#
-# Colocar botones de regresar/cancelar /* Terminar YA */ /* TERMINADO */
-#
-# Agregar pestaña para manejo de datos/*pro gre so x3*/ /* Terminar YA */
-# Agregar lógica para vaciar tablas de DB /*LISTOOO*/
-# Agregar modificacion a tablas de DB/*LISTOOO*/
-# Cerrar conexiones después de usarlas :,[ /*mejor no */
-#
-#
-# Formatear .¿
-# Cambiar nombre de app
-#
-# Crear diagrama de 'flujo' para presentación
-# Crear presentación
-# .¿
-#
-# TERMINAR {-.-}
-
-
 # Se crea app principal
 class App(tk.Tk):
     instancia = None
@@ -90,7 +44,7 @@ class App(tk.Tk):
         self.notebook.add(self.abiertos, text="Abiertos")
         self.notebook.add(self.tickets, text="Tickets")
         ttk.Button(self.notebook, text="Ajustes", command=lambda: Ajustes(self)).place(
-            relx=0.97, rely=0.09, anchor="ne"
+            relx=0.97, rely=0.87, anchor="ne"
         )
         # Vincular evento de pestañas
         self.notebook.bind("<<NotebookTabChanged>>", self.on_tab_selected)
