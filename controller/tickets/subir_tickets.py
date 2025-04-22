@@ -128,6 +128,7 @@ def subir_tickets(tabla, frame, reporte, progress):
 
                 # Intentar insertar un nuevo ticket en base de datos
                 try:
+                    script_id = get_id_script_sin_asignar()
                     command = """
                     INSERT INTO tickets(id_ticket, titulo, estado, fecha_apertura, fecha_limite, categoria, 
                     prioridad, solicitante, localizacion, tecnico_id, forma_solucion_id, script_id, observaciones, revisado)
@@ -147,7 +148,7 @@ def subir_tickets(tabla, frame, reporte, progress):
                             localizacion,
                             tecnico_i,
                             "5",
-                            "54",
+                            script_id,
                             observacion,
                             revisado,
                         ),
@@ -178,3 +179,11 @@ def subir_tickets(tabla, frame, reporte, progress):
             Completado(frame, f"No se cargó ningún registro nuevo")
         else:
             ErrorAlert(frame, "Archivo vacio/icorrecto")
+
+
+def get_id_script_sin_asignar():
+    conn = connection_to_db()
+    cursor = conn.cursor()
+    cursor.execute("SELECT id_script FROM scripts WHERE script = 'Sin asignar'")
+    result = cursor.fetchone()
+    return result[0] if result else None

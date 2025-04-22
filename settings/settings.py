@@ -6,7 +6,7 @@ import json
 archivo = r".\settings\config.json"
 
 # Configuración por defecto
-default = {"tema": "Dark_theme", "background": "#121212", "foreground": "#B0B0B0", "listbg": "#434447","listfg": "#B0B0B0"}
+default = {"tema": "Light_theme", "background": "#F5F5F5", "foreground": "#333333", "listbg": "#dfdfdf","listfg": "#333333"}
 
 
 def cargar_config():
