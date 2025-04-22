@@ -14,7 +14,7 @@ def mostrar_datos(datos, tabla):
     return conteo
 
 
-# Organizar valores de la columna
+# Organizar valores de la columna de manera ascendente o descendente
 def ordenar_tabla(tabla, col, descendiente, columnas):
     data = [(tabla.set(item, col), item) for item in tabla.get_children("")]
     data.sort(reverse=descendiente)

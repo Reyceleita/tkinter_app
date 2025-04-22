@@ -1,10 +1,10 @@
 from model.connection import *
 
+connection = connection_to_db()
+cursor = connection.cursor()
 
 # Funcón para obtener id del tecnico según nombre, en caso de no existir se coloca sin asignar
 def obtener_id_tecnico(nombre):
-    connection = connection_to_db()
-    cursor = connection.cursor()
     cursor.execute("SELECT id_tecnico FROM tecnicos WHERE nombre = ?", (nombre,))
     tecnico = cursor.fetchone()
     return str(tecnico[0]) if tecnico else "1"
@@ -12,8 +12,6 @@ def obtener_id_tecnico(nombre):
 
 # Función para obtener información de un ticket por su id
 def obtener_ticket_abierto(ticket):
-    connection = connection_to_db()
-    cursor = connection.cursor()
     command = """
         SELECT tecnico_id, estado, fecha_actualiza, revisado 
         FROM tickets_diarios 
@@ -26,8 +24,6 @@ def obtener_ticket_abierto(ticket):
 
 # Función para obtener el estado de un ticket abierto
 def obtener_estado(ticket):
-    connection = connection_to_db()
-    cursor = connection.cursor()
     cursor.execute(
         "SELECT estado_t FROM tickets_diarios WHERE id_ticket = ?", (ticket,)
     )
@@ -38,8 +34,6 @@ def obtener_estado(ticket):
 
 # Función para obtener las soluciones de base de datos
 def cargar_solucion(solucion, solucion_list):
-    connection = connection_to_db()
-    cursor = connection.cursor()
     solucion["values"] = []
     solucion_list.clear()
 
@@ -53,8 +47,6 @@ def cargar_solucion(solucion, solucion_list):
 
 # Función para obtener los scripts de base de datos
 def cargar_script(script, script_list):
-    connection = connection_to_db()
-    cursor = connection.cursor()
     script["values"] = []
     script_list.clear()
 
@@ -68,8 +60,6 @@ def cargar_script(script, script_list):
 
 # Función para obtener los técnicos de base de datos
 def cargar_tecnico(tecnico, tecnico_list):
-    connection = connection_to_db()
-    cursor = connection.cursor()
     tecnico["values"] = []
     tecnico_list.clear()
 
@@ -84,8 +74,6 @@ def cargar_tecnico(tecnico, tecnico_list):
 
 # Obtener datos de tablas específicas
 def cargar_tablas(datos, tabla_list, tabla):
-    connection = connection_to_db()
-    cursor = connection.cursor()
     datos.set("")
     datos["values"] = []
     tabla_list.clear()
@@ -101,8 +89,6 @@ def cargar_tablas(datos, tabla_list, tabla):
 
 # Obtener las observaciones de base de datos
 def cargar_observacion(tabla, id):
-    connection = connection_to_db()
-    cursor = connection.cursor()
     command = f"SELECT observaciones FROM {tabla} WHERE id_ticket = ?"
     cursor.execute(command, (id,))
     obsesrvacion = cursor.fetchone()
@@ -127,8 +113,6 @@ def obtener_cargo(cargo_id, combobox):
 
 # Obtener listado de cargos
 def cargar_cargo(cargo_id, combobox):
-    connection = connection_to_db()
-    cursor = connection.cursor()
     combobox["values"] = []
     cargo_id.clear()
 

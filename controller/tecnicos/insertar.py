@@ -8,8 +8,6 @@ from view.alertas.warning import *
 from logs.logger_config import logger
 
 # Crear un técnico
-
-
 def crear_tecnico(
     cargo_id,
     cargo,

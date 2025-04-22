@@ -130,15 +130,17 @@ try:
     ('Juan Camilo Figueroa', '5'),
     ('Juan David Becerra Molano', '2'),
     ('Camilo Ospina Escudero', '5'),
-    ('Laura Natalia Forero Artunduaga', '2'),
+    ('Laura Natalia Forero Artunduaga', '3'),
     ('Juan Pablo Alfonso Beltran', '2'),
     ('Jairo Esteban Rodriguez Jimenez', '2'),
     ('Miguel Angel Pardo Reyes', '2'),
-    ('Deicy Yadira Robayo Rincon', '3'),
     ('Faiver Leguizamo Rojas', '4'),
     ('Edgar Yesid Cortes Insuasty', '3'),
     ('Jairo Miller Urrego Garay', '2'),
     ('Mauricio Enrique Hernandez Cabrera', 2);
+    ('German Orlando Ramirez Sarmiento', 2);
+    ('Diosenelth de la Hoz Fonseca', 2);
+    ('Jimmy Alexander Menjura Calvo', 2);
         """
     )
 

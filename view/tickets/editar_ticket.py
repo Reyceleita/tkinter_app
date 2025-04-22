@@ -97,7 +97,7 @@ class EditarTicket(tk.Toplevel):
         cargar_script(script, script_lista)
         cargar_tecnico(tecnico, tecnico_lista)
 
-        # Botón de acción
+        # Botones de acción
         self.guardar = ttk.Button(
             self,
             text="Guardar",
@@ -118,11 +118,11 @@ class EditarTicket(tk.Toplevel):
         )
         self.guardar.grid(
             row=8, column=1, pady=25, padx=40, sticky="w"
-        )  # Posicionamiento del botón
-
+        )
         ttk.Button(self, text="Cancelar", width=15, style='Adv.TButton', command=self.destroy).grid(
             row=8, column=0, pady=25, padx=10, sticky="e"
         )
+        
         # Ajustes de ventana
         self.update_idletasks()
         self.geometry("")

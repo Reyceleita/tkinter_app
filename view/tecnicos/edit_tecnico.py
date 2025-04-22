@@ -66,7 +66,6 @@ class EditarTecnico(tk.Toplevel):
         self.fecha_i_campo.grid(row=2, column=1, padx=25, pady=5, sticky="e")
         self.fecha_s_campo.grid(row=4, column=1, padx=25, pady=5, sticky="e")
 
-        # Agregar ventana de confirmación.
         # Botón de acción
         ttk.Button(
             self,

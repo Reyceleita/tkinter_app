@@ -12,9 +12,7 @@ output_folder = r".\csv"
 # Crear la carpeta si no existe
 os.makedirs(output_folder, exist_ok=True)
 
-# Conectar con SQLite
-
-
+# Exportar datos csv para informes en power BI
 def exportar_datos(frame):
     conn = connection_to_db()
     try:

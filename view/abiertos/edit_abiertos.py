@@ -36,8 +36,8 @@ class EditarAbiertos(tk.Toplevel):
         self.script_db.set(info_ticket[2])
         self.fecha_db.set(info_ticket[3])
         self.observacion_db.set(
-            cargar_observacion("tickets_diarios", id_ticket.get())
-        )  # Cargar observación guardada en BD
+            cargar_observacion("tickets_diarios", id_ticket.get()) # Cargar observación guardada en BD
+        )  
         if self.fecha_db.get() == "None":
             self.fecha_db.set("Sin definir")
 

@@ -2,7 +2,7 @@ import os
 import json
 
 
-# Crear variable con la ruta de la DB
+# Crear variable con la ruta de la BD
 archivo = r".\settings\config.json"
 
 # Configuración por defecto

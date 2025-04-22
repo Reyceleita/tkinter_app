@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import *
 from tkinter import ttk
 
-
+#Alerta de cargando para procesos demorados
 class Progressbar(tk.Toplevel):
     def __init__(self, parent):
         super().__init__(parent)
