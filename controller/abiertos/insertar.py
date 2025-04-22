@@ -18,6 +18,8 @@ def insertar_abierto(
     estado_t,
     revisado,
 ):
+    
+    script_id = get_id_script_sin_asignar()
     connection = connection_to_db()
     cursor = connection.cursor()
     command = """
@@ -42,7 +44,7 @@ def insertar_abierto(
             localizacion,
             tecnico_i,
             "5",
-            "54",
+            script_id,
             observacion,
             fecha_actual,
             estado_t,
@@ -50,3 +52,10 @@ def insertar_abierto(
         ),
     )
     connection.commit()
+
+def get_id_script_sin_asignar():
+    conn = connection_to_db()
+    cursor = conn.cursor()
+    cursor.execute("SELECT id_script FROM scripts WHERE script = 'Sin asignar'")
+    result = cursor.fetchone()
+    return result[0] if result else None

@@ -31,7 +31,6 @@ class TabTecnicos(ttk.Frame):
             "Fecha de salida",
             "Tickets asignados",
             "Tickets cerrados",
-            "Estado",
         )
 
         # Configuración de tabla y scrollbar

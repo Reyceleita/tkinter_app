@@ -113,7 +113,6 @@ def subir_tickets(tabla, frame, reporte, progress):
                     except Exception as e:
                         print(e, "c")
             else:
-                nuevos += 1
                 # Se asigna técnico default si no hay tecnico en la fila
                 if tecnico_i == None:
                     tecnico_i = "1"

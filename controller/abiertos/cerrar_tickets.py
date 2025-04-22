@@ -47,7 +47,7 @@ def cerrar_abierto(tabla, frame):
                 # Actualizar solo lo necesario si el ticket abierto existía
                 command = """
                     UPDATE tickets
-                    SET forma_solucion_id = ?, tecnico_id = ?, script_id = ?, fecha_solucion = ?, observaciones =  ?, revisado = 'Revisado'
+                    SET forma_solucion_id = ?, tecnico_id = ?, script_id = ?, fecha_solucion = ?, observaciones =  ?, revisado = 'Revisado', estado = 'cerrado'
                     WHERE id_ticket = ?
                 """
                 cursor.execute(
@@ -76,7 +76,7 @@ def cerrar_abierto(tabla, frame):
                     (
                         id_ticket,
                         titulo,
-                        estado,
+                        'cerrado',
                         fecha_apertura,
                         fecha_limite,
                         categoria,

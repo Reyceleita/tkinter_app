@@ -5,7 +5,7 @@ from logs.logger_config import logger
 # Conexión a la base de datos
 def connection_to_db():
     try:
-        connection = sqlite3.connect("./model/database/db.sqlite")
+        connection = sqlite3.connect("./model/database/db.sqlite", timeout=10)
         return connection
     except sqlite3.Error as e:
         print("Error en la conexión")

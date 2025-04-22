@@ -15,9 +15,9 @@ def filtro(tabla, filter=None):
     query = """
         SELECT id_ticket, titulo, estado, fecha_apertura, fecha_limite, categoria, localizacion, nombre, solucion, script, fecha_solucion, observaciones, revisado 
         FROM tickets
-        INNER JOIN tecnicos ON tickets.tecnico_id = tecnicos.id_tecnico 
-        INNER JOIN forma_solucion ON tickets.forma_solucion_id = forma_solucion.id_solucion
-        INNER JOIN scripts ON tickets.script_id = scripts.id_script
+        LEFT JOIN tecnicos ON tickets.tecnico_id = tecnicos.id_tecnico 
+        LEFT JOIN forma_solucion ON tickets.forma_solucion_id = forma_solucion.id_solucion
+        LEFT JOIN scripts ON tickets.script_id = scripts.id_script
         WHERE 1=1
     """
 

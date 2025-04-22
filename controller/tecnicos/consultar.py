@@ -18,7 +18,7 @@ def cargar_tecnicos(tabla_tecnicos):
     command = """
         SELECT id_tecnico, nombre, cargo, fecha_ingreso, fecha_salida 
         FROM tecnicos
-        INNER JOIN cargos ON cargos.id_cargo = tecnicos.cargo_id
+        LEFT JOIN cargos ON cargos.id_cargo = tecnicos.cargo_id
         WHERE id_tecnico > 1
     """
 
@@ -53,19 +53,7 @@ def cargar_tecnicos(tabla_tecnicos):
         fila.pop(0)
         fila.append(int(conteo_d))
         fila.append(int(conteo))
-        fecha_fin = None
-
-        try:
-            fecha_fin = datetime.strptime(fila[3], "%Y-%m-%d")
-            if fecha_fin < fecha_hoy:
-                fila.append("Inactivo")
-                tabla_tecnicos.insert("", "end", values=fila)
-            elif fecha_fin > fecha_hoy:
-                fila.append("Activo")
-                tabla_tecnicos.insert("", "end", values=fila)
-        except:
-            fila.append("N/A")
-            tabla_tecnicos.insert("", "end", values=fila)
+        tabla_tecnicos.insert("", "end", values=fila)
 
 
 # Consultar técnico por nombre
@@ -76,7 +64,7 @@ def tecnico_nobre(nombre):
     command = """
             SELECT id_tecnico, cargo, fecha_ingreso, fecha_salida
             FROM tecnicos 
-            INNER JOIN cargos ON cargos.id_cargo = tecnicos.cargo_id
+            LEFT JOIN cargos ON cargos.id_cargo = tecnicos.cargo_id
             WHERE nombre = ?
             """
     cursor.execute(command, (nombre,))

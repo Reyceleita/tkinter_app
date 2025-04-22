@@ -51,6 +51,7 @@ class App(tk.Tk):
         self.aplicar_tema()
 
     # Cargar datos al cambiar de pestaña
+
     def on_tab_selected(self, event):
         pestaña = self.notebook.index(self.notebook.select())
 
@@ -59,7 +60,6 @@ class App(tk.Tk):
         elif pestaña == 1:
             mostrar_datos(query_datos(), self.tickets.traer_tabla())
 
-    #Aplicar tema guardado
     def aplicar_tema(self):
         tema = cargar_config()
         bg = tema["background"]

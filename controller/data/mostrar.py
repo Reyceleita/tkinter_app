@@ -4,6 +4,7 @@ def mostrar_datos(datos, tabla):
     for row in tabla.get_children():
         tabla.delete(row)
 
+    default = []
     incompleto = []
     conteo = 0
     for row in datos:
